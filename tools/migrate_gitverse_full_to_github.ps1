@@ -129,12 +129,16 @@ function Save-State($state) {
     Move-Item -LiteralPath $tmp -Destination $StateFile -Force
 }
 
-function Invoke-Git([string[]]$GitArgs, [switch]$AllowFail) {
-    & $GitExe @GitArgs
+function Invoke-Git([string[]]$GitArgs, [switch]$AllowFail, [switch]$Quiet) {
+    if ($Quiet) {
+        & $GitExe @GitArgs 1>$null 2>$null
+    } else {
+        & $GitExe @GitArgs
+    }
     if (-not $AllowFail -and $LASTEXITCODE -ne 0) {
         throw "git $($GitArgs -join ' ') failed ($LASTEXITCODE)"
     }
-    return $LASTEXITCODE
+    return [int]$LASTEXITCODE
 }
 
 function Get-TreePaths([string]$Ref, [string]$Prefix = "") {
@@ -228,14 +232,13 @@ Ensure-Worktree
 Set-Location -LiteralPath $Worktree
 
 # remotes
-$rc = Invoke-Git @("remote", "get-url", "gitverse") -AllowFail
-if ($rc -ne 0) {
+$remotes = @(& $GitExe remote)
+if ($remotes -notcontains "gitverse") {
     Invoke-Git @("remote", "add", "gitverse", "git@gitverse.ru:Mihaham/CNN-NEAT-RUNS.git")
     Invoke-Git @("config", "remote.gitverse.promisor", "true")
     Invoke-Git @("config", "remote.gitverse.partialclonefilter", "tree:0")
 }
-$rc = Invoke-Git @("remote", "get-url", $Remote) -AllowFail
-if ($rc -ne 0) {
+if ($remotes -notcontains $Remote) {
     Invoke-Git @("remote", "add", $Remote, "git@github.com:Mihaham/CNN-NEAT-RUNS.git")
 }
 
