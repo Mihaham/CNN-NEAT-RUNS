@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "format": "cnn_neat_run_archive",
+  "run_id": "run_0001",
+  "created_at": "2026-06-21T18:23:43.404930",
+  "updated_at": "2026-06-21T18:23:52.241293",
+  "meta": {},
+  "topology_registry": {
+    "count": 10,
+    "hashes": [
+      "0872d2fcc31973e9d8b72ea29371e346cde12cf2051abc474939ce21d36b3567",
+      "26604c71293fc8b7169ade051a2985c4c86bb70d7a83583bdede23f64fa0ab7a",
+      "3d53a46317b4f73bc50b83126cb5b1af5c1912dd2f222a99731a05eed05240f4",
+      "4da2b0a90d6b10794f180f1f7271ec68d17d72455afb97ffbe18cb3780658ddb",
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "69a075bf89376037a55ae1281e791a8b9e507d14c65b924686179a6d11ef4ed2",
+      "81670e160f102774880334ee99ab2fbd3b2f4ce60aeaf2b1a47effea36a2abae",
+      "8d479781bb28f2c2e9438acfa93667e01775fbe96e7f8db930096dabcfbe4943",
+      "942a190e248dcb0aa5d7d028387a93a0e84909e9520da1019e5ad5a57b8fb2b5",
+      "9895d7fb3a1fd68dab51190a21c445fa834cda4f8df8d04a92e59da5f6d793ea"
+    ]
+  },
+  "epochs": {}
+}
