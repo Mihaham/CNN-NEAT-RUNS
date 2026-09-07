@@ -1,0 +1,385 @@
+{
+  "study_id": "ablation_backups_ova_hash_host_spill_2026-08-07_2026_cone_prefetch",
+  "source_path": "ablation/backups/ova_hash_host_spill_2026-08-07_2026_cone_prefetch",
+  "updated_at": "2026-09-06T08:21:26Z",
+  "extract_sec": 39.6,
+  "n_results": 2,
+  "n_runs": 5,
+  "best_bal_acc": 0.7359900406939388,
+  "has_holdout": false,
+  "status": {
+    "script_id": "10",
+    "pipeline": "ova_hash_host_spill",
+    "label": "10 OVA A–D planned hash-cache + C/D dual-track GD",
+    "updated_at": "2026-08-07T20:23:35",
+    "finished": false,
+    "completed_count": 2,
+    "context": {
+      "script_id": "10",
+      "label": "10 OVA A–D planned hash-cache + C/D dual-track GD",
+      "pipeline": "ova_hash_host_spill",
+      "phases": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "population_size": 320,
+      "top_n": 0,
+      "generalize_fraction": 0.5,
+      "channel_sets": [
+        "var_default",
+        "fixed_3"
+      ],
+      "classes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "forward_hash_cache": true,
+      "forward_hash_cache_streaming_elite": false,
+      "forward_hash_cache_planned": true,
+      "stagnation_patience": 10,
+      "num_generations_planned": 0,
+      "phase_c_generations": 0,
+      "phase_c_strong_gd_every": 5,
+      "phase_c_dual_track_gd": true,
+      "periodic_gd_targets": "elites",
+      "fitness_val_size": 3413,
+      "fitness_tiered": false,
+      "mutation_policy": "structural+edge_remove",
+      "phase_a_gpu_resident": true,
+      "phase_c_gpu_resident": true,
+      "phase_c_planned": true,
+      "phase_c_flush_after_periodic_gd": true,
+      "phase_c_host_spill_rematch": false
+    },
+    "top_overall": [
+      {
+        "config_name": "linear_mean",
+        "phase": "a",
+        "stage": "pilot",
+        "class_id": 0,
+        "class_name": "airplane",
+        "best_bal_acc": 0.7359900406939388,
+        "best_fitness": 0.7359900406939388,
+        "best_mcc": 0.29550738048352276,
+        "elapsed_sec": 1169.5
+      },
+      {
+        "config_name": "linear_mmd",
+        "phase": "a",
+        "stage": "pilot",
+        "class_id": 0,
+        "class_name": "airplane",
+        "best_bal_acc": 0.7337683836653102,
+        "best_fitness": 0.7337683836653102,
+        "best_mcc": 0.2909244101164061,
+        "elapsed_sec": 3152.8
+      }
+    ],
+    "top_by_class": {
+      "0": [
+        {
+          "config": "linear_mean",
+          "phase": "a",
+          "stage": "pilot",
+          "best_bal_acc": 0.7359900406939388
+        },
+        {
+          "config": "linear_mmd",
+          "phase": "a",
+          "stage": "pilot",
+          "best_bal_acc": 0.7337683836653102
+        }
+      ]
+    },
+    "errors": [],
+    "phases": {
+      "a": {
+        "title": "Phase A — Activation × Readout (без GD)",
+        "pilot": {
+          "class_id": 0,
+          "class_name": "airplane",
+          "done": 2,
+          "total": 10
+        },
+        "generalize": {
+          "done": 0,
+          "total": 45,
+          "by_class": {
+            "1": {
+              "class_name": "automobile",
+              "done": 0,
+              "total": 5
+            },
+            "2": {
+              "class_name": "bird",
+              "done": 0,
+              "total": 5
+            },
+            "3": {
+              "class_name": "cat",
+              "done": 0,
+              "total": 5
+            },
+            "4": {
+              "class_name": "deer",
+              "done": 0,
+              "total": 5
+            },
+            "5": {
+              "class_name": "dog",
+              "done": 0,
+              "total": 5
+            },
+            "6": {
+              "class_name": "frog",
+              "done": 0,
+              "total": 5
+            },
+            "7": {
+              "class_name": "horse",
+              "done": 0,
+              "total": 5
+            },
+            "8": {
+              "class_name": "ship",
+              "done": 0,
+              "total": 5
+            },
+            "9": {
+              "class_name": "truck",
+              "done": 0,
+              "total": 5
+            }
+          }
+        },
+        "top5": [],
+        "finished": false
+      }
+    },
+    "live": {
+      "phase": "a",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "config": "relu_mmd",
+      "generation": 19,
+      "best_bal_acc": 0.694749500249875,
+      "best_fitness": 0.694749500249875,
+      "best_mcc": 0.2460734716298121,
+      "wall_elapsed_sec": 501.05,
+      "wall_gen_sec": 37.16,
+      "started_at": 1786122914.3357952,
+      "all_time_best_fitness": 0.6955705183122725,
+      "gens_without_improve": 1,
+      "best_sweep_bal_acc": 0.694749500249875,
+      "best_nodes": 9,
+      "best_edges": 17
+    }
+  },
+  "runs": [
+    {
+      "run_key": "phase_a__class_00_airplane__linear_mean__run_0001",
+      "run_dir": "ablation/backups/ova_hash_host_spill_2026-08-07_2026_cone_prefetch/phase_a/class_00_airplane/linear_mean/run_0001",
+      "meta": {
+        "output_readout": "mean",
+        "edge_weights": false,
+        "population_size": 320,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mean",
+        "run_id": "run_0001",
+        "input_channels": 3,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 35,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 14,
+      "topo_weight_neg_frac": 0.4411764705882353,
+      "topo_spatial_reduction_ratio": 32.0,
+      "topo_graph_depth": 9,
+      "series_fitness_gain": 0.0829611979724425,
+      "w_sign_neg_frac": 0.49999999370044856,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 1.792238793202809,
+      "last_generation": 34,
+      "best_fitness": 0.7359900406939388,
+      "best_bal_acc": 0.7359900406939388,
+      "best_nodes": 14,
+      "best_edges": 23,
+      "best_edges_executed": 21,
+      "best_mcc": 0.29550738048352276,
+      "best_roc_auc": 0.8010583993717426
+    },
+    {
+      "run_key": "phase_a__class_00_airplane__linear_mmd__run_0001",
+      "run_dir": "ablation/backups/ova_hash_host_spill_2026-08-07_2026_cone_prefetch/phase_a/class_00_airplane/linear_mmd/run_0001",
+      "meta": {
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 320,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mmd",
+        "run_id": "run_0001",
+        "input_channels": 3,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 21,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 9,
+      "topo_weight_neg_frac": 0.4444444444444444,
+      "topo_spatial_reduction_ratio": 32.0,
+      "topo_graph_depth": 6,
+      "series_fitness_gain": 0.11252721853359038,
+      "w_sign_neg_frac": 0.4995111126661301,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 1.6836231432177804,
+      "last_generation": 20,
+      "best_fitness": 0.7158059363175555,
+      "best_bal_acc": 0.7158059363175555,
+      "best_nodes": 9,
+      "best_edges": 13,
+      "best_edges_executed": 11,
+      "best_mcc": 0.26912927308012374,
+      "best_roc_auc": 0.7757933533233383
+    },
+    {
+      "run_key": "phase_a__class_00_airplane__linear_mmd__run_0002",
+      "run_dir": "ablation/backups/ova_hash_host_spill_2026-08-07_2026_cone_prefetch/phase_a/class_00_airplane/linear_mmd/run_0002",
+      "meta": {
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 320,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mmd",
+        "run_id": "run_0002",
+        "input_channels": 3,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 12,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 12,
+      "topo_weight_neg_frac": 0.6428571428571429,
+      "topo_spatial_reduction_ratio": 32.0,
+      "topo_graph_depth": 6,
+      "series_fitness_gain": 0.11339330334832587,
+      "w_sign_neg_frac": 0.4906169822120435,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 1.685347808731927,
+      "last_generation": 11,
+      "best_fitness": 0.716672021132291,
+      "best_bal_acc": 0.716672021132291,
+      "best_nodes": 12,
+      "best_edges": 13,
+      "best_edges_executed": 9,
+      "best_mcc": 0.27014506432582114,
+      "best_roc_auc": 0.7921093024916113
+    },
+    {
+      "run_key": "phase_a__class_00_airplane__linear_mmd__run_0003",
+      "run_dir": "ablation/backups/ova_hash_host_spill_2026-08-07_2026_cone_prefetch/phase_a/class_00_airplane/linear_mmd/run_0003",
+      "meta": {
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 320,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mmd",
+        "run_id": "run_0003",
+        "input_channels": 3,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 72,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 21,
+      "topo_weight_neg_frac": 0.3888888888888889,
+      "topo_spatial_reduction_ratio": 32.0,
+      "topo_graph_depth": 13,
+      "series_fitness_gain": 0.12863835939173274,
+      "w_sign_neg_frac": 0.5018309271296314,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 1.6043591182678938,
+      "last_generation": 71,
+      "best_fitness": 0.7337683836653102,
+      "best_bal_acc": 0.7337683836653102,
+      "best_nodes": 20,
+      "best_edges": 32,
+      "best_edges_executed": 32,
+      "best_mcc": 0.2909244101164061,
+      "best_roc_auc": 0.7907894267152138
+    },
+    {
+      "run_key": "phase_a__class_00_airplane__relu_mmd__run_0001",
+      "run_dir": "ablation/backups/ova_hash_host_spill_2026-08-07_2026_cone_prefetch/phase_a/class_00_airplane/relu_mmd/run_0001",
+      "meta": {
+        "activation": "relu",
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 320,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "relu_mmd",
+        "run_id": "run_0001",
+        "input_channels": 3,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 20,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 9,
+      "topo_weight_neg_frac": 0.47619047619047616,
+      "topo_spatial_reduction_ratio": 32.0,
+      "topo_graph_depth": 6,
+      "series_fitness_gain": 0.13071499964303557,
+      "w_sign_neg_frac": 0.499860924954872,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 1.5102207050658762,
+      "last_generation": 19,
+      "best_fitness": 0.6955705183122725,
+      "best_bal_acc": 0.6955705183122725,
+      "best_nodes": 9,
+      "best_edges": 16,
+      "best_edges_executed": 16,
+      "best_mcc": 0.24725445458370596,
+      "best_roc_auc": 0.7355911330049261
+    }
+  ],
+  "script_id": "10",
+  "label": "10 OVA A–D planned hash-cache + C/D dual-track GD",
+  "finished": false,
+  "completed_count": 2
+}

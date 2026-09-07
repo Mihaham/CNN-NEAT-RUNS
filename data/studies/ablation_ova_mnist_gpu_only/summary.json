@@ -1,0 +1,368 @@
+{
+  "study_id": "ablation_ova_mnist_gpu_only",
+  "source_path": "ablation/ova_mnist_gpu_only",
+  "updated_at": "2026-09-06T12:37:27Z",
+  "extract_sec": 79.79,
+  "n_results": 2,
+  "n_runs": 5,
+  "best_bal_acc": 0.97,
+  "has_holdout": false,
+  "status": {
+    "script_id": "15",
+    "pipeline": "ova_mnist_gpu_only",
+    "label": "15 OVA A-D MNIST CUDA-only phase-sized study",
+    "updated_at": "2026-09-03T22:55:25",
+    "finished": false,
+    "completed_count": 1,
+    "context": {
+      "script_id": "15",
+      "label": "15 OVA A-D MNIST CUDA-only phase-sized study",
+      "pipeline": "ova_mnist_gpu_only",
+      "phases": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "population_size_ab": 500,
+      "population_size_cd": 250,
+      "effective_population_size_ab": 500,
+      "effective_population_size_cd": 500,
+      "effective_population_c": 500,
+      "effective_population_d": 500,
+      "eval_batch_size_ab": 10000,
+      "eval_batch_size_cd": 10000,
+      "gd_lineage_expand_slots": 250,
+      "fitness_val_size": 10000,
+      "gpu_vram_cap_bytes": 17179869184,
+      "fitness_screen_cache_max_bytes": 12884901888,
+      "preserve_protected_parents": true,
+      "evict_covered_parents": false,
+      "strict_full_batch": true,
+      "compute_mode": "full_gpu",
+      "train_device": "cuda",
+      "generalize_fraction": 0.5,
+      "config_limit": 0,
+      "dataset": "mnist",
+      "channel_sets": [
+        "var_mnist",
+        "fixed_1"
+      ],
+      "input_channels": 1,
+      "input_image_size": [
+        28,
+        28
+      ],
+      "output_readout": "mean",
+      "phase_readouts": [
+        "mean"
+      ]
+    },
+    "top_overall": [
+      {
+        "config_name": "linear_mmd",
+        "phase": "a",
+        "stage": "pilot",
+        "class_id": 0,
+        "class_name": "0",
+        "best_bal_acc": 0.5,
+        "best_fitness": 0.5,
+        "best_mcc": 0.0,
+        "elapsed_sec": 51.9
+      }
+    ],
+    "top_by_class": {
+      "0": [
+        {
+          "config": "linear_mmd",
+          "phase": "a",
+          "stage": "pilot",
+          "best_bal_acc": 0.5
+        }
+      ]
+    },
+    "errors": [],
+    "capacity_alerts": [],
+    "phases": {
+      "a": {
+        "title": "Phase A — Activation × Readout (без GD)",
+        "pilot": {
+          "class_id": 0,
+          "class_name": "0",
+          "done": 1,
+          "total": 5
+        },
+        "generalize": {
+          "done": 0,
+          "total": 27,
+          "by_class": {
+            "1": {
+              "class_name": "1",
+              "done": 0,
+              "total": 3
+            },
+            "2": {
+              "class_name": "2",
+              "done": 0,
+              "total": 3
+            },
+            "3": {
+              "class_name": "3",
+              "done": 0,
+              "total": 3
+            },
+            "4": {
+              "class_name": "4",
+              "done": 0,
+              "total": 3
+            },
+            "5": {
+              "class_name": "5",
+              "done": 0,
+              "total": 3
+            },
+            "6": {
+              "class_name": "6",
+              "done": 0,
+              "total": 3
+            },
+            "7": {
+              "class_name": "7",
+              "done": 0,
+              "total": 3
+            },
+            "8": {
+              "class_name": "8",
+              "done": 0,
+              "total": 3
+            },
+            "9": {
+              "class_name": "9",
+              "done": 0,
+              "total": 3
+            }
+          }
+        },
+        "top5": [],
+        "finished": false
+      }
+    },
+    "live": {
+      "phase": "a",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "0",
+      "config": "linear_mean",
+      "generation": 130,
+      "best_bal_acc": 0.9695,
+      "best_fitness": 0.9695,
+      "best_mcc": 0.8406716103246981,
+      "wall_elapsed_sec": 20097.37,
+      "wall_gen_sec": 287.9,
+      "started_at": 1788445224.1414661,
+      "stagnation_patience": 10,
+      "all_time_best_fitness": 0.9696111111111111,
+      "gens_without_improve": 2,
+      "best_sweep_bal_acc": 0.9695,
+      "best_nodes": 14,
+      "best_edges": 46
+    }
+  },
+  "runs": [
+    {
+      "run_key": "hold_script15_ova_mnist___hold_script15_ova_mnist__phase_a__class_00_0__linear_mean__run_0001",
+      "run_dir": "ablation/ova_mnist_gpu_only/_hold_script15_ova_mnist/_hold_script15_ova_mnist/phase_a/class_00_0/linear_mean/run_0001",
+      "meta": {
+        "output_readout": "mean",
+        "edge_weights": false,
+        "population_size": 500,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mean",
+        "run_id": "run_0001",
+        "input_channels": 1,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 47,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 14,
+      "topo_weight_neg_frac": 0.6511627906976745,
+      "topo_spatial_reduction_ratio": 28.0,
+      "topo_graph_depth": 11,
+      "series_fitness_gain": 0.14855555555555555,
+      "w_sign_neg_frac": 0.5042950942276583,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 0.9636469723847814,
+      "last_generation": 46,
+      "best_fitness": 0.9609444444444444,
+      "best_bal_acc": 0.9609444444444444,
+      "best_nodes": 14,
+      "best_edges": 39,
+      "best_edges_executed": 39,
+      "best_mcc": 0.7963381767924563,
+      "best_roc_auc": 0.9916014444444444
+    },
+    {
+      "run_key": "hold_script15_ova_mnist___hold_script15_ova_mnist__phase_a__class_00_0__linear_mmd__run_0001",
+      "run_dir": "ablation/ova_mnist_gpu_only/_hold_script15_ova_mnist/_hold_script15_ova_mnist/phase_a/class_00_0/linear_mmd/run_0001",
+      "meta": {
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 128,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mmd",
+        "run_id": "run_0001",
+        "input_channels": 1,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 11,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 2,
+      "topo_weight_neg_frac": 0.0,
+      "topo_spatial_reduction_ratio": 28.0,
+      "topo_graph_depth": 1,
+      "series_fitness_gain": 0.0,
+      "w_sign_neg_frac": 0.4872449040412903,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 0.5488312244415283,
+      "last_generation": 10,
+      "best_fitness": 0.5,
+      "best_bal_acc": 0.5,
+      "best_nodes": 2,
+      "best_edges": 1,
+      "best_edges_executed": 1,
+      "best_mcc": 0.0,
+      "best_roc_auc": 0.4913743055555555
+    },
+    {
+      "run_key": "hold_script15_ova_mnist___hold_script15_ova_mnist__phase_a__class_00_0__linear_mmd__run_0002",
+      "run_dir": "ablation/ova_mnist_gpu_only/_hold_script15_ova_mnist/_hold_script15_ova_mnist/phase_a/class_00_0/linear_mmd/run_0002",
+      "meta": {
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 128,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mmd",
+        "run_id": "run_0002",
+        "input_channels": 1,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 11,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 2,
+      "topo_weight_neg_frac": 0.0,
+      "topo_spatial_reduction_ratio": 28.0,
+      "topo_graph_depth": 1,
+      "series_fitness_gain": 0.0,
+      "w_sign_neg_frac": 0.4872449040412903,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 0.5488312244415283,
+      "last_generation": 10,
+      "best_fitness": 0.5,
+      "best_bal_acc": 0.5,
+      "best_nodes": 2,
+      "best_edges": 1,
+      "best_edges_executed": 1,
+      "best_mcc": 0.0,
+      "best_roc_auc": 0.5113247777777779
+    },
+    {
+      "run_key": "phase_a__class_00_0__linear_mean__run_0001",
+      "run_dir": "ablation/ova_mnist_gpu_only/phase_a/class_00_0/linear_mean/run_0001",
+      "meta": {
+        "output_readout": "mean",
+        "edge_weights": false,
+        "population_size": 500,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mean",
+        "run_id": "run_0001",
+        "input_channels": 1,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 177,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 14,
+      "topo_weight_neg_frac": 0.6415094339622641,
+      "topo_spatial_reduction_ratio": 28.0,
+      "topo_graph_depth": 13,
+      "series_fitness_gain": 0.15733333333333333,
+      "w_sign_neg_frac": 0.5121762597588531,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 0.9973594027105719,
+      "last_generation": 176,
+      "best_fitness": 0.97,
+      "best_bal_acc": 0.97,
+      "best_nodes": 14,
+      "best_edges": 48,
+      "best_edges_executed": 48,
+      "best_mcc": 0.8440844138511397,
+      "best_roc_auc": 0.9925366666666666
+    },
+    {
+      "run_key": "phase_a__class_00_0__relu_mean__run_0001",
+      "run_dir": "ablation/ova_mnist_gpu_only/phase_a/class_00_0/relu_mean/run_0001",
+      "meta": {
+        "activation": "relu",
+        "output_readout": "mean",
+        "edge_weights": false,
+        "population_size": 500,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "relu_mean",
+        "run_id": "run_0001",
+        "input_channels": 1,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 120,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 17,
+      "topo_weight_neg_frac": 0.43137254901960786,
+      "topo_spatial_reduction_ratio": 28.0,
+      "topo_graph_depth": 12,
+      "series_fitness_gain": 0.249,
+      "w_sign_neg_frac": 0.49743828094166603,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 0.7249203882047108,
+      "last_generation": 119,
+      "best_fitness": 0.9581666666666666,
+      "best_bal_acc": 0.9581666666666666,
+      "best_nodes": 17,
+      "best_edges": 38,
+      "best_edges_executed": 35,
+      "best_mcc": 0.8062189923566434,
+      "best_roc_auc": 0.9710965555555556
+    }
+  ],
+  "script_id": "15",
+  "label": "15 OVA A-D MNIST CUDA-only phase-sized study",
+  "finished": false,
+  "completed_count": 1
+}

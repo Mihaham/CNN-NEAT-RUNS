@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNN-NEAT Runs Dashboard</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>CNN-NEAT Runs Dashboard</h1>
+    <div class="meta" id="meta">Loading…</div>
+  </header>
+  <main>
+    <div class="filters">
+      <input id="filter" type="search" placeholder="Filter studies…" />
+    </div>
+    <div class="card">
+      <table id="studies">
+        <thead>
+          <tr>
+            <th data-col="0">study</th>
+            <th data-col="1">path</th>
+            <th data-col="2">script</th>
+            <th data-col="3" data-num="1">runs</th>
+            <th data-col="4" data-num="1">results</th>
+            <th data-col="5" data-num="1">best bal_acc</th>
+            <th data-col="6">holdout</th>
+            <th data-col="7">status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="./assets/charts.js"></script>
+  <script src="./assets/app.js"></script>
+  <script>Dashboard.initIndex();</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study — CNN-NEAT Runs</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="title">Study</h1>
+    <a id="back" href="./index.html">← studies</a>
+    <div class="meta" id="meta">Loading…</div>
+  </header>
+  <main>
+    <div id="holdout" class="card" style="display:none"></div>
+    <div id="errors" class="card" style="display:none"></div>
+    <div class="filters">
+      <input id="filter" type="search" placeholder="Filter runs…" />
+    </div>
+    <div class="card">
+      <table id="runs">
+        <thead>
+          <tr>
+            <th>run</th>
+            <th>activation / readout</th>
+            <th>epochs</th>
+            <th>best bal_acc</th>
+            <th>best fitness</th>
+            <th>fitness gain</th>
+            <th>nodes</th>
+            <th>depth</th>
+            <th>w− frac</th>
+            <th>spatial ↓</th>
+            <th>conv−</th>
+            <th>champion</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="charts"></div>
+  </main>
+  <script src="./assets/charts.js"></script>
+  <script src="./assets/app.js"></script>
+  <script>Dashboard.initStudy();</script>
+</body>
+</html>

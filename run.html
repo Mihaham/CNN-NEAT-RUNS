@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Run — CNN-NEAT Runs</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="title">Run</h1>
+    <a id="back" href="./index.html">← study</a>
+    <div class="meta" id="meta">Loading…</div>
+  </header>
+  <main>
+    <div class="card">
+      <div class="chart-title">Run meta</div>
+      <pre class="genome-box" id="meta-box"></pre>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="chart-title">Topology metrics (from genome JSON, no .pt)</div>
+        <pre class="genome-box" id="topo-metrics"></pre>
+      </div>
+      <div class="card">
+        <div class="chart-title">Series / lineage metrics</div>
+        <pre class="genome-box" id="series-metrics"></pre>
+        <pre class="genome-box" id="lineage-metrics" style="margin-top:0.75rem"></pre>
+      </div>
+    </div>
+    <div class="card">
+      <div class="chart-title">Weight tensor metrics (from epoch_*_weight_stats.json or .pt backfill)</div>
+      <pre class="genome-box" id="weight-metrics"></pre>
+    </div>
+    <div class="card">
+      <div class="chart-title">Topology sketch (green = +weight_scale, red = −, dotted = disabled)</div>
+      <div class="chart" id="topo-sketch" style="min-height:360px"></div>
+    </div>
+    <div id="charts"></div>
+    <div class="card">
+      <div class="chart-title">Champion genome + topology_draw JSON</div>
+      <pre class="genome-box" id="genome"></pre>
+    </div>
+  </main>
+  <script src="./assets/charts.js"></script>
+  <script src="./assets/app.js"></script>
+  <script>Dashboard.initRun();</script>
+</body>
+</html>
