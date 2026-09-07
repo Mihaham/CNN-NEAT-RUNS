@@ -1,0 +1,131 @@
+name: Build dashboard
+
+# Extract compact dashboard JSON from git objects (no full worktree of .pt),
+# rebuild site templates, optionally publish branch `pages`.
+
+on:
+  workflow_dispatch:
+    inputs:
+      study_filter:
+        description: "Optional substring filter for studies (empty = all discoverable)"
+        required: false
+        default: ""
+      publish_pages:
+        description: "Push built site/ to branch pages"
+        type: boolean
+        default: true
+      fetch_weights:
+        description: "Allow reading champion .pt when weight_stats JSON missing (slow/heavy)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "tools/runs_dashboard/**"
+      - ".github/workflows/build-dashboard.yml"
+
+concurrency:
+  group: build-dashboard-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  extract-and-build:
+    name: Extract + build site
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    permissions:
+      contents: write
+
+    steps:
+      - name: Clone partial (blob:none) + sparse tools/site
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --sparse --depth 1 \
+            --branch "${GITHUB_REF_NAME}" \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          git sparse-checkout set tools site
+          git config remote.origin.promisor true
+          git config remote.origin.partialclonefilter blob:none
+          git rev-parse --short HEAD
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile dashboard tools
+        working-directory: repo
+        run: |
+          set -e
+          for f in \
+            tools/runs_dashboard/metrics.py \
+            tools/runs_dashboard/topology_metrics.py \
+            tools/runs_dashboard/weight_pt_stats.py \
+            tools/runs_dashboard/extract.py \
+            tools/runs_dashboard/build_site.py \
+            tools/runs_dashboard/validate_site.py
+          do
+            python -m py_compile "$f"
+          done
+
+      - name: Extract dashboard data from git objects
+        working-directory: repo
+        run: |
+          set -euo pipefail
+          mkdir -p site/data
+          EXTRA=()
+          if [ -n "${{ inputs.study_filter }}" ]; then
+            EXTRA+=(--study-filter "${{ inputs.study_filter }}")
+          fi
+          if [ "${{ inputs.fetch_weights }}" = "true" ]; then
+            EXTRA+=(--fetch-weights)
+          fi
+          # list_paths only indexes dashboard JSON names — git show fetches those blobs on demand
+          python tools/runs_dashboard/extract.py \
+            --git-dir .git \
+            --ref HEAD \
+            --out site \
+            --full \
+            "${EXTRA[@]}"
+          test -f site/data/studies.json
+
+      - name: Build site templates
+        working-directory: repo
+        run: |
+          set -e
+          python tools/runs_dashboard/build_site.py --out site
+          python tools/runs_dashboard/validate_site.py --site site
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: runs-dashboard-site
+          path: repo/site/
+          retention-days: 14
+
+      - name: Publish pages branch
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_pages || github.event_name == 'push' }}
+        working-directory: repo
+        run: |
+          set -euo pipefail
+          python tools/runs_dashboard/build_site.py --out site
+          # orphan-ish publish: replace pages tree with site/ contents at root
+          git fetch origin pages:pages || true
+          WORK=/tmp/pages_publish
+          rm -rf "$WORK"
+          mkdir -p "$WORK"
+          cp -a site/. "$WORK/"
+          cd "$WORK"
+          git init -b pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          touch .nojekyll
+          git add -A
+          git commit -m "pages: dashboard site from ${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -f origin pages:pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

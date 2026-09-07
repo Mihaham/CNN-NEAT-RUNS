@@ -1,0 +1,88 @@
+name: Validate site
+
+# Checks that site/ (or pages branch) has required HTML/assets and valid JSON.
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Where to read the site from"
+        type: choice
+        options:
+          - site-on-main
+          - pages-branch
+        default: pages-branch
+      strict:
+        description: "Treat warnings as errors"
+        type: boolean
+        default: false
+  push:
+    branches: [pages, main]
+    paths:
+      - "site/**"
+      - "tools/runs_dashboard/validate_site.py"
+      - ".github/workflows/validate-site.yml"
+  pull_request:
+    paths:
+      - "site/**"
+      - "tools/runs_dashboard/**"
+
+jobs:
+  validate:
+    name: Validate dashboard site
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout main (tools + site)
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.source == 'site-on-main' }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            tools/runs_dashboard
+            site
+          sparse-checkout-cone-mode: true
+
+      - name: Checkout pages branch as site/
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.source == 'pages-branch' }}
+        uses: actions/checkout@v4
+        with:
+          ref: pages
+          fetch-depth: 1
+          path: site
+
+      - name: Checkout validate tool when using pages-branch
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.source == 'pages-branch' }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            tools/runs_dashboard
+          sparse-checkout-cone-mode: true
+          path: tools_src
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Prepare tool path
+        run: |
+          set -e
+          if [ -d tools_src/tools/runs_dashboard ]; then
+            mkdir -p tools
+            rm -rf tools/runs_dashboard
+            mv tools_src/tools/runs_dashboard tools/runs_dashboard
+          fi
+          test -f tools/runs_dashboard/validate_site.py
+          test -d site
+
+      - name: Validate site
+        run: |
+          set -e
+          EXTRA=()
+          if [ "${{ inputs.strict }}" = "true" ]; then
+            EXTRA+=(--strict)
+          fi
+          python tools/runs_dashboard/validate_site.py --site site "${EXTRA[@]}"
