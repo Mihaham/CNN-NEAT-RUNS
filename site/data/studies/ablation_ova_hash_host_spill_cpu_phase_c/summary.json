@@ -1,0 +1,195 @@
+{
+  "study_id": "ablation_ova_hash_host_spill_cpu_phase_c",
+  "source_path": "ablation/ova_hash_host_spill/cpu_phase_c",
+  "updated_at": "2026-09-06T12:35:24Z",
+  "extract_sec": 16.44,
+  "n_results": 0,
+  "n_runs": 1,
+  "best_bal_acc": null,
+  "has_holdout": false,
+  "status": {
+    "script_id": "10",
+    "pipeline": "ova_hash_host_spill",
+    "label": "10 OVA A–D planned hash-cache + C/D dual-track GD",
+    "updated_at": "2026-08-13T07:49:09",
+    "finished": false,
+    "completed_count": 0,
+    "context": {
+      "script_id": "10",
+      "label": "10 OVA A–D planned hash-cache + C/D dual-track GD",
+      "pipeline": "ova_hash_host_spill",
+      "phases": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "population_size": 320,
+      "top_n": 0,
+      "generalize_fraction": 0.5,
+      "channel_sets": [
+        "var_default",
+        "fixed_3"
+      ],
+      "classes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "forward_hash_cache": true,
+      "forward_hash_cache_streaming_elite": false,
+      "forward_hash_cache_planned": true,
+      "stagnation_patience": 10,
+      "num_generations_planned": 0,
+      "phase_c_generations": 0,
+      "phase_c_strong_gd_every": 5,
+      "phase_c_dual_track_gd": true,
+      "periodic_gd_targets": "elites",
+      "fitness_val_size": 3413,
+      "fitness_tiered": false,
+      "mutation_policy": "structural+edge_remove",
+      "phase_a_gpu_resident": true,
+      "phase_c_gpu_resident": true,
+      "train_device": "cpu",
+      "phase_c_planned": true,
+      "phase_c_flush_after_periodic_gd": true,
+      "phase_c_host_spill_rematch": false
+    },
+    "top_overall": [],
+    "top_by_class": {},
+    "errors": [],
+    "phases": {
+      "c": {
+        "title": "Phase C — Activation × Readout (periodic GD, strong)",
+        "pilot": {
+          "class_id": 0,
+          "class_name": "airplane",
+          "done": 0,
+          "total": 10
+        },
+        "generalize": {
+          "done": 0,
+          "total": 45,
+          "by_class": {
+            "1": {
+              "class_name": "automobile",
+              "done": 0,
+              "total": 5
+            },
+            "2": {
+              "class_name": "bird",
+              "done": 0,
+              "total": 5
+            },
+            "3": {
+              "class_name": "cat",
+              "done": 0,
+              "total": 5
+            },
+            "4": {
+              "class_name": "deer",
+              "done": 0,
+              "total": 5
+            },
+            "5": {
+              "class_name": "dog",
+              "done": 0,
+              "total": 5
+            },
+            "6": {
+              "class_name": "frog",
+              "done": 0,
+              "total": 5
+            },
+            "7": {
+              "class_name": "horse",
+              "done": 0,
+              "total": 5
+            },
+            "8": {
+              "class_name": "ship",
+              "done": 0,
+              "total": 5
+            },
+            "9": {
+              "class_name": "truck",
+              "done": 0,
+              "total": 5
+            }
+          }
+        },
+        "top5": [],
+        "finished": false
+      }
+    },
+    "live": {
+      "phase": "c",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "config": "linear_mmd_gd_strong",
+      "generation": 70,
+      "best_bal_acc": 0.745159563075605,
+      "best_fitness": 0.745159563075605,
+      "best_mcc": 0.30545534517874684,
+      "wall_elapsed_sec": 423983.52,
+      "wall_gen_sec": 173.14,
+      "started_at": 1786172565.8252099,
+      "all_time_best_fitness": 0.745159563075605,
+      "gens_without_improve": 8,
+      "best_sweep_bal_acc": 0.745159563075605,
+      "best_nodes": 21,
+      "best_edges": 41
+    }
+  },
+  "runs": [
+    {
+      "run_key": "phase_c__class_00_airplane__linear_mmd_gd_strong__run_0001",
+      "run_dir": "ablation/ova_hash_host_spill/cpu_phase_c/phase_c/class_00_airplane/linear_mmd_gd_strong/run_0001",
+      "meta": {
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 320,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": true,
+        "positive_class": 0,
+        "num_generations_planned": 0,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mmd_gd_strong",
+        "run_id": "run_0001",
+        "input_channels": 3,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 71,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 22,
+      "topo_weight_neg_frac": 0.44642857142857145,
+      "topo_spatial_reduction_ratio": 32.0,
+      "topo_graph_depth": 17,
+      "series_fitness_gain": 0.1418808452916399,
+      "w_sign_neg_frac": 0.4986684899084156,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 1.6340032587485278,
+      "last_generation": 70,
+      "best_fitness": 0.745159563075605,
+      "best_bal_acc": 0.745159563075605,
+      "best_nodes": 22,
+      "best_edges": 45,
+      "best_edges_executed": 34,
+      "best_mcc": 0.30545534517874684,
+      "best_roc_auc": 0.8078505390162062
+    }
+  ],
+  "script_id": "10",
+  "label": "10 OVA A–D planned hash-cache + C/D dual-track GD",
+  "finished": false,
+  "completed_count": 0
+}

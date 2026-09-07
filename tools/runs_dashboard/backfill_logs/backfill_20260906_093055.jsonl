@@ -1,0 +1,2 @@
+﻿{"detail":"OK ablation_ova_gpu_only: results=174 archives=443 (1106.47s) Wrote D:\\cifar-10-CNN_NEAT\\runs\\site\\data\\studies.json (19 studies, head=85010e6ddbb0)","ts":"2026-09-06T09:49:23.9915344+03:00","sec":1106.79,"error":"","ok":true,"name":"remote:ablation/ova_gpu_only","phase":"remote_extract"}
+{"detail":"","ts":"2026-09-06T09:49:24.0735351+03:00","sec":0.05,"error":"","ok":true,"name":"build_site","phase":"build_site"}

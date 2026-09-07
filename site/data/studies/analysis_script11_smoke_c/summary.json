@@ -1,0 +1,131 @@
+{
+  "study_id": "analysis_script11_smoke_c",
+  "source_path": "analysis/script11_smoke_c",
+  "updated_at": "2026-09-06T15:16:45Z",
+  "extract_sec": 2.63,
+  "n_results": 1,
+  "n_runs": 1,
+  "best_bal_acc": 0.6005639097744361,
+  "has_holdout": false,
+  "status": {
+    "script_id": "11",
+    "pipeline": "ova_gpu_only",
+    "label": "11 OVA A-D CUDA-only phase-sized study",
+    "updated_at": "2026-08-14T15:55:48",
+    "finished": true,
+    "completed_count": 1,
+    "context": {
+      "script_id": "11",
+      "label": "11 OVA A-D CUDA-only phase-sized study",
+      "pipeline": "ova_gpu_only",
+      "phases": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "population_size_ab": 2,
+      "population_size_cd": 2,
+      "eval_batch_size_ab": 8,
+      "eval_batch_size_cd": 4,
+      "gd_lineage_expand_slots": 2,
+      "fitness_val_size": 256,
+      "gpu_vram_cap_bytes": 17179869184,
+      "fitness_screen_cache_max_bytes": 12884901888,
+      "preserve_protected_parents": true,
+      "compute_mode": "full_gpu",
+      "train_device": "cuda",
+      "generalize_fraction": 0.5,
+      "config_limit": 1
+    },
+    "top_overall": [
+      {
+        "config_name": "linear_mmd_gd_strong",
+        "phase": "c",
+        "stage": "pilot",
+        "class_id": 0,
+        "class_name": "airplane",
+        "best_bal_acc": 0.6005639097744361,
+        "best_fitness": 0.6005639097744361,
+        "best_mcc": 0.1258591575083904,
+        "elapsed_sec": 9.1
+      }
+    ],
+    "top_by_class": {
+      "0": [
+        {
+          "config": "linear_mmd_gd_strong",
+          "phase": "c",
+          "stage": "pilot",
+          "best_bal_acc": 0.6005639097744361
+        }
+      ]
+    },
+    "errors": [],
+    "phases": {
+      "c": {
+        "title": "Phase C — Activation × Readout (periodic GD, strong)",
+        "pilot": {
+          "class_id": 0,
+          "class_name": "airplane",
+          "done": 1,
+          "total": 1
+        },
+        "generalize": {
+          "done": 0,
+          "total": 0,
+          "by_class": {}
+        },
+        "top5": [
+          "linear_mmd_gd_strong"
+        ],
+        "finished": true
+      }
+    },
+    "live": null
+  },
+  "runs": [
+    {
+      "run_key": "phase_c__class_00_airplane__linear_mmd_gd_strong__run_0001",
+      "run_dir": "analysis/script11_smoke_c/phase_c/class_00_airplane/linear_mmd_gd_strong/run_0001",
+      "meta": {
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 2,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": true,
+        "positive_class": 0,
+        "num_generations_planned": 2,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mmd_gd_strong",
+        "run_id": "run_0001",
+        "input_channels": 3,
+        "stagnation_patience": 10,
+        "archive_weights_policy": "full"
+      },
+      "n_epochs": 2,
+      "has_champion": true,
+      "has_weight_stats": true,
+      "topo_n_nodes": 3,
+      "topo_weight_neg_frac": 0.3333333333333333,
+      "topo_spatial_reduction_ratio": 32.0,
+      "topo_graph_depth": 2,
+      "series_fitness_gain": 0.046992481203007475,
+      "w_sign_neg_frac": 0.5010268220937959,
+      "w_sparsity_eps": 0.0,
+      "w_l2_mean": 1.2977227568626404,
+      "last_generation": 1,
+      "best_fitness": 0.6005639097744361,
+      "best_bal_acc": 0.6005639097744361,
+      "best_nodes": 3,
+      "best_edges": 3,
+      "best_edges_executed": 3,
+      "best_mcc": 0.1258591575083904,
+      "best_roc_auc": 0.5532581453634086
+    }
+  ],
+  "script_id": "11",
+  "label": "11 OVA A-D CUDA-only phase-sized study",
+  "finished": true,
+  "completed_count": 1
+}

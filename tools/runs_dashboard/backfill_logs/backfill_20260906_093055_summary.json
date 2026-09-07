@@ -1,0 +1,32 @@
+﻿{
+    "started_log":  "D:\\cifar-10-CNN_NEAT\\runs\\tools\\runs_dashboard\\backfill_logs\\backfill_20260906_093055.jsonl",
+    "total_sec":  1106.87,
+    "total_min":  18.45,
+    "ok":  2,
+    "fail":  0,
+    "sec_by_phase":  {
+                         "remote_extract":  1106.79,
+                         "build_site":  0.05
+                     },
+    "steps":  [
+                  {
+                      "ts":  "2026-09-06T09:49:23.9915344+03:00",
+                      "phase":  "remote_extract",
+                      "name":  "remote:ablation/ova_gpu_only",
+                      "sec":  1106.79,
+                      "ok":  true,
+                      "detail":  "OK ablation_ova_gpu_only: results=174 archives=443 (1106.47s) Wrote D:\\cifar-10-CNN_NEAT\\runs\\site\\data\\studies.json (19 studies, head=85010e6ddbb0)",
+                      "error":  ""
+                  },
+                  {
+                      "ts":  "2026-09-06T09:49:24.0735351+03:00",
+                      "phase":  "build_site",
+                      "name":  "build_site",
+                      "sec":  0.05,
+                      "ok":  true,
+                      "detail":  "",
+                      "error":  ""
+                  }
+              ],
+    "note":  "Remote extract uses git show (no .pt checkout). LocalStudyDir is never deleted by this script."
+}

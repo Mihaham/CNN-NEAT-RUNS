@@ -1,0 +1,61 @@
+﻿{
+    "started_log":  "D:\\cifar-10-CNN_NEAT\\runs\\tools\\runs_dashboard\\backfill_logs\\backfill_20260906_130439.jsonl",
+    "total_sec":  5724.78,
+    "total_min":  95.41,
+    "ok":  5,
+    "fail":  0,
+    "sec_by_phase":  {
+                         "build_site":  0.06,
+                         "weight_stats_backfill":  723.88,
+                         "remote_extract":  4813.12,
+                         "local_extract":  187.67
+                     },
+    "steps":  [
+                  {
+                      "ts":  "2026-09-06T13:05:58.4130350+03:00",
+                      "phase":  "weight_stats_backfill",
+                      "name":  "local:ablation/ova_mnist_gpu_only",
+                      "sec":  77.11,
+                      "ok":  true,
+                      "detail":  "{ \"sec\": 75.07, \"n_done\": 208, \"counts\": { \"skip_exists\": 208 } }",
+                      "error":  ""
+                  },
+                  {
+                      "ts":  "2026-09-06T13:16:45.2195339+03:00",
+                      "phase":  "weight_stats_backfill",
+                      "name":  "remote:ablation/ova_gpu_only",
+                      "sec":  646.77,
+                      "ok":  true,
+                      "detail":  "oew_var_default_gd_strong/run_0001/epochs/epoch_0021_weight_stats.json OK ablation/ova_gpu_only/phase_d/class_09_truck/relu_mmd_ew_fixed_3_gd_strong/run_0001/epochs/epoch_0007_weight_stats.json OK ablation/ova_gpu_only/phase_d/class_09_truck/relu_mmd_ew_var_default_gd_strong/run_0001/epochs/epoch_0026_weight_stats.json { \"sec\": 645.49, \"n_done\": 443, \"counts\": { \"skip_exists\": 431, \"wrote\": 12 } }",
+                      "error":  ""
+                  },
+                  {
+                      "ts":  "2026-09-06T13:19:52.8955528+03:00",
+                      "phase":  "local_extract",
+                      "name":  "local:ablation/ova_mnist_gpu_only",
+                      "sec":  187.67,
+                      "ok":  true,
+                      "detail":  "OK ablation_ova_mnist_gpu_only: results=65 archives=104 (185.88s) Wrote D:\\cifar-10-CNN_NEAT\\runs\\site\\data\\studies.json (19 studies, head=filesystem)",
+                      "error":  ""
+                  },
+                  {
+                      "ts":  "2026-09-06T14:40:06.0203528+03:00",
+                      "phase":  "remote_extract",
+                      "name":  "remote:ablation/ova_gpu_only",
+                      "sec":  4813.12,
+                      "ok":  true,
+                      "detail":  "OK ablation_ova_gpu_only: results=174 archives=443 (4811.61s) Wrote D:\\cifar-10-CNN_NEAT\\runs\\site\\data\\studies.json (19 studies, head=8a33ab775b0e)",
+                      "error":  ""
+                  },
+                  {
+                      "ts":  "2026-09-06T14:40:06.0781138+03:00",
+                      "phase":  "build_site",
+                      "name":  "build_site",
+                      "sec":  0.06,
+                      "ok":  true,
+                      "detail":  "",
+                      "error":  ""
+                  }
+              ],
+    "note":  "Remote extract uses git show (no .pt checkout). LocalStudyDir is never deleted by this script."
+}

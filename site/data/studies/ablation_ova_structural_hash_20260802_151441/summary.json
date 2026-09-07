@@ -1,0 +1,201 @@
+{
+  "study_id": "ablation_ova_structural_hash_20260802_151441",
+  "source_path": "ablation/ova_structural_hash/20260802_151441",
+  "updated_at": "2026-09-06T12:38:12Z",
+  "extract_sec": 2.57,
+  "n_results": 1,
+  "n_runs": 2,
+  "best_bal_acc": null,
+  "has_holdout": false,
+  "status": {
+    "script_id": "09",
+    "pipeline": "ova_structural_hash",
+    "label": "09 OVA A-B structural hash-cache",
+    "updated_at": "2026-08-02T15:20:34",
+    "finished": false,
+    "completed_count": 0,
+    "context": {
+      "script_id": "09",
+      "label": "09 OVA A-B structural hash-cache",
+      "pipeline": "ova_structural_hash",
+      "phases": [
+        "a",
+        "b"
+      ],
+      "population_size": 10000,
+      "top_n": 5,
+      "channel_sets": [
+        "var_default",
+        "fixed_3"
+      ],
+      "classes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "forward_hash_cache": true,
+      "forward_hash_cache_planned": true,
+      "fitness_tiered": false,
+      "mutation_policy": "structural+edge_remove"
+    },
+    "top_overall": [],
+    "top_by_class": {},
+    "errors": [
+      {
+        "phase": "a",
+        "stage": "pilot",
+        "class_id": 0,
+        "class_name": "airplane",
+        "config_name": "linear_mmd",
+        "error": "CUDA out of memory. Tried to allocate 66.00 MiB. GPU 0 has a total capacity of 16.00 GiB of which 0 bytes is free. Of the allocated memory 61.51 GiB is allocated by PyTorch, and 628.84 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+        "timestamp": "2026-08-02T15:20:33"
+      }
+    ],
+    "phases": {
+      "a": {
+        "title": "Phase A — Activation × Readout (без GD)",
+        "pilot": {
+          "class_id": 0,
+          "class_name": "airplane",
+          "done": 0,
+          "total": 10
+        },
+        "generalize": {
+          "done": 0,
+          "total": 45,
+          "by_class": {
+            "1": {
+              "class_name": "automobile",
+              "done": 0,
+              "total": 5
+            },
+            "2": {
+              "class_name": "bird",
+              "done": 0,
+              "total": 5
+            },
+            "3": {
+              "class_name": "cat",
+              "done": 0,
+              "total": 5
+            },
+            "4": {
+              "class_name": "deer",
+              "done": 0,
+              "total": 5
+            },
+            "5": {
+              "class_name": "dog",
+              "done": 0,
+              "total": 5
+            },
+            "6": {
+              "class_name": "frog",
+              "done": 0,
+              "total": 5
+            },
+            "7": {
+              "class_name": "horse",
+              "done": 0,
+              "total": 5
+            },
+            "8": {
+              "class_name": "ship",
+              "done": 0,
+              "total": 5
+            },
+            "9": {
+              "class_name": "truck",
+              "done": 0,
+              "total": 5
+            }
+          }
+        },
+        "top5": [],
+        "finished": false
+      }
+    },
+    "live": {
+      "phase": "a",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "config": "linear_mean",
+      "generation": 0,
+      "best_bal_acc": null,
+      "best_fitness": null,
+      "best_mcc": null,
+      "wall_elapsed_sec": null,
+      "wall_gen_sec": null,
+      "started_at": 1785673234.083395
+    }
+  },
+  "runs": [
+    {
+      "run_key": "phase_a__class_00_airplane__linear_mean__run_0001",
+      "run_dir": "ablation/ova_structural_hash/20260802_151441/phase_a/class_00_airplane/linear_mean/run_0001",
+      "meta": {
+        "output_readout": "mean",
+        "edge_weights": false,
+        "population_size": 10000,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 25,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mean",
+        "run_id": "run_0001",
+        "input_channels": 3
+      },
+      "n_epochs": 0,
+      "has_champion": false,
+      "has_weight_stats": false,
+      "topo_n_nodes": null,
+      "topo_weight_neg_frac": null,
+      "topo_spatial_reduction_ratio": null,
+      "topo_graph_depth": null,
+      "series_fitness_gain": null,
+      "w_sign_neg_frac": null,
+      "w_sparsity_eps": null,
+      "w_l2_mean": null
+    },
+    {
+      "run_key": "phase_a__class_00_airplane__linear_mmd__run_0001",
+      "run_dir": "ablation/ova_structural_hash/20260802_151441/phase_a/class_00_airplane/linear_mmd/run_0001",
+      "meta": {
+        "output_readout": "mean_minus_median",
+        "edge_weights": false,
+        "population_size": 10000,
+        "fitness_metric": "balanced_accuracy",
+        "periodic_gd_enabled": false,
+        "positive_class": 0,
+        "num_generations_planned": 25,
+        "allow_variable_channels": false,
+        "experiment_name": "linear_mmd",
+        "run_id": "run_0001",
+        "input_channels": 3
+      },
+      "n_epochs": 0,
+      "has_champion": false,
+      "has_weight_stats": false,
+      "topo_n_nodes": null,
+      "topo_weight_neg_frac": null,
+      "topo_spatial_reduction_ratio": null,
+      "topo_graph_depth": null,
+      "series_fitness_gain": null,
+      "w_sign_neg_frac": null,
+      "w_sparsity_eps": null,
+      "w_l2_mean": null
+    }
+  ],
+  "script_id": "09",
+  "label": "09 OVA A-B structural hash-cache",
+  "finished": false,
+  "completed_count": 0
+}

@@ -1,0 +1,5 @@
+.git_corrupt_*/
+.git_broken_*/
+.git_reclaim_*/
+.git_upload_parts/
+
