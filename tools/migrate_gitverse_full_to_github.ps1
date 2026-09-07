@@ -82,17 +82,25 @@ function Write-ProgressLine {
     )
     $elapsed = (Get-Date) - $ScriptStarted
     $eta = "?"
+    $secs = [double]$elapsed.TotalSeconds
+    if ($secs -lt 1.0) { $secs = 1.0 }
     if ($TotalBytesHint -gt 0 -and $DoneBytes -gt 0) {
-        $rate = $DoneBytes / [math]::Max(1.0, $elapsed.TotalSeconds)
-        $left = [math]::Max(0, $TotalBytesHint - $DoneBytes)
-        if ($rate -gt 0) { $eta = Format-Duration ([TimeSpan]::FromSeconds($left / $rate)) }
+        $rate = [double]$DoneBytes / $secs
+        $leftBytes = [int64]($TotalBytesHint - $DoneBytes)
+        if ($leftBytes -lt 0) { $leftBytes = [int64]0 }
+        if ($rate -gt 0) {
+            $eta = Format-Duration ([TimeSpan]::FromSeconds(([double]$leftBytes) / $rate))
+        }
     } elseif ($TotalItems -gt 0 -and $DoneItems -gt 0) {
-        $rate = $DoneItems / [math]::Max(1.0, $elapsed.TotalSeconds)
-        $leftItems = [math]::Max(0, $TotalItems - $DoneItems)
-        if ($rate -gt 0) { $eta = Format-Duration ([TimeSpan]::FromSeconds($leftItems / $rate)) }
+        $rate = [double]$DoneItems / $secs
+        $leftItems = $TotalItems - $DoneItems
+        if ($leftItems -lt 0) { $leftItems = 0 }
+        if ($rate -gt 0) {
+            $eta = Format-Duration ([TimeSpan]::FromSeconds(([double]$leftItems) / $rate))
+        }
     }
     $pct = if ($TotalItems -gt 0) { [int](100.0 * $DoneItems / $TotalItems) } else { 0 }
-    $free = [math]::Round((Get-PSDrive D).Free / 1GB, 1)
+    $free = [math]::Round(([double](Get-PSDrive D).Free) / 1GB, 1)
     Write-Host ("" +
         ("[{0}] {1}% paths {2}/{3} | down {4} | push-session {5} | elapsed {6} | ETA {7} | free D:{8}GB" -f `
             $Phase, $pct, $DoneItems, $TotalItems, (Format-Bytes $SessionDown), (Format-Bytes $SessionPush), `
@@ -489,7 +497,7 @@ while ($pendingQueue.Count -gt 0) {
 
     Write-Host ("Wave {0} done. done={1}/{2} queue={3} freeD={4}GB elapsed={5}" -f `
         $waveIndex, $doneSet.Count, $allUnits.Count, $pendingQueue.Count, `
-        [math]::Round((Get-PSDrive D).Free/1GB,1), (Format-Duration ((Get-Date) - $ScriptStarted))) -ForegroundColor Green
+        [math]::Round(([double](Get-PSDrive D).Free)/1GB,1), (Format-Duration ((Get-Date) - $ScriptStarted))) -ForegroundColor Green
 }
 
 Write-Host "`n=== ALL WAVES FINISHED (or stopped) ===" -ForegroundColor Green
