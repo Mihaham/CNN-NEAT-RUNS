@@ -143,7 +143,7 @@ function Invoke-Git([string[]]$GitArgs, [switch]$AllowFail, [switch]$Quiet) {
 
 function Get-TreePaths([string]$Ref, [string]$Prefix = "") {
     if ($Prefix) {
-        $spec = "${Ref}:${Prefix.TrimEnd('/')}"
+        $spec = "${Ref}:$($Prefix.TrimEnd('/'))"
         $out = & $GitExe @("ls-tree", "--name-only", $spec) 2>$null
     } else {
         $out = & $GitExe @("ls-tree", "--name-only", $Ref) 2>$null
