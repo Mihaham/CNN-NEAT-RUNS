@@ -2,6 +2,7 @@ name: Build dashboard
 
 # Extract compact dashboard JSON from git objects (no full worktree of .pt),
 # rebuild site templates, optionally publish branch `pages`.
+# Torch is NOT required unless fetch_weights=true.
 
 on:
   workflow_dispatch:
@@ -15,7 +16,7 @@ on:
         type: boolean
         default: true
       fetch_weights:
-        description: "Allow reading champion .pt when weight_stats JSON missing (slow/heavy)"
+        description: "Allow reading champion .pt when weight_stats JSON missing (installs torch CPU)"
         type: boolean
         default: false
   push:
@@ -40,8 +41,9 @@ jobs:
       - name: Clone partial (blob:none) + sparse tools/site
         run: |
           set -euo pipefail
+          BRANCH="${GITHUB_REF_NAME}"
           git clone --filter=blob:none --sparse --depth 1 \
-            --branch "${GITHUB_REF_NAME}" \
+            --branch "${BRANCH}" \
             "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
           cd repo
           git sparse-checkout set tools site
@@ -55,6 +57,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Install torch (only if fetch_weights)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.fetch_weights }}
+        run: pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
 
       - name: Compile dashboard tools
         working-directory: repo
@@ -71,19 +77,26 @@ jobs:
             python -m py_compile "$f"
           done
 
+      - name: Smoke import extract (no torch required)
+        working-directory: repo
+        run: |
+          set -e
+          cd tools/runs_dashboard
+          python -c "import extract, build_site, validate_site, weight_pt_stats; print('imports ok')"
+
       - name: Extract dashboard data from git objects
         working-directory: repo
         run: |
           set -euo pipefail
           mkdir -p site/data
           EXTRA=()
-          if [ -n "${{ inputs.study_filter }}" ]; then
-            EXTRA+=(--study-filter "${{ inputs.study_filter }}")
+          FILTER="${{ github.event_name == 'workflow_dispatch' && inputs.study_filter || '' }}"
+          if [ -n "$FILTER" ]; then
+            EXTRA+=(--study-filter "$FILTER")
           fi
-          if [ "${{ inputs.fetch_weights }}" = "true" ]; then
+          if [ "${{ github.event_name == 'workflow_dispatch' && inputs.fetch_weights || false }}" = "true" ]; then
             EXTRA+=(--fetch-weights)
           fi
-          # list_paths only indexes dashboard JSON names — git show fetches those blobs on demand
           python tools/runs_dashboard/extract.py \
             --git-dir .git \
             --ref HEAD \
@@ -92,7 +105,7 @@ jobs:
             "${EXTRA[@]}"
           test -f site/data/studies.json
 
-      - name: Build site templates
+      - name: Build + validate site
         working-directory: repo
         run: |
           set -e
@@ -107,13 +120,13 @@ jobs:
           retention-days: 14
 
       - name: Publish pages branch
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_pages || github.event_name == 'push' }}
+        if: >-
+          ${{ (github.event_name == 'workflow_dispatch' && inputs.publish_pages)
+              || github.event_name == 'push' }}
         working-directory: repo
         run: |
           set -euo pipefail
           python tools/runs_dashboard/build_site.py --out site
-          # orphan-ish publish: replace pages tree with site/ contents at root
-          git fetch origin pages:pages || true
           WORK=/tmp/pages_publish
           rm -rf "$WORK"
           mkdir -p "$WORK"

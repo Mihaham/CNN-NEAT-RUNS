@@ -25,15 +25,17 @@ param(
 )
 
 # Full GitVerse -> GitHub migration (new history), resume-safe.
-# - Downloads at most -MaxDownloadGB per run (default 200)
-# - Each push pack is at most -MaxPushGB (default 1.5, hard cap < 2)
-# - Progress: elapsed, ETA, downloaded, pushed, path counts
 #
-# Run yourself in a dedicated terminal (long-running):
+# One run loops until everything is done (or Ctrl+C):
+#   1) Download up to -MaxDownloadGB (default 200)
+#   2) Commit in chunks of -MaxPushGB (default 1.5, hard < 2)
+#   3) Push EACH commit separately
+#   4) Delete the downloaded wave from the worktree
+#   5) Repeat; state file resumes after stop
+#
+# Run yourself in a dedicated terminal:
 #   powershell -NoProfile -ExecutionPolicy Bypass -File runs\tools\migrate_gitverse_full_to_github.ps1
 #   powershell -File runs\tools\migrate_gitverse_full_to_github.ps1 -ListOnly
-#   powershell -File runs\tools\migrate_gitverse_full_to_github.ps1 -DryRun
-#   powershell -File runs\tools\migrate_gitverse_full_to_github.ps1 -OnlyPaths ablation/ova_study
 
 $ErrorActionPreference = "Stop"
 $GitExe = (Get-Command git.exe).Source
@@ -319,135 +321,186 @@ if ($ListOnly) {
     $pending | ForEach-Object { Write-Host "  PENDING $_" }
     $doneSet | Sort-Object | ForEach-Object { Write-Host "  DONE    $_" }
     exit 0
+
+
+# =====================================================================
+# Wave loop: download <= MaxDownloadGB -> commit/push <= MaxPushGB each
+# -> delete wave files -> repeat until pending empty (resume via state)
+# =====================================================================
+
+function Get-TreeChildren([string]$Ref, [string]$Rel) {
+    $kids = @(Get-TreePaths $Ref $Rel)
+    return @($kids | ForEach-Object {
+        if ($_ -match '/' ) { $_ } else { "$($Rel.TrimEnd('/'))/$_" }
+    })
 }
 
-$sessionDown = [int64]0
-$sessionPush = [int64]0
-$completedThisRun = 0
-$pushBatch = New-Object System.Collections.Generic.List[object]  # {Path, Bytes}
-$pushBatchBytes = [int64]0
-
-function Flush-PushBatch {
-    if ($pushBatch.Count -eq 0) { return }
-    $paths = @($pushBatch | ForEach-Object { $_.Path })
-    $bytes = [int64]($pushBatch | Measure-Object -Property Bytes -Sum).Sum
-    Write-Host ("`n== PUSH batch ({0} paths, {1}) ==" -f $paths.Count, (Format-Bytes $bytes)) -ForegroundColor Yellow
-    foreach ($p in $paths) { Write-Host "   - $p" }
-
-    if ($bytes -gt $MaxPushBytes -and $paths.Count -gt 1) {
-        throw "Internal error: push batch $($bytes) exceeds MaxPushBytes (multi-path). Split logic bug."
+function Remove-WorktreePath([string]$Rel) {
+    $full = Join-Path $Worktree ($Rel -replace '/', [IO.Path]::DirectorySeparatorChar)
+    if (Test-Path -LiteralPath $full) {
+        Remove-Item -LiteralPath $full -Recurse -Force -ErrorAction SilentlyContinue
     }
-    if ($bytes -ge 2GB) {
-        throw "Refusing push >= 2GB ($([math]::Round($bytes/1GB,2)) GB)."
-    }
+}
 
+function Commit-AndPushChunk {
+    param([string[]]$Paths, [int64]$Bytes)
+    if ($Paths.Count -eq 0) { return }
+    Write-Host ("`n== COMMIT+PUSH ({0} paths, {1}) ==" -f $Paths.Count, (Format-Bytes $Bytes)) -ForegroundColor Yellow
+    foreach ($p in $Paths) { Write-Host "   - $p" }
+    if ($Bytes -ge 2GB) { throw "Refusing push >= 2GB ($([math]::Round($Bytes/1GB,2)) GB)" }
     if ($DryRun) {
         Write-Host "DryRun: skip commit/push" -ForegroundColor DarkYellow
-        $script:pushBatch.Clear()
-        $script:pushBatchBytes = 0
         return
     }
-
-    Invoke-Git (@("add", "-A", "--") + $paths)
+    Invoke-Git (@("add", "-A", "--") + $Paths)
     $msgFile = Join-Path $env:TEMP ("mig_msg_" + [guid]::NewGuid().ToString("N") + ".txt")
-    $msg = "migrate: " + ($paths -join ", ")
-    Set-Content -LiteralPath $msgFile -Value $msg -Encoding utf8
-    cmd /c "`"$GitExe`" commit --allow-empty-message -F `"$msgFile`""
-    if ($LASTEXITCODE -ne 0) {
-        # maybe nothing staged
-        $st = & $GitExe status --porcelain -- @paths
+    Set-Content -LiteralPath $msgFile -Value ("migrate: " + ($Paths -join ", ")) -Encoding utf8
+    cmd /c "`"$GitExe`" commit -F `"$msgFile`""
+    $commitRc = $LASTEXITCODE
+    Remove-Item $msgFile -Force -ErrorAction SilentlyContinue
+    if ($commitRc -ne 0) {
+        $st = & $GitExe status --porcelain -- @Paths
         if (-not $st) {
-            Write-Host "Nothing staged; marking done anyway" -ForegroundColor Yellow
+            Write-Host "Nothing to commit for chunk (already indexed?)" -ForegroundColor Yellow
         } else {
             throw "commit failed"
         }
+    } else {
+        Write-Host "git push $Remote HEAD:$PushRef (single commit) ..." -ForegroundColor Cyan
+        $tPush = Get-Date
+        Invoke-Git @("push", $Remote, "HEAD:$PushRef")
+        Write-Host ("push ok in {0}" -f (Format-Duration ((Get-Date) - $tPush))) -ForegroundColor Green
+        $script:totalPushedBytes += $Bytes
+        $state.bytes_pushed = [int64]$state.bytes_pushed + $Bytes
+        Save-State $state
     }
-    Remove-Item $msgFile -Force -ErrorAction SilentlyContinue
-
-    Write-Host "git push $Remote HEAD:$PushRef ..." -ForegroundColor Cyan
-    $tPush = Get-Date
-    Invoke-Git @("push", $Remote, "HEAD:$PushRef")
-    Write-Host ("push ok in {0}" -f (Format-Duration ((Get-Date) - $tPush))) -ForegroundColor Green
-
-    $script:sessionPush += $bytes
-    $state.bytes_pushed = [int64]$state.bytes_pushed + $bytes
-    foreach ($p in $paths) {
-        if (-not $doneSet.Contains($p)) {
-            [void]$doneSet.Add($p)
-            $state.done_paths = @($doneSet)
-        }
-        # Free worktree space (objects remain in .git history)
-        $full = Join-Path $Worktree ($p -replace '/', [IO.Path]::DirectorySeparatorChar)
-        if (Test-Path -LiteralPath $full) {
-            Remove-Item -LiteralPath $full -Recurse -Force -ErrorAction SilentlyContinue
-        }
-    }
-    Save-State $state
-    $script:completedThisRun += $paths.Count
-    $script:pushBatch.Clear()
-    $script:pushBatchBytes = 0
-    Write-ProgressLine -Phase "after-push" -DoneBytes $state.bytes_pushed -TotalBytesHint 0 `
-        -DoneItems $doneSet.Count -TotalItems $allUnits.Count -SessionDown $sessionDown -SessionPush $sessionPush
 }
 
-foreach ($unit in $pending) {
-    if ($sessionDown -ge $MaxDownloadBytes) {
-        Write-Host "`nSession download cap reached ($MaxDownloadGB GB). Re-run script to continue." -ForegroundColor Magenta
+$totalPushedBytes = [int64]0
+$waveIndex = 0
+$pendingQueue = New-Object System.Collections.Generic.Queue[string]
+foreach ($u in $pending) { $pendingQueue.Enqueue($u) }
+
+Write-Host ("`nStarting wave loop. Pending={0} MaxDown={1} MaxPush={2}" -f `
+    $pendingQueue.Count, (Format-Bytes $MaxDownloadBytes), (Format-Bytes $MaxPushBytes)) -ForegroundColor Green
+
+while ($pendingQueue.Count -gt 0) {
+    $waveIndex++
+    $waveDownloaded = [int64]0
+    $wavePaths = New-Object System.Collections.Generic.List[string]
+    Write-Host ("`n######## WAVE {0} — DOWNLOAD (cap {1}) ########" -f $waveIndex, (Format-Bytes $MaxDownloadBytes)) -ForegroundColor Magenta
+
+    while ($pendingQueue.Count -gt 0 -and $waveDownloaded -lt $MaxDownloadBytes) {
+        $unit = $pendingQueue.Dequeue()
+        Write-ProgressLine -Phase "wave-$waveIndex-dl" -DoneBytes $waveDownloaded -TotalBytesHint $MaxDownloadBytes `
+            -DoneItems $doneSet.Count -TotalItems $allUnits.Count -SessionDown $waveDownloaded -SessionPush $totalPushedBytes
+
+        if ($DryRun) {
+            Write-Host "DryRun: would download $unit"
+            $wavePaths.Add($unit)
+            [void]$doneSet.Add($unit)
+            continue
+        }
+
+        Write-Host ("== checkout {0} ==" -f $unit) -ForegroundColor Yellow
+        $t0 = Get-Date
+        try {
+            Invoke-Git @("checkout", $SourceRef, "--", $unit)
+        } catch {
+            Write-Host "FAIL checkout $unit : $_ — skip" -ForegroundColor Red
+            continue
+        }
+        $size = Measure-PathBytes $Worktree $unit
+        Write-Host ("   size {0} in {1}" -f (Format-Bytes $size), (Format-Duration ((Get-Date) - $t0)))
+
+        $remaining = $MaxDownloadBytes - $waveDownloaded
+        if ($size -gt $remaining -and $size -gt ($MaxDownloadBytes / 4)) {
+            $children = @(Get-TreeChildren $SourceRef $unit)
+            if ($children.Count -gt 1) {
+                Write-Host ("   too large for remaining budget — expand to {0} children" -f $children.Count) -ForegroundColor DarkYellow
+                Remove-WorktreePath $unit
+                $rest = New-Object System.Collections.Generic.List[string]
+                while ($pendingQueue.Count -gt 0) { $rest.Add($pendingQueue.Dequeue()) }
+                foreach ($c in $children) {
+                    if (-not $doneSet.Contains($c)) { $pendingQueue.Enqueue($c) }
+                }
+                foreach ($r in $rest) { $pendingQueue.Enqueue($r) }
+                continue
+            }
+        }
+
+        $wavePaths.Add($unit)
+        $waveDownloaded += $size
+        Write-Host ("   wave download now {0} / {1}" -f (Format-Bytes $waveDownloaded), (Format-Bytes $MaxDownloadBytes))
+    }
+
+    if ($wavePaths.Count -eq 0) {
+        Write-Host "Wave downloaded nothing; stopping to avoid loop." -ForegroundColor Red
         break
     }
 
-    Write-Host ("`n== DOWNLOAD {0} ==" -f $unit) -ForegroundColor Yellow
-    Write-ProgressLine -Phase "download" -DoneBytes $sessionDown -TotalBytesHint $MaxDownloadBytes `
-        -DoneItems $doneSet.Count -TotalItems $allUnits.Count -SessionDown $sessionDown -SessionPush $sessionPush
+    Write-Host ("`n######## WAVE {0} — COMMIT/PUSH chunks <={1} ########" -f $waveIndex, (Format-Bytes $MaxPushBytes)) -ForegroundColor Magenta
 
-    if ($DryRun) {
-        Write-Host "DryRun: would: git checkout $SourceRef -- $unit"
-        [void]$doneSet.Add($unit)
-        continue
+    $chunks = New-Object System.Collections.Generic.List[object]
+    foreach ($wp in $wavePaths) {
+        foreach ($ch in (Split-PathIntoPushChunks -Root $Worktree -Rel $wp -MaxBytes $MaxPushBytes)) {
+            $chunks.Add($ch)
+        }
     }
 
-    $t0 = Get-Date
-    try {
-        Invoke-Git @("checkout", $SourceRef, "--", $unit)
-    } catch {
-        Write-Host "FAIL checkout $unit : $_" -ForegroundColor Red
-        continue
-    }
-    $size = Measure-PathBytes $Worktree $unit
-    $sessionDown += $size
-    Write-Host ("   downloaded/measured {0} in {1}" -f (Format-Bytes $size), (Format-Duration ((Get-Date) - $t0)))
-
-    if ($sessionDown -gt $MaxDownloadBytes -and $size -gt 0) {
-        Write-Host "Note: this path crossed session download cap; still processing it, then stop." -ForegroundColor Magenta
-    }
-
-    $chunks = Split-PathIntoPushChunks -Root $Worktree -Rel $unit -MaxBytes $MaxPushBytes
+    $batch = New-Object System.Collections.Generic.List[object]
+    $batchBytes = [int64]0
+    $chunkI = 0
     foreach ($ch in $chunks) {
-        if ($pushBatchBytes -gt 0 -and ($pushBatchBytes + $ch.Bytes) -gt $MaxPushBytes) {
-            Flush-PushBatch
+        if ($batchBytes -gt 0 -and ($batchBytes + $ch.Bytes) -gt $MaxPushBytes) {
+            $chunkI++
+            Write-ProgressLine -Phase "wave-$waveIndex-push-$chunkI" -DoneBytes $totalPushedBytes -TotalBytesHint 0 `
+                -DoneItems $doneSet.Count -TotalItems $allUnits.Count -SessionDown $waveDownloaded -SessionPush $totalPushedBytes
+            Commit-AndPushChunk -Paths @($batch | ForEach-Object { $_.Path }) -Bytes $batchBytes
+            $batch.Clear()
+            $batchBytes = 0
         }
-        if ($ch.Bytes -gt $MaxPushBytes -and $pushBatch.Count -eq 0) {
-            Write-Host ("WARN: chunk {0} is {1} > MaxPushGB; pushing alone (GitHub may reject if > soft limits)." -f $ch.Path, (Format-Bytes $ch.Bytes)) -ForegroundColor Yellow
-        }
-        $pushBatch.Add($ch)
-        $pushBatchBytes += $ch.Bytes
-        if ($pushBatchBytes -ge $MaxPushBytes -or $ch.Bytes -ge $MaxPushBytes) {
-            Flush-PushBatch
+        $batch.Add($ch)
+        $batchBytes += $ch.Bytes
+        if ($batchBytes -ge $MaxPushBytes) {
+            $chunkI++
+            Commit-AndPushChunk -Paths @($batch | ForEach-Object { $_.Path }) -Bytes $batchBytes
+            $batch.Clear()
+            $batchBytes = 0
         }
     }
+    if ($batch.Count -gt 0) {
+        $chunkI++
+        Commit-AndPushChunk -Paths @($batch | ForEach-Object { $_.Path }) -Bytes $batchBytes
+    }
+
+    Write-Host ("`n######## WAVE {0} — DELETE downloaded files ({1}) ########" -f $waveIndex, (Format-Bytes $waveDownloaded)) -ForegroundColor Magenta
+    foreach ($wp in $wavePaths) {
+        if (-not $DryRun) { Remove-WorktreePath $wp }
+        if (-not $doneSet.Contains($wp)) { [void]$doneSet.Add($wp) }
+    }
+    $state.done_paths = @($doneSet)
+    Save-State $state
+
+    if (-not $DryRun) {
+        Invoke-Git @("reset", "--hard", "HEAD") -AllowFail | Out-Null
+        Invoke-Git @("clean", "-fd") -AllowFail | Out-Null
+    }
+
+    Write-Host ("Wave {0} done. done={1}/{2} queue={3} freeD={4}GB elapsed={5}" -f `
+        $waveIndex, $doneSet.Count, $allUnits.Count, $pendingQueue.Count, `
+        [math]::Round((Get-PSDrive D).Free/1GB,1), (Format-Duration ((Get-Date) - $ScriptStarted))) -ForegroundColor Green
 }
 
-Flush-PushBatch
-
-Write-Host "`n=== session done ===" -ForegroundColor Green
+Write-Host "`n=== ALL WAVES FINISHED (or stopped) ===" -ForegroundColor Green
 Write-Host ("Elapsed:     {0}" -f (Format-Duration ((Get-Date) - $ScriptStarted)))
-Write-Host ("Downloaded:  {0}" -f (Format-Bytes $sessionDown))
-Write-Host ("Pushed:      {0}" -f (Format-Bytes $sessionPush))
+Write-Host ("Pushed:      {0}" -f (Format-Bytes $totalPushedBytes))
 Write-Host ("Paths done:  {0} / {1}" -f $doneSet.Count, $allUnits.Count)
-Write-Host ("Pending:     {0}" -f ($allUnits.Count - $doneSet.Count))
+Write-Host ("Queue left:  {0}" -f $pendingQueue.Count)
 Write-Host ("State file:  {0}" -f $StateFile)
-if ($doneSet.Count -lt $allUnits.Count) {
-    Write-Host "Re-run the same command to continue." -ForegroundColor Cyan
+if ($pendingQueue.Count -gt 0) {
+    Write-Host "Re-run the same command to continue from state." -ForegroundColor Cyan
 } else {
-    Write-Host "All unit paths migrated." -ForegroundColor Green
+    Write-Host "All pending paths migrated." -ForegroundColor Green
 }
+

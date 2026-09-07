@@ -2,19 +2,34 @@
 
 Used when saving epochs (new runs → JSON beside .pt) and when backfilling
 dashboard data from historical ``epoch_*_weights.pt`` files.
+
+``torch`` is imported lazily so dashboard extract/CI works without PyTorch
+when only JSON sidecars are used.
 """
 
 from __future__ import annotations
 
 import math
 import re
-from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple, TYPE_CHECKING
 
-import torch
+if TYPE_CHECKING:
+    import torch as torch_types
 
 _CONV_RE = re.compile(r"^conv_(\d+)_(\d+)\.weight$")
 _BIAS_RE = re.compile(r"^conv_(\d+)_(\d+)\.bias$")
 _EDGE_W_RE = re.compile(r"^edge_w_(\d+)_(\d+)$")
+
+
+def _torch():
+    try:
+        import torch
+    except ImportError as exc:  # pragma: no cover
+        raise ImportError(
+            "PyTorch is required to read .pt weight files. "
+            "Install torch, or use JSON weight_stats sidecars / omit --fetch-weights."
+        ) from exc
+    return torch
 
 
 def _safe_float(x: Any) -> Optional[float]:
@@ -27,8 +42,9 @@ def _safe_float(x: Any) -> Optional[float]:
     return v
 
 
-def tensor_aggregates(t: torch.Tensor, *, eps: float = 1e-8) -> Dict[str, float]:
+def tensor_aggregates(t: Any, *, eps: float = 1e-8) -> Dict[str, float]:
     """O(N) stats for a single tensor (already on CPU preferred)."""
+    torch = _torch()
     if not isinstance(t, torch.Tensor) or t.numel() == 0:
         return {
             "numel": 0.0,
@@ -71,6 +87,7 @@ def summarize_state_dict(
     edge_w_vals: List[float] = []
 
     for key, tensor in state_dict.items():
+        torch = _torch()
         if not isinstance(tensor, torch.Tensor):
             continue
         m = _CONV_RE.match(key)

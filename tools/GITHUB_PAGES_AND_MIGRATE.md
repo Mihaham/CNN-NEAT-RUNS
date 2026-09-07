@@ -4,34 +4,23 @@
 
 ## 1. Полный перенос данных GitVerse → GitHub
 
-Скрипт (запускай **сам** в отдельном терминале — долгий процесс с прогрессом):
+Скрипт сам крутит волны до конца (или Ctrl+C → resume):
+
+1. Скачал ≤ **200 GB** с GitVerse  
+2. Нарезал коммиты ≤ **1.5 GB**  
+3. Запушил **каждый** коммит отдельно  
+4. Удалил скачанные файлы волны из worktree  
+5. Повторил, пока всё не уйдёт; state = `runs\tools\migrate_state.json`
 
 ```powershell
 cd d:\cifar-10-CNN_NEAT
 
-# Список путей (что осталось / что уже залито)
 powershell -NoProfile -ExecutionPolicy Bypass -File runs\tools\migrate_gitverse_full_to_github.ps1 -ListOnly
 
-# Боевой запуск: качает ≤200 GB за сессию, пушит пачками ≤1.5 GB
-powershell -NoProfile -ExecutionPolicy Bypass -File runs\tools\migrate_gitverse_full_to_github.ps1
-
-# Продолжение после остановки / лимита 200 GB — та же команда (resume по state-файлу)
 powershell -NoProfile -ExecutionPolicy Bypass -File runs\tools\migrate_gitverse_full_to_github.ps1
 ```
 
-Параметры:
-
-| Параметр | Default | Смысл |
-|----------|---------|--------|
-| `-MaxPushGB` | `1.5` | потолок размера одного push (**строго &lt; 2**) |
-| `-MaxDownloadGB` | `200` | сколько максимум скачать с GitVerse за один запуск |
-| `-DryRun` | | только показать план |
-| `-OnlyPaths a,b` | | ограничить путями |
-| `-StateFile` | `runs\tools\migrate_state.json` | checkpoint для resume |
-
-Прогресс в консоли: `%` путей, скачано / запушено за сессию, **elapsed**, **ETA**, свободно на D:.
-
-История на GitHub **новая** (не зеркало SHA GitVerse). После успешного push файлы из worktree удаляются (освобождает диск); объекты коммитов остаются в `.git` worktree — при нехватке места пересоздай worktree от `origin/main`.
+В консоли: номер волны, `%` путей, скачано/запушено, **elapsed**, **ETA**, свободно на D:.
 
 ## 2. GitHub Pages (сайт)
 
