@@ -321,7 +321,7 @@ if ($ListOnly) {
     $pending | ForEach-Object { Write-Host "  PENDING $_" }
     $doneSet | Sort-Object | ForEach-Object { Write-Host "  DONE    $_" }
     exit 0
-
+}
 
 # =====================================================================
 # Wave loop: download <= MaxDownloadGB -> commit/push <= MaxPushGB each
@@ -388,7 +388,7 @@ while ($pendingQueue.Count -gt 0) {
     $waveIndex++
     $waveDownloaded = [int64]0
     $wavePaths = New-Object System.Collections.Generic.List[string]
-    Write-Host ("`n######## WAVE {0} — DOWNLOAD (cap {1}) ########" -f $waveIndex, (Format-Bytes $MaxDownloadBytes)) -ForegroundColor Magenta
+    Write-Host ("`n######## WAVE {0} - DOWNLOAD (cap {1}) ########" -f $waveIndex, (Format-Bytes $MaxDownloadBytes)) -ForegroundColor Magenta
 
     while ($pendingQueue.Count -gt 0 -and $waveDownloaded -lt $MaxDownloadBytes) {
         $unit = $pendingQueue.Dequeue()
@@ -407,7 +407,7 @@ while ($pendingQueue.Count -gt 0) {
         try {
             Invoke-Git @("checkout", $SourceRef, "--", $unit)
         } catch {
-            Write-Host "FAIL checkout $unit : $_ — skip" -ForegroundColor Red
+            Write-Host "FAIL checkout $unit : $_ - skip" -ForegroundColor Red
             continue
         }
         $size = Measure-PathBytes $Worktree $unit
@@ -417,7 +417,7 @@ while ($pendingQueue.Count -gt 0) {
         if ($size -gt $remaining -and $size -gt ($MaxDownloadBytes / 4)) {
             $children = @(Get-TreeChildren $SourceRef $unit)
             if ($children.Count -gt 1) {
-                Write-Host ("   too large for remaining budget — expand to {0} children" -f $children.Count) -ForegroundColor DarkYellow
+                Write-Host ("   too large for remaining budget - expand to {0} children" -f $children.Count) -ForegroundColor DarkYellow
                 Remove-WorktreePath $unit
                 $rest = New-Object System.Collections.Generic.List[string]
                 while ($pendingQueue.Count -gt 0) { $rest.Add($pendingQueue.Dequeue()) }
@@ -439,7 +439,7 @@ while ($pendingQueue.Count -gt 0) {
         break
     }
 
-    Write-Host ("`n######## WAVE {0} — COMMIT/PUSH chunks <={1} ########" -f $waveIndex, (Format-Bytes $MaxPushBytes)) -ForegroundColor Magenta
+    Write-Host ("`n######## WAVE {0} - COMMIT/PUSH chunks <={1} ########" -f $waveIndex, (Format-Bytes $MaxPushBytes)) -ForegroundColor Magenta
 
     $chunks = New-Object System.Collections.Generic.List[object]
     foreach ($wp in $wavePaths) {
@@ -474,7 +474,7 @@ while ($pendingQueue.Count -gt 0) {
         Commit-AndPushChunk -Paths @($batch | ForEach-Object { $_.Path }) -Bytes $batchBytes
     }
 
-    Write-Host ("`n######## WAVE {0} — DELETE downloaded files ({1}) ########" -f $waveIndex, (Format-Bytes $waveDownloaded)) -ForegroundColor Magenta
+    Write-Host ("`n######## WAVE {0} - DELETE downloaded files ({1}) ########" -f $waveIndex, (Format-Bytes $waveDownloaded)) -ForegroundColor Magenta
     foreach ($wp in $wavePaths) {
         if (-not $DryRun) { Remove-WorktreePath $wp }
         if (-not $doneSet.Contains($wp)) { [void]$doneSet.Add($wp) }
