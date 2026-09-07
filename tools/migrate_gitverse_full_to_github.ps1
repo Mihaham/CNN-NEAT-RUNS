@@ -142,27 +142,34 @@ function Invoke-Git([string[]]$GitArgs, [switch]$AllowFail, [switch]$Quiet) {
 }
 
 function Get-TreePaths([string]$Ref, [string]$Prefix = "") {
-    $args = @("ls-tree", "--name-only", $Ref)
-    if ($Prefix) { $args += "--"; $args += $Prefix }
-    $out = & $GitExe @args 2>$null
+    if ($Prefix) {
+        $spec = "${Ref}:${Prefix.TrimEnd('/')}"
+        $out = & $GitExe @("ls-tree", "--name-only", $spec) 2>$null
+    } else {
+        $out = & $GitExe @("ls-tree", "--name-only", $Ref) 2>$null
+    }
     if ($LASTEXITCODE -ne 0) { return @() }
     return @($out | Where-Object { $_ -and $_.Trim() } | ForEach-Object { $_.Trim().Replace('\', '/') })
 }
 
 function Get-UnitPaths([string]$Ref) {
-    # Top-level entries; expand huge containers one level (ablation/*).
+    # Top-level entries; expand ablation/* one level.
     $skip = [System.Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
-    foreach ($s in @('.git', '.gitignore', '.gitverse', '.github', '.git_upload_parts', 'site', 'tools')) {
+    foreach ($s in @(
+            '.git', '.gitignore', '.gitverse', '.github', '.git_upload_parts',
+            'site', 'tools',
+            '.push_runs.lock', '.push_runs_until_done.lock'
+        )) {
         [void]$skip.Add($s)
     }
     $units = New-Object System.Collections.Generic.List[string]
     foreach ($name in (Get-TreePaths $Ref)) {
         if ($skip.Contains($name)) { continue }
+        if ($name -like '.*') { continue }
         if ($name -eq 'ablation') {
             foreach ($child in (Get-TreePaths $Ref "ablation")) {
-                $rel = "ablation/$child"
                 if ($child -eq 'backups') { continue }
-                $units.Add($rel)
+                $units.Add("ablation/$child")
             }
         } else {
             $units.Add($name)
@@ -263,6 +270,22 @@ if ($rc -eq 0) {
 $state = Load-State
 $doneSet = [System.Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 foreach ($d in $state.done_paths) { [void]$doneSet.Add($d) }
+
+# Paths already present on GitHub tip count as done (resume after partial manual pushes)
+$rcTip = Invoke-Git @("rev-parse", "--verify", "$Remote/$PushRef") -AllowFail -Quiet
+if ($rcTip -eq 0) {
+    foreach ($name in (Get-TreePaths "$Remote/$PushRef")) {
+        if ($name -eq 'ablation') {
+            foreach ($child in (Get-TreePaths "$Remote/$PushRef" "ablation")) {
+                [void]$doneSet.Add("ablation/$child")
+            }
+        } elseif ($name -notin @('site', 'tools', '.github', '.gitignore')) {
+            [void]$doneSet.Add($name)
+        }
+    }
+    $state.done_paths = @($doneSet)
+    Save-State $state
+}
 
 $allUnits = Get-UnitPaths $SourceRef
 if ($OnlyPaths -and $OnlyPaths.Count -gt 0) {
