@@ -1,7 +1,6 @@
 name: Validate site
 
 # Checks that site/ (or pages branch) has required HTML/assets and valid JSON.
-# No PyTorch required.
 
 on:
   workflow_dispatch:
@@ -68,6 +67,14 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          pip install --quiet numpy
+          pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+          python -c "import torch, numpy; print('torch', torch.__version__, 'numpy', numpy.__version__)"
+
       - name: Prepare tool path
         run: |
           set -euo pipefail
@@ -97,7 +104,7 @@ jobs:
           fi
           python tools/runs_dashboard/validate_site.py --site site "${EXTRA[@]}"
 
-      - name: Import smoke (no torch)
+      - name: Import smoke
         run: |
           set -e
           cd tools/runs_dashboard
