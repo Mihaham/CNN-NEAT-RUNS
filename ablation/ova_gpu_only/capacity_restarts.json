@@ -1,0 +1,98 @@
+[
+  {
+    "phase": "a",
+    "config": "linear_mmd",
+    "stage": "pilot",
+    "class_id": 0,
+    "generation": 0,
+    "old_val_size": 500,
+    "new_val_size": 250,
+    "reason": "strict forward-cache capacity violation at generation 0: missing_breeders=25",
+    "timestamp": "2026-08-14T22:23:17",
+    "invalidated_rows": []
+  },
+  {
+    "phase": "a",
+    "config": "linear_mmd",
+    "stage": "pilot",
+    "class_id": 0,
+    "generation": 0,
+    "old_val_size": 250,
+    "new_val_size": 125,
+    "reason": "strict forward-cache capacity violation at generation 0: missing_breeders=25",
+    "timestamp": "2026-08-14T22:23:22",
+    "invalidated_rows": []
+  },
+  {
+    "phase": "a",
+    "config": "linear_mmd",
+    "stage": "pilot",
+    "class_id": 0,
+    "generation": 0,
+    "old_val_size": 125,
+    "new_val_size": 62,
+    "reason": "strict forward-cache capacity violation at generation 0: missing_breeders=25",
+    "timestamp": "2026-08-14T22:23:26",
+    "invalidated_rows": []
+  },
+  {
+    "phase": "a",
+    "config": "linear_mmd",
+    "stage": "pilot",
+    "class_id": 0,
+    "generation": 0,
+    "old_val_size": 62,
+    "new_val_size": 31,
+    "reason": "strict forward-cache capacity violation at generation 0: missing_breeders=25",
+    "timestamp": "2026-08-14T22:23:31",
+    "invalidated_rows": []
+  },
+  {
+    "phase": "a",
+    "config": "linear_mmd",
+    "stage": "pilot",
+    "class_id": 0,
+    "generation": 0,
+    "old_val_size": 31,
+    "new_val_size": 15,
+    "reason": "strict forward-cache capacity violation at generation 0: missing_breeders=25",
+    "timestamp": "2026-08-14T22:23:36",
+    "invalidated_rows": []
+  },
+  {
+    "phase": "a",
+    "config": "linear_mmd",
+    "stage": "pilot",
+    "class_id": 0,
+    "generation": 0,
+    "old_val_size": 15,
+    "new_val_size": 7,
+    "reason": "strict forward-cache capacity violation at generation 0: missing_breeders=25",
+    "timestamp": "2026-08-14T22:23:41",
+    "invalidated_rows": []
+  },
+  {
+    "phase": "a",
+    "config": "linear_mmd",
+    "stage": "pilot",
+    "class_id": 0,
+    "generation": 0,
+    "old_val_size": 7,
+    "new_val_size": 3,
+    "reason": "strict forward-cache capacity violation at generation 0: missing_breeders=25",
+    "timestamp": "2026-08-14T22:23:46",
+    "invalidated_rows": []
+  },
+  {
+    "phase": "a",
+    "config": "linear_mmd",
+    "stage": "pilot",
+    "class_id": 0,
+    "generation": 0,
+    "old_val_size": 3,
+    "new_val_size": 1,
+    "reason": "strict forward-cache capacity violation at generation 0: missing_breeders=25",
+    "timestamp": "2026-08-14T22:23:52",
+    "invalidated_rows": []
+  }
+]

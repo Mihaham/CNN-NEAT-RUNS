@@ -1,0 +1,6 @@
+class,gelu_mean
+00_airplane,0.727986
+01_automobile,0.707873
+02_bird,0.600889
+03_cat,0.605799
+04_deer,0.677368

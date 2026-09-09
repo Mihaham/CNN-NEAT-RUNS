@@ -1,0 +1,760 @@
+{
+  "updated_at": "2026-08-15T19:47:35",
+  "pipeline": "ova_gpu_only",
+  "pilot_class": 0,
+  "pilot_class_name": "airplane",
+  "phase_gens": {
+    "a": 0,
+    "b": 0,
+    "c": 0,
+    "d": 0
+  },
+  "context": {
+    "script_id": "11",
+    "label": "11 OVA A-D CUDA-only phase-sized study",
+    "pipeline": "ova_gpu_only",
+    "phases": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "population_size_ab": 128,
+    "population_size_cd": 64,
+    "effective_population_size_ab": 128,
+    "effective_population_size_cd": 128,
+    "effective_population_c": 128,
+    "effective_population_d": 128,
+    "eval_batch_size_ab": 500,
+    "eval_batch_size_cd": 500,
+    "gd_lineage_expand_slots": 64,
+    "fitness_val_size": 500,
+    "gpu_vram_cap_bytes": 17179869184,
+    "fitness_screen_cache_max_bytes": 12884901888,
+    "preserve_protected_parents": true,
+    "evict_covered_parents": false,
+    "strict_full_batch": true,
+    "compute_mode": "full_gpu",
+    "train_device": "cuda",
+    "generalize_fraction": 0.5,
+    "config_limit": 0
+  },
+  "phases": {
+    "a": {
+      "title": "Phase A — Activation × Readout (без GD)",
+      "pilot": {
+        "class_id": 0,
+        "class_name": "airplane",
+        "done": 10,
+        "total": 10
+      },
+      "generalize": {
+        "done": 45,
+        "total": 45,
+        "by_class": {
+          "1": {
+            "class_name": "automobile",
+            "done": 5,
+            "total": 5
+          },
+          "2": {
+            "class_name": "bird",
+            "done": 5,
+            "total": 5
+          },
+          "3": {
+            "class_name": "cat",
+            "done": 5,
+            "total": 5
+          },
+          "4": {
+            "class_name": "deer",
+            "done": 5,
+            "total": 5
+          },
+          "5": {
+            "class_name": "dog",
+            "done": 5,
+            "total": 5
+          },
+          "6": {
+            "class_name": "frog",
+            "done": 5,
+            "total": 5
+          },
+          "7": {
+            "class_name": "horse",
+            "done": 5,
+            "total": 5
+          },
+          "8": {
+            "class_name": "ship",
+            "done": 5,
+            "total": 5
+          },
+          "9": {
+            "class_name": "truck",
+            "done": 5,
+            "total": 5
+          }
+        }
+      },
+      "top5": [
+        "leaky_relu_mean",
+        "tanh_mmd",
+        "tanh_mean",
+        "gelu_mean",
+        "linear_mean"
+      ],
+      "finished": true
+    },
+    "b": {
+      "title": "Phase B — Полная сетка: активации × readout × каналы × edge weights (без GD)",
+      "pilot": {
+        "class_id": 0,
+        "class_name": "airplane",
+        "done": 30,
+        "total": 30
+      },
+      "generalize": {
+        "done": 89,
+        "total": 135,
+        "by_class": {
+          "1": {
+            "class_name": "automobile",
+            "done": 10,
+            "total": 15
+          },
+          "2": {
+            "class_name": "bird",
+            "done": 10,
+            "total": 15
+          },
+          "3": {
+            "class_name": "cat",
+            "done": 10,
+            "total": 15
+          },
+          "4": {
+            "class_name": "deer",
+            "done": 10,
+            "total": 15
+          },
+          "5": {
+            "class_name": "dog",
+            "done": 10,
+            "total": 15
+          },
+          "6": {
+            "class_name": "frog",
+            "done": 10,
+            "total": 15
+          },
+          "7": {
+            "class_name": "horse",
+            "done": 10,
+            "total": 15
+          },
+          "8": {
+            "class_name": "ship",
+            "done": 10,
+            "total": 15
+          },
+          "9": {
+            "class_name": "truck",
+            "done": 9,
+            "total": 15
+          }
+        }
+      },
+      "top5": [
+        "gelu_mean_noew_var_default",
+        "gelu_mean_ew_fixed_3",
+        "gelu_mean_ew_var_default",
+        "relu_mmd_noew_var_default",
+        "tanh_mean_ew_var_default",
+        "leaky_relu_mean_noew_var_default",
+        "relu_mmd_ew_var_default",
+        "leaky_relu_mmd_ew_var_default",
+        "tanh_mean_ew_fixed_3",
+        "linear_mean_noew_var_default",
+        "leaky_relu_mean_ew_var_default",
+        "tanh_mmd_ew_var_default",
+        "gelu_mmd_noew_var_default",
+        "tanh_mmd_ew_fixed_3",
+        "tanh_mean_noew_var_default"
+      ],
+      "finished": false
+    }
+  },
+  "live": {
+    "phase": "b",
+    "stage": "generalize",
+    "class_id": 9,
+    "class_name": "truck",
+    "config": "linear_mean_noew_var_default",
+    "generation": 32,
+    "best_bal_acc": 0.7144444444444444,
+    "best_fitness": 0.7144444444444444,
+    "best_mcc": 0.2579303592856799,
+    "wall_elapsed_sec": 377.5,
+    "wall_gen_sec": 16.71,
+    "started_at": 1786812077.8090038,
+    "stagnation_patience": 10,
+    "all_time_best_fitness": 0.7144444444444444,
+    "gens_without_improve": 7,
+    "best_sweep_bal_acc": 0.7144444444444444,
+    "best_nodes": 10,
+    "best_edges": 26
+  },
+  "top_by_class": {
+    "0": [
+      {
+        "config": "gelu_mean_noew_var_default",
+        "phase": "b",
+        "stage": "pilot",
+        "best_bal_acc": 0.8577777777777778
+      },
+      {
+        "config": "gelu_mean_ew_fixed_3",
+        "phase": "b",
+        "stage": "pilot",
+        "best_bal_acc": 0.8444444444444444
+      },
+      {
+        "config": "gelu_mean_ew_var_default",
+        "phase": "b",
+        "stage": "pilot",
+        "best_bal_acc": 0.8333333333333333
+      },
+      {
+        "config": "relu_mmd_noew_var_default",
+        "phase": "b",
+        "stage": "pilot",
+        "best_bal_acc": 0.8177777777777777
+      },
+      {
+        "config": "tanh_mean_ew_var_default",
+        "phase": "b",
+        "stage": "pilot",
+        "best_bal_acc": 0.8144444444444444
+      }
+    ],
+    "1": [
+      {
+        "config": "gelu_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.8155555555555556
+      },
+      {
+        "config": "leaky_relu_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7822222222222222
+      },
+      {
+        "config": "gelu_mean_ew_fixed_3",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7644444444444445
+      },
+      {
+        "config": "gelu_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7611111111111111
+      },
+      {
+        "config": "gelu_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7611111111111111
+      }
+    ],
+    "2": [
+      {
+        "config": "tanh_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7466666666666666
+      },
+      {
+        "config": "gelu_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7433333333333334
+      },
+      {
+        "config": "tanh_mean_ew_fixed_3",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7388888888888889
+      },
+      {
+        "config": "gelu_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7322222222222222
+      },
+      {
+        "config": "linear_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.73
+      }
+    ],
+    "3": [
+      {
+        "config": "linear_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7844444444444445
+      },
+      {
+        "config": "gelu_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7666666666666666
+      },
+      {
+        "config": "gelu_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7544444444444445
+      },
+      {
+        "config": "tanh_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7466666666666666
+      },
+      {
+        "config": "leaky_relu_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7444444444444445
+      }
+    ],
+    "4": [
+      {
+        "config": "gelu_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7288888888888889
+      },
+      {
+        "config": "tanh_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7277777777777779
+      },
+      {
+        "config": "relu_mmd_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7244444444444444
+      },
+      {
+        "config": "gelu_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.72
+      },
+      {
+        "config": "tanh_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.71
+      }
+    ],
+    "5": [
+      {
+        "config": "gelu_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7544444444444445
+      },
+      {
+        "config": "gelu_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7522222222222222
+      },
+      {
+        "config": "tanh_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7511111111111111
+      },
+      {
+        "config": "linear_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7355555555555555
+      },
+      {
+        "config": "tanh_mean_ew_fixed_3",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7244444444444444
+      }
+    ],
+    "6": [
+      {
+        "config": "gelu_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.8155555555555556
+      },
+      {
+        "config": "tanh_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7711111111111111
+      },
+      {
+        "config": "linear_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.768888888888889
+      },
+      {
+        "config": "tanh_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.758888888888889
+      },
+      {
+        "config": "gelu_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7588888888888888
+      }
+    ],
+    "7": [
+      {
+        "config": "tanh_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7622222222222221
+      },
+      {
+        "config": "tanh_mean_ew_fixed_3",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7588888888888888
+      },
+      {
+        "config": "gelu_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7511111111111111
+      },
+      {
+        "config": "gelu_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7433333333333333
+      },
+      {
+        "config": "linear_mean_noew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.73
+      }
+    ],
+    "8": [
+      {
+        "config": "tanh_mean_ew_fixed_3",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.8066666666666666
+      },
+      {
+        "config": "gelu_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.8
+      },
+      {
+        "config": "gelu_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7833333333333333
+      },
+      {
+        "config": "linear_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7777777777777778
+      },
+      {
+        "config": "tanh_mean_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7755555555555556
+      }
+    ],
+    "9": [
+      {
+        "config": "leaky_relu_mmd_ew_var_default",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7755555555555556
+      },
+      {
+        "config": "gelu_mean_ew_fixed_3",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7677777777777778
+      },
+      {
+        "config": "tanh_mean_ew_fixed_3",
+        "phase": "b",
+        "stage": "generalize",
+        "best_bal_acc": 0.7477777777777778
+      },
+      {
+        "config": "tanh_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7455555555555555
+      },
+      {
+        "config": "linear_mean",
+        "phase": "a",
+        "stage": "generalize",
+        "best_bal_acc": 0.7288888888888889
+      }
+    ]
+  },
+  "top_overall": [
+    {
+      "config_name": "gelu_mean_noew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8577777777777778,
+      "best_fitness": 0.8577777777777778,
+      "best_mcc": 0.48022060274098005,
+      "elapsed_sec": 638.4
+    },
+    {
+      "config_name": "gelu_mean_ew_fixed_3",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8444444444444444,
+      "best_fitness": 0.8444444444444444,
+      "best_mcc": 0.4730932768133265,
+      "elapsed_sec": 401.2
+    },
+    {
+      "config_name": "gelu_mean_ew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8333333333333333,
+      "best_fitness": 0.8333333333333333,
+      "best_mcc": 0.4506964470310563,
+      "elapsed_sec": 680.5
+    },
+    {
+      "config_name": "relu_mmd_noew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8177777777777777,
+      "best_fitness": 0.8177777777777777,
+      "best_mcc": 0.4061189135521357,
+      "elapsed_sec": 957.4
+    },
+    {
+      "config_name": "gelu_mean_ew_var_default",
+      "phase": "b",
+      "stage": "generalize",
+      "class_id": 1,
+      "class_name": "automobile",
+      "best_bal_acc": 0.8155555555555556,
+      "best_fitness": 0.8155555555555556,
+      "best_mcc": 0.3878218358288068,
+      "elapsed_sec": 954.2
+    },
+    {
+      "config_name": "gelu_mean_ew_var_default",
+      "phase": "b",
+      "stage": "generalize",
+      "class_id": 6,
+      "class_name": "frog",
+      "best_bal_acc": 0.8155555555555556,
+      "best_fitness": 0.8155555555555556,
+      "best_mcc": 0.41640796344023223,
+      "elapsed_sec": 3086.7
+    },
+    {
+      "config_name": "tanh_mean_ew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8144444444444444,
+      "best_fitness": 0.8144444444444444,
+      "best_mcc": 0.3899170344290965,
+      "elapsed_sec": 415.6
+    },
+    {
+      "config_name": "leaky_relu_mean",
+      "phase": "a",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8088888888888889,
+      "best_fitness": 0.8088888888888889,
+      "best_mcc": 0.41099624656270084,
+      "elapsed_sec": 378.0
+    },
+    {
+      "config_name": "tanh_mean_ew_fixed_3",
+      "phase": "b",
+      "stage": "generalize",
+      "class_id": 8,
+      "class_name": "ship",
+      "best_bal_acc": 0.8066666666666666,
+      "best_fitness": 0.8066666666666666,
+      "best_mcc": 0.37187580578350204,
+      "elapsed_sec": 1279.9
+    },
+    {
+      "config_name": "leaky_relu_mean_noew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8044444444444444,
+      "best_fitness": 0.8044444444444444,
+      "best_mcc": 0.410496219773487,
+      "elapsed_sec": 222.8
+    },
+    {
+      "config_name": "relu_mmd_ew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8022222222222222,
+      "best_fitness": 0.8022222222222222,
+      "best_mcc": 0.37871256312039364,
+      "elapsed_sec": 323.3
+    },
+    {
+      "config_name": "leaky_relu_mmd_ew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8022222222222222,
+      "best_fitness": 0.8022222222222222,
+      "best_mcc": 0.4761652580217767,
+      "elapsed_sec": 453.6
+    },
+    {
+      "config_name": "tanh_mmd",
+      "phase": "a",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8011111111111111,
+      "best_fitness": 0.8011111111111111,
+      "best_mcc": 0.3662928139387768,
+      "elapsed_sec": 497.9
+    },
+    {
+      "config_name": "gelu_mean",
+      "phase": "a",
+      "stage": "generalize",
+      "class_id": 8,
+      "class_name": "ship",
+      "best_bal_acc": 0.8,
+      "best_fitness": 0.8,
+      "best_mcc": 0.37083853954364815,
+      "elapsed_sec": 260.2
+    },
+    {
+      "config_name": "tanh_mean_ew_fixed_3",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.8,
+      "best_fitness": 0.8,
+      "best_mcc": 0.3690923993524504,
+      "elapsed_sec": 184.4
+    },
+    {
+      "config_name": "linear_mean_noew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.7988888888888889,
+      "best_fitness": 0.7988888888888889,
+      "best_mcc": 0.3657610053236628,
+      "elapsed_sec": 240.1
+    },
+    {
+      "config_name": "leaky_relu_mean_ew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.7988888888888889,
+      "best_fitness": 0.7988888888888889,
+      "best_mcc": 0.43151384573113005,
+      "elapsed_sec": 1568.7
+    },
+    {
+      "config_name": "tanh_mmd_ew_var_default",
+      "phase": "b",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.7877777777777777,
+      "best_fitness": 0.7877777777777777,
+      "best_mcc": 0.347680449841152,
+      "elapsed_sec": 276.3
+    },
+    {
+      "config_name": "tanh_mean",
+      "phase": "a",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.7866666666666666,
+      "best_fitness": 0.7866666666666666,
+      "best_mcc": 0.34804410067801966,
+      "elapsed_sec": 301.1
+    },
+    {
+      "config_name": "gelu_mean",
+      "phase": "a",
+      "stage": "pilot",
+      "class_id": 0,
+      "class_name": "airplane",
+      "best_bal_acc": 0.7844444444444445,
+      "best_fitness": 0.7844444444444445,
+      "best_mcc": 0.3502330549886948,
+      "elapsed_sec": 127.3
+    }
+  ],
+  "errors": [],
+  "capacity_alerts": [],
+  "completed_count": 174,
+  "finished": false,
+  "script_id": "11",
+  "label": "11 OVA A-D CUDA-only phase-sized study"
+}

@@ -1,0 +1,23 @@
+{
+  "script": "12",
+  "study_dir": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_ab",
+  "selection": "all",
+  "rich": false,
+  "n_evaluated": 5,
+  "n_errors": 0,
+  "n_weight_fallbacks": 0,
+  "fallback_mean_peak_minus_loaded": null,
+  "fallback_median_peak_minus_loaded": null,
+  "fallback_max_peak_minus_loaded": null,
+  "fallback_min_peak_minus_loaded": null,
+  "mean_val_bal_acc": 0.6639830868172685,
+  "mean_test_bal_acc": 0.6598888888888889,
+  "mean_gap": -0.004094197928379684,
+  "median_gap": -0.0004793563525133937,
+  "min_gap": -0.018444300493214216,
+  "max_gap": 0.006458483807120441,
+  "pearson_val_test": 0.9996045836650962,
+  "test_set": "CIFAR-10 official test (train=False, n=10000)",
+  "val_source": "ova_results.json best_fitness (training val subset)",
+  "fallback_note": "delta(peak-loaded) = archive peak val fitness minus fitness of the genome actually loaded when peak weights were missing"
+}

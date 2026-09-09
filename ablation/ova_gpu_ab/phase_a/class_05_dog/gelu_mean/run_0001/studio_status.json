@@ -1,0 +1,101 @@
+{
+  "updated_at": "2026-08-18T06:05:55",
+  "generation": 19,
+  "num_generations_planned": 0,
+  "best_fitness": 0.6262209331941013,
+  "best_bal_acc": 0.6262209331941013,
+  "best_mcc": null,
+  "best_f1": null,
+  "best_nodes": null,
+  "best_edges": null,
+  "best_edges_executed": null,
+  "run_path": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_ab\\phase_a\\class_05_dog\\gelu_mean\\run_0001",
+  "run_id": "run_0001",
+  "memory_snapshot": {
+    "structures": [
+      {
+        "name": "cuda_reserved",
+        "bytes": 4076863488,
+        "length": null
+      },
+      {
+        "name": "host_ram_rss",
+        "bytes": 2189635584,
+        "length": null
+      },
+      {
+        "name": "cuda_peak_allocated",
+        "bytes": 1847463936,
+        "length": null
+      },
+      {
+        "name": "cuda_allocated",
+        "bytes": 511141888,
+        "length": null
+      },
+      {
+        "name": "eval_source",
+        "bytes": 491520000,
+        "length": null
+      },
+      {
+        "name": "population_params",
+        "bytes": 18459885,
+        "length": 128
+      },
+      {
+        "name": "offspring_queue_params",
+        "bytes": 16178279,
+        "length": 128
+      },
+      {
+        "name": "last_breeding_pool_params",
+        "bytes": 3779780,
+        "length": 26
+      },
+      {
+        "name": "topology_hashes",
+        "bytes": 357288,
+        "length": 2560
+      },
+      {
+        "name": "history",
+        "bytes": 30344,
+        "length": 19
+      },
+      {
+        "name": "population_lineage",
+        "bytes": 13368,
+        "length": 128
+      },
+      {
+        "name": "evaluated_hashes",
+        "bytes": 216,
+        "length": 0
+      }
+    ],
+    "total_bytes": 9155444056,
+    "process_rss_bytes": 2189635584,
+    "process_peak_rss_bytes": null
+  },
+  "live": {
+    "phase": "eval",
+    "phase_done": 104,
+    "phase_total": 128,
+    "phase_frac": 0.8125,
+    "oom_retries": 0,
+    "eval_batch_size": 40000,
+    "message": "starting eval",
+    "best_nodes": null,
+    "best_edges": null,
+    "best_edges_executed": null,
+    "best_mcc": null,
+    "best_f1": null,
+    "best_fitness": 0.6262209331941013,
+    "best_bal_acc": 0.6262209331941013,
+    "all_time_best_fitness": null,
+    "gens_without_improve": null
+  },
+  "eval_batch_size": 40000,
+  "oom_retries": 0
+}
