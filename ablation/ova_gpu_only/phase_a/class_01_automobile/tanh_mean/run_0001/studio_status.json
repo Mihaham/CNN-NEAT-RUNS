@@ -1,0 +1,263 @@
+{
+  "updated_at": "2026-08-18T20:15:15",
+  "generation": 108,
+  "num_generations_planned": 0,
+  "best_fitness": 0.6911111111111111,
+  "best_bal_acc": 0.6911111111111111,
+  "best_mcc": 0.23078538729415624,
+  "best_f1": 0.27439024390243905,
+  "best_nodes": 14,
+  "best_edges": 35,
+  "best_edges_executed": 31,
+  "run_path": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_01_automobile\\tanh_mean\\run_0001",
+  "run_id": "run_0001",
+  "memory_snapshot": {
+    "structures": [
+      {
+        "name": "cuda_peak_allocated",
+        "bytes": 6500106240,
+        "length": null
+      },
+      {
+        "name": "host_ram_rss",
+        "bytes": 4482396160,
+        "length": null
+      },
+      {
+        "name": "forward_hash_cache_peak",
+        "bytes": 1659024000,
+        "length": null
+      },
+      {
+        "name": "cuda_reserved",
+        "bytes": 1602224128,
+        "length": null
+      },
+      {
+        "name": "breeding_cone_genomes",
+        "bytes": 1391483104,
+        "length": 15718
+      },
+      {
+        "name": "breeding_cone_fill",
+        "bytes": 1391483104,
+        "length": 15718
+      },
+      {
+        "name": "cuda_allocated",
+        "bytes": 988508672,
+        "length": null
+      },
+      {
+        "name": "breeding_cone_orphaned",
+        "bytes": 699017088,
+        "length": 7896
+      },
+      {
+        "name": "forward_hash_cache",
+        "bytes": 270336000,
+        "length": 49
+      },
+      {
+        "name": "forward_hash_cache_gpu",
+        "bytes": 270336000,
+        "length": null
+      },
+      {
+        "name": "breeding_cone_root_children",
+        "bytes": 54887360,
+        "length": 620
+      },
+      {
+        "name": "eval_source",
+        "bytes": 49152000,
+        "length": null
+      },
+      {
+        "name": "breeding_cone_roots",
+        "bytes": 22663168,
+        "length": 256
+      },
+      {
+        "name": "offspring_queue_params",
+        "bytes": 15755286,
+        "length": 128
+      },
+      {
+        "name": "population_params",
+        "bytes": 15062809,
+        "length": 128
+      },
+      {
+        "name": "last_breeding_pool_params",
+        "bytes": 3200221,
+        "length": 26
+      },
+      {
+        "name": "breeding_cone_elites",
+        "bytes": 2301728,
+        "length": 26
+      },
+      {
+        "name": "topology_hashes",
+        "bytes": 750504,
+        "length": 13952
+      },
+      {
+        "name": "breeding_cone_hashes_ready",
+        "bytes": 500608,
+        "length": 7822
+      },
+      {
+        "name": "history",
+        "bytes": 360344,
+        "length": 108
+      },
+      {
+        "name": "breeding_cone_soft_hashes",
+        "bytes": 74400,
+        "length": 620
+      },
+      {
+        "name": "population_lineage",
+        "bytes": 13368,
+        "length": 128
+      },
+      {
+        "name": "forward_hash_overlay",
+        "bytes": 272,
+        "length": 430
+      },
+      {
+        "name": "evaluated_hashes",
+        "bytes": 216,
+        "length": 0
+      }
+    ],
+    "total_bytes": 19419636780,
+    "process_rss_bytes": 4482396160,
+    "process_peak_rss_bytes": null,
+    "forward_hash_cache": {
+      "bytes_used": 270336000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 270336000,
+      "pending_bytes": 0,
+      "pending_entries": 0,
+      "pool_bytes": 270336000,
+      "peak_bytes": 1659024000,
+      "max_bytes": 12884901888,
+      "entries": 49,
+      "resident_vertex_count": 49,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 67584,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "3072": 1,
+        "768": 9,
+        "432": 1,
+        "192": 9,
+        "972": 1,
+        "1452": 8,
+        "4332": 8,
+        "12": 9,
+        "588": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x16x16": 1,
+        "3x8x8": 9,
+        "3x6x6": 1,
+        "3x4x4": 9,
+        "3x9x9": 1,
+        "3x11x11": 8,
+        "3x19x19": 8,
+        "3x1x1": 9,
+        "3x7x7": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 49
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        4000
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 41520,
+      "hit_rate": 0.5606986899563319,
+      "stats": {
+        "hits": 51360,
+        "misses": 40240,
+        "puts": 40240,
+        "evictions": 40191,
+        "covered_parent_evictions": 0,
+        "skipped_puts": 0,
+        "bytes_used": 270336000,
+        "peak_bytes": 1659024000,
+        "cpu_bytes": 0,
+        "gpu_bytes": 270336000,
+        "peak_cpu_bytes": 0,
+        "peak_gpu_bytes": 1659024000,
+        "gpu_spills": 0,
+        "gpu_spill_bytes": 0,
+        "entries": 49,
+        "shared_nodes": 81,
+        "dup_bytes_saved": 9332928000,
+        "prefix_hits": 0,
+        "first_miss_step_sum": 0,
+        "full_prefix_hits": 0,
+        "hit_rate": 0.5606986899563319,
+        "edge_hash_hits": 472846,
+        "edge_hash_misses": 795428,
+        "node_hash_hits": 217775,
+        "node_hash_misses": 369995,
+        "executions": 0,
+        "deferred_commits": 0,
+        "deferred_discards": 0,
+        "planned_waves": 13952,
+        "max_bytes": 12884901888
+      },
+      "overlay_summary": {
+        "n_nodes": 430,
+        "n_edges": 1609,
+        "n_shared": 81,
+        "n_resident": 49
+      }
+    }
+  },
+  "live": {
+    "phase": "save",
+    "phase_done": 0,
+    "phase_total": 1,
+    "phase_frac": 0.0,
+    "oom_retries": 0,
+    "eval_batch_size": 4000,
+    "message": "saving archive",
+    "best_nodes": 14,
+    "best_edges": 35,
+    "best_edges_executed": 31,
+    "best_mcc": 0.23078538729415624,
+    "best_f1": 0.27439024390243905,
+    "best_fitness": 0.6911111111111111,
+    "best_bal_acc": 0.6911111111111111,
+    "all_time_best_fitness": 0.6911111111111111,
+    "gens_without_improve": 10
+  },
+  "eval_batch_size": 4000,
+  "oom_retries": 0,
+  "best_acc": 0.524,
+  "best_roc_auc": 0.7197465277777777,
+  "best_pr_auc": 0.19653976921401192,
+  "best_precision": 0.1618705035971223,
+  "best_recall": 0.9,
+  "best_sweep_bal_acc": 0.6911111111111111,
+  "all_time_best_fitness": 0.6911111111111111,
+  "gens_without_improve": 10,
+  "stagnation_patience": 10,
+  "population_size": 128
+}
