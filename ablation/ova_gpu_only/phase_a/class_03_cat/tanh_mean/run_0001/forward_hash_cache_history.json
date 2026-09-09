@@ -1,0 +1,4378 @@
+{
+  "points": [
+    {
+      "generation": 0,
+      "bytes_used": 56742000,
+      "resident_bytes": 56742000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 56742000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 94554000,
+      "max_bytes": 12884901888,
+      "entries": 69,
+      "hit_rate": 0.5083333333333333,
+      "hits": 244,
+      "misses": 236,
+      "evictions": 167,
+      "dup_bytes_saved": 322764000,
+      "breeding_pool_size": 25,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 237,
+      "overlay_shared": 62,
+      "overlay_resident": 69,
+      "resident_vertex_count": 69,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 113484,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 24,
+        "3072": 8,
+        "6912": 4,
+        "768": 11,
+        "192": 7,
+        "1728": 3,
+        "4800": 4,
+        "432": 1,
+        "1200": 1,
+        "10800": 1,
+        "9408": 1,
+        "48": 2,
+        "972": 1,
+        "3888": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 24,
+        "3x16x16": 8,
+        "3x24x24": 4,
+        "3x8x8": 11,
+        "3x4x4": 7,
+        "3x12x12": 3,
+        "3x20x20": 4,
+        "3x6x6": 1,
+        "3x10x10": 1,
+        "3x30x30": 1,
+        "3x28x28": 1,
+        "3x2x2": 2,
+        "3x9x9": 1,
+        "3x18x18": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 69
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 822347.8260869565,
+      "bytes_per_breeder": 2269680.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:18.354669+00:00"
+    },
+    {
+      "generation": 1,
+      "bytes_used": 54438000,
+      "resident_bytes": 54438000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 54438000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 129624000,
+      "max_bytes": 12884901888,
+      "entries": 78,
+      "hit_rate": 0.3959143968871595,
+      "hits": 407,
+      "misses": 621,
+      "evictions": 543,
+      "dup_bytes_saved": 449382000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 455,
+      "overlay_shared": 61,
+      "overlay_resident": 78,
+      "resident_vertex_count": 78,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 108876,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 26,
+        "3072": 9,
+        "6912": 3,
+        "768": 15,
+        "192": 7,
+        "1728": 4,
+        "4800": 6,
+        "1200": 2,
+        "48": 1,
+        "972": 3,
+        "5808": 1,
+        "432": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 26,
+        "3x16x16": 9,
+        "3x24x24": 3,
+        "3x8x8": 15,
+        "3x4x4": 7,
+        "3x12x12": 4,
+        "3x20x20": 6,
+        "3x10x10": 2,
+        "3x2x2": 1,
+        "3x9x9": 3,
+        "3x22x22": 1,
+        "3x6x6": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 78
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 697923.0769230769,
+      "bytes_per_breeder": 2093769.2307692308,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:21.071532+00:00"
+    },
+    {
+      "generation": 2,
+      "bytes_used": 55656000,
+      "resident_bytes": 55656000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 55656000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 143106000,
+      "max_bytes": 12884901888,
+      "entries": 72,
+      "hit_rate": 0.38903061224489793,
+      "hits": 610,
+      "misses": 958,
+      "evictions": 886,
+      "dup_bytes_saved": 553986000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 416,
+      "overlay_shared": 84,
+      "overlay_resident": 72,
+      "resident_vertex_count": 72,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 111312,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 24,
+        "3072": 6,
+        "6912": 3,
+        "768": 11,
+        "192": 9,
+        "1728": 3,
+        "4800": 5,
+        "1200": 2,
+        "972": 3,
+        "5808": 2,
+        "432": 2,
+        "9408": 1,
+        "5292": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 24,
+        "3x16x16": 6,
+        "3x24x24": 3,
+        "3x8x8": 11,
+        "3x4x4": 9,
+        "3x12x12": 3,
+        "3x20x20": 5,
+        "3x10x10": 2,
+        "3x9x9": 3,
+        "3x22x22": 2,
+        "3x6x6": 2,
+        "3x28x28": 1,
+        "3x21x21": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 72
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 773000.0,
+      "bytes_per_breeder": 2140615.3846153845,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:24.144620+00:00"
+    },
+    {
+      "generation": 3,
+      "bytes_used": 54564000,
+      "resident_bytes": 54564000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 54564000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 143106000,
+      "max_bytes": 12884901888,
+      "entries": 79,
+      "hit_rate": 0.40316027088036116,
+      "hits": 893,
+      "misses": 1322,
+      "evictions": 1243,
+      "dup_bytes_saved": 875502000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 437,
+      "overlay_shared": 79,
+      "overlay_resident": 79,
+      "resident_vertex_count": 79,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 109128,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 9,
+        "6912": 1,
+        "768": 16,
+        "192": 12,
+        "1728": 3,
+        "4800": 7,
+        "12": 21,
+        "972": 2,
+        "1200": 1,
+        "5808": 2,
+        "432": 1,
+        "5292": 1,
+        "300": 1,
+        "108": 1,
+        "48": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 9,
+        "3x24x24": 1,
+        "3x8x8": 16,
+        "3x4x4": 12,
+        "3x12x12": 3,
+        "3x20x20": 7,
+        "3x1x1": 21,
+        "3x9x9": 2,
+        "3x10x10": 1,
+        "3x22x22": 2,
+        "3x6x6": 1,
+        "3x21x21": 1,
+        "3x5x5": 1,
+        "3x3x3": 1,
+        "3x2x2": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 79
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 690683.5443037974,
+      "bytes_per_breeder": 2098615.3846153845,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:27.879104+00:00"
+    },
+    {
+      "generation": 4,
+      "bytes_used": 36576000,
+      "resident_bytes": 36576000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 36576000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 143106000,
+      "max_bytes": 12884901888,
+      "entries": 72,
+      "hit_rate": 0.41202445652173914,
+      "hits": 1213,
+      "misses": 1731,
+      "evictions": 1659,
+      "dup_bytes_saved": 955440000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 489,
+      "overlay_shared": 74,
+      "overlay_resident": 72,
+      "resident_vertex_count": 72,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 73152,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 9,
+        "6912": 1,
+        "768": 16,
+        "192": 15,
+        "4800": 4,
+        "12": 21,
+        "972": 1,
+        "432": 2,
+        "300": 1,
+        "108": 1,
+        "1728": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 9,
+        "3x24x24": 1,
+        "3x8x8": 16,
+        "3x4x4": 15,
+        "3x20x20": 4,
+        "3x1x1": 21,
+        "3x9x9": 1,
+        "3x6x6": 2,
+        "3x5x5": 1,
+        "3x3x3": 1,
+        "3x12x12": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 72
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 508000.0,
+      "bytes_per_breeder": 1406769.2307692308,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:32.102641+00:00"
+    },
+    {
+      "generation": 5,
+      "bytes_used": 38742000,
+      "resident_bytes": 38742000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 38742000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 143106000,
+      "max_bytes": 12884901888,
+      "entries": 75,
+      "hit_rate": 0.4238716693855356,
+      "hits": 1559,
+      "misses": 2119,
+      "evictions": 2044,
+      "dup_bytes_saved": 1230744000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 461,
+      "overlay_shared": 74,
+      "overlay_resident": 75,
+      "resident_vertex_count": 75,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 77484,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 12,
+        "6912": 1,
+        "768": 19,
+        "192": 11,
+        "4800": 3,
+        "12": 22,
+        "972": 1,
+        "432": 2,
+        "300": 1,
+        "108": 1,
+        "48": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 12,
+        "3x24x24": 1,
+        "3x8x8": 19,
+        "3x4x4": 11,
+        "3x20x20": 3,
+        "3x1x1": 22,
+        "3x9x9": 1,
+        "3x6x6": 2,
+        "3x5x5": 1,
+        "3x3x3": 1,
+        "3x2x2": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 75
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 516560.0,
+      "bytes_per_breeder": 1490076.923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:36.612692+00:00"
+    },
+    {
+      "generation": 6,
+      "bytes_used": 49680000,
+      "resident_bytes": 49680000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 49680000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 143106000,
+      "max_bytes": 12884901888,
+      "entries": 77,
+      "hit_rate": 0.4365097588978186,
+      "hits": 1901,
+      "misses": 2454,
+      "evictions": 2377,
+      "dup_bytes_saved": 1249494000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 411,
+      "overlay_shared": 75,
+      "overlay_resident": 77,
+      "resident_vertex_count": 77,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 99360,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 14,
+        "6912": 1,
+        "4800": 5,
+        "768": 21,
+        "972": 1,
+        "432": 4,
+        "192": 11,
+        "300": 1,
+        "108": 1,
+        "12": 17,
+        "3888": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 14,
+        "3x24x24": 1,
+        "3x20x20": 5,
+        "3x8x8": 21,
+        "3x9x9": 1,
+        "3x6x6": 4,
+        "3x4x4": 11,
+        "3x5x5": 1,
+        "3x3x3": 1,
+        "3x1x1": 17,
+        "3x18x18": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 77
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 645194.8051948051,
+      "bytes_per_breeder": 1910769.2307692308,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:40.935070+00:00"
+    },
+    {
+      "generation": 7,
+      "bytes_used": 52740000,
+      "resident_bytes": 52740000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 52740000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 143106000,
+      "max_bytes": 12884901888,
+      "entries": 80,
+      "hit_rate": 0.4449269640742203,
+      "hits": 2254,
+      "misses": 2812,
+      "evictions": 2732,
+      "dup_bytes_saved": 1315584000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 436,
+      "overlay_shared": 109,
+      "overlay_resident": 80,
+      "resident_vertex_count": 80,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 105480,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 17,
+        "6912": 1,
+        "4800": 4,
+        "768": 22,
+        "972": 2,
+        "432": 4,
+        "192": 13,
+        "12": 16,
+        "3888": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 17,
+        "3x24x24": 1,
+        "3x20x20": 4,
+        "3x8x8": 22,
+        "3x9x9": 2,
+        "3x6x6": 4,
+        "3x4x4": 13,
+        "3x1x1": 16,
+        "3x18x18": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 80
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 659250.0,
+      "bytes_per_breeder": 2028461.5384615385,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:45.671250+00:00"
+    },
+    {
+      "generation": 8,
+      "bytes_used": 59250000,
+      "resident_bytes": 59250000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 59250000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 143106000,
+      "max_bytes": 12884901888,
+      "entries": 89,
+      "hit_rate": 0.4516404647983595,
+      "hits": 2643,
+      "misses": 3209,
+      "evictions": 3120,
+      "dup_bytes_saved": 1464198000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 478,
+      "overlay_shared": 96,
+      "overlay_resident": 89,
+      "resident_vertex_count": 89,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 118500,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 18,
+        "6912": 1,
+        "4800": 2,
+        "768": 28,
+        "972": 1,
+        "192": 13,
+        "12": 17,
+        "432": 2,
+        "3888": 3,
+        "1728": 2,
+        "4332": 1,
+        "1200": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 18,
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x8x8": 28,
+        "3x9x9": 1,
+        "3x4x4": 13,
+        "3x1x1": 17,
+        "3x6x6": 2,
+        "3x18x18": 3,
+        "3x12x12": 2,
+        "3x19x19": 1,
+        "3x10x10": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 89
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 665730.3370786516,
+      "bytes_per_breeder": 2278846.153846154,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:50.949729+00:00"
+    },
+    {
+      "generation": 9,
+      "bytes_used": 83418000,
+      "resident_bytes": 83418000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 83418000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 143196000,
+      "max_bytes": 12884901888,
+      "entries": 126,
+      "hit_rate": 0.4553292701055448,
+      "hits": 3063,
+      "misses": 3664,
+      "evictions": 3538,
+      "dup_bytes_saved": 1722690000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 545,
+      "overlay_shared": 101,
+      "overlay_resident": 126,
+      "resident_vertex_count": 126,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 166836,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 26,
+        "6912": 1,
+        "4800": 3,
+        "768": 44,
+        "972": 2,
+        "192": 17,
+        "432": 3,
+        "12": 23,
+        "3888": 4,
+        "4332": 1,
+        "3468": 1,
+        "1728": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 26,
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x8x8": 44,
+        "3x9x9": 2,
+        "3x4x4": 17,
+        "3x6x6": 3,
+        "3x1x1": 23,
+        "3x18x18": 4,
+        "3x19x19": 1,
+        "3x17x17": 1,
+        "3x12x12": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 126
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 662047.619047619,
+      "bytes_per_breeder": 3208384.6153846155,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:49:56.635884+00:00"
+    },
+    {
+      "generation": 10,
+      "bytes_used": 83088000,
+      "resident_bytes": 83088000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 83088000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 165648000,
+      "max_bytes": 12884901888,
+      "entries": 119,
+      "hit_rate": 0.4579098253844149,
+      "hits": 3514,
+      "misses": 4160,
+      "evictions": 4041,
+      "dup_bytes_saved": 1769040000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 623,
+      "overlay_shared": 149,
+      "overlay_resident": 119,
+      "resident_vertex_count": 119,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 166176,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 26,
+        "6912": 1,
+        "4800": 4,
+        "768": 42,
+        "972": 2,
+        "192": 16,
+        "12": 20,
+        "3888": 3,
+        "432": 2,
+        "4332": 1,
+        "3468": 1,
+        "2352": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 26,
+        "3x24x24": 1,
+        "3x20x20": 4,
+        "3x8x8": 42,
+        "3x9x9": 2,
+        "3x4x4": 16,
+        "3x1x1": 20,
+        "3x18x18": 3,
+        "3x6x6": 2,
+        "3x19x19": 1,
+        "3x17x17": 1,
+        "3x14x14": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 119
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 698218.487394958,
+      "bytes_per_breeder": 3195692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:02.418452+00:00"
+    },
+    {
+      "generation": 11,
+      "bytes_used": 75324000,
+      "resident_bytes": 75324000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 75324000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 182754000,
+      "max_bytes": 12884901888,
+      "entries": 110,
+      "hit_rate": 0.4633434508522064,
+      "hits": 3969,
+      "misses": 4597,
+      "evictions": 4487,
+      "dup_bytes_saved": 1701396000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 557,
+      "overlay_shared": 126,
+      "overlay_resident": 110,
+      "resident_vertex_count": 110,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 150648,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 26,
+        "6912": 1,
+        "4800": 3,
+        "768": 36,
+        "972": 3,
+        "192": 15,
+        "12": 18,
+        "3888": 2,
+        "432": 3,
+        "4332": 1,
+        "2352": 1,
+        "48": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 26,
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x8x8": 36,
+        "3x9x9": 3,
+        "3x4x4": 15,
+        "3x1x1": 18,
+        "3x18x18": 2,
+        "3x6x6": 3,
+        "3x19x19": 1,
+        "3x14x14": 1,
+        "3x2x2": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 110
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 684763.6363636364,
+      "bytes_per_breeder": 2897076.923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:08.377830+00:00"
+    },
+    {
+      "generation": 12,
+      "bytes_used": 71934000,
+      "resident_bytes": 71934000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 71934000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 182754000,
+      "max_bytes": 12884901888,
+      "entries": 102,
+      "hit_rate": 0.4665892536683205,
+      "hits": 4420,
+      "misses": 5053,
+      "evictions": 4951,
+      "dup_bytes_saved": 1648902000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 567,
+      "overlay_shared": 128,
+      "overlay_resident": 102,
+      "resident_vertex_count": 102,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 143868,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 27,
+        "6912": 1,
+        "4800": 3,
+        "972": 4,
+        "768": 34,
+        "192": 12,
+        "12": 17,
+        "3888": 1,
+        "432": 2,
+        "2352": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 27,
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x9x9": 4,
+        "3x8x8": 34,
+        "3x4x4": 12,
+        "3x1x1": 17,
+        "3x18x18": 1,
+        "3x6x6": 2,
+        "3x14x14": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 102
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 705235.2941176471,
+      "bytes_per_breeder": 2766692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:14.376053+00:00"
+    },
+    {
+      "generation": 13,
+      "bytes_used": 58548000,
+      "resident_bytes": 58548000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 58548000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 182754000,
+      "max_bytes": 12884901888,
+      "entries": 88,
+      "hit_rate": 0.4726372986609742,
+      "hits": 4871,
+      "misses": 5435,
+      "evictions": 5347,
+      "dup_bytes_saved": 1765452000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 485,
+      "overlay_shared": 91,
+      "overlay_resident": 88,
+      "resident_vertex_count": 88,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 117096,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 22,
+        "6912": 1,
+        "4800": 2,
+        "972": 2,
+        "768": 30,
+        "192": 12,
+        "12": 16,
+        "3888": 1,
+        "432": 1,
+        "1200": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 22,
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x9x9": 2,
+        "3x8x8": 30,
+        "3x4x4": 12,
+        "3x1x1": 16,
+        "3x18x18": 1,
+        "3x6x6": 1,
+        "3x10x10": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 88
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 665318.1818181818,
+      "bytes_per_breeder": 2251846.153846154,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:20.490284+00:00"
+    },
+    {
+      "generation": 14,
+      "bytes_used": 68082000,
+      "resident_bytes": 68082000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 68082000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 182754000,
+      "max_bytes": 12884901888,
+      "entries": 104,
+      "hit_rate": 0.4768064228367529,
+      "hits": 5345,
+      "misses": 5865,
+      "evictions": 5761,
+      "dup_bytes_saved": 1801506000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 519,
+      "overlay_shared": 116,
+      "overlay_resident": 104,
+      "resident_vertex_count": 104,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 136164,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 25,
+        "6912": 1,
+        "4800": 2,
+        "972": 2,
+        "768": 38,
+        "192": 15,
+        "3888": 2,
+        "12": 17,
+        "432": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 25,
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x9x9": 2,
+        "3x8x8": 38,
+        "3x4x4": 15,
+        "3x18x18": 2,
+        "3x1x1": 17,
+        "3x6x6": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 104
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 654634.6153846154,
+      "bytes_per_breeder": 2618538.4615384615,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:26.925744+00:00"
+    },
+    {
+      "generation": 15,
+      "bytes_used": 90888000,
+      "resident_bytes": 90888000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 90888000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 182754000,
+      "max_bytes": 12884901888,
+      "entries": 139,
+      "hit_rate": 0.4794228562059354,
+      "hits": 5848,
+      "misses": 6350,
+      "evictions": 6211,
+      "dup_bytes_saved": 1752162000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 590,
+      "overlay_shared": 124,
+      "overlay_resident": 139,
+      "resident_vertex_count": 139,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 181776,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 32,
+        "6912": 1,
+        "4800": 4,
+        "972": 3,
+        "768": 54,
+        "192": 19,
+        "3888": 2,
+        "12": 21,
+        "432": 3
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 32,
+        "3x24x24": 1,
+        "3x20x20": 4,
+        "3x9x9": 3,
+        "3x8x8": 54,
+        "3x4x4": 19,
+        "3x18x18": 2,
+        "3x1x1": 21,
+        "3x6x6": 3
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 139
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 653870.5035971223,
+      "bytes_per_breeder": 3495692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:33.698249+00:00"
+    },
+    {
+      "generation": 16,
+      "bytes_used": 91752000,
+      "resident_bytes": 91752000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 91752000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 182754000,
+      "max_bytes": 12884901888,
+      "entries": 134,
+      "hit_rate": 0.4804889158821743,
+      "hits": 6329,
+      "misses": 6843,
+      "evictions": 6709,
+      "dup_bytes_saved": 1782156000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 633,
+      "overlay_shared": 135,
+      "overlay_resident": 134,
+      "resident_vertex_count": 134,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 183504,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 29,
+        "6912": 2,
+        "4800": 6,
+        "972": 3,
+        "768": 46,
+        "192": 22,
+        "3888": 2,
+        "12": 21,
+        "432": 3
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 29,
+        "3x24x24": 2,
+        "3x20x20": 6,
+        "3x9x9": 3,
+        "3x8x8": 46,
+        "3x4x4": 22,
+        "3x18x18": 2,
+        "3x1x1": 21,
+        "3x6x6": 3
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 134
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 684716.4179104478,
+      "bytes_per_breeder": 3528923.076923077,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:40.532663+00:00"
+    },
+    {
+      "generation": 17,
+      "bytes_used": 85956000,
+      "resident_bytes": 85956000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 85956000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 182754000,
+      "max_bytes": 12884901888,
+      "entries": 130,
+      "hit_rate": 0.48308630593574925,
+      "hits": 6812,
+      "misses": 7289,
+      "evictions": 7159,
+      "dup_bytes_saved": 1721748000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 581,
+      "overlay_shared": 145,
+      "overlay_resident": 130,
+      "resident_vertex_count": 130,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 171912,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 26,
+        "6912": 2,
+        "4800": 5,
+        "972": 3,
+        "768": 44,
+        "192": 20,
+        "3888": 3,
+        "12": 23,
+        "432": 4
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 26,
+        "3x24x24": 2,
+        "3x20x20": 5,
+        "3x9x9": 3,
+        "3x8x8": 44,
+        "3x4x4": 20,
+        "3x18x18": 3,
+        "3x1x1": 23,
+        "3x6x6": 4
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 130
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 661200.0,
+      "bytes_per_breeder": 3306000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:47.582127+00:00"
+    },
+    {
+      "generation": 18,
+      "bytes_used": 104580000,
+      "resident_bytes": 104580000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 104580000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 182754000,
+      "max_bytes": 12884901888,
+      "entries": 157,
+      "hit_rate": 0.4837403769577913,
+      "hits": 7289,
+      "misses": 7779,
+      "evictions": 7622,
+      "dup_bytes_saved": 1749936000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 621,
+      "overlay_shared": 116,
+      "overlay_resident": 157,
+      "resident_vertex_count": 157,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 209160,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 35,
+        "6912": 1,
+        "4800": 5,
+        "972": 6,
+        "768": 54,
+        "192": 22,
+        "3888": 4,
+        "12": 24,
+        "432": 5,
+        "1200": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 35,
+        "3x24x24": 1,
+        "3x20x20": 5,
+        "3x9x9": 6,
+        "3x8x8": 54,
+        "3x4x4": 22,
+        "3x18x18": 4,
+        "3x1x1": 24,
+        "3x6x6": 5,
+        "3x10x10": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 157
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 666114.6496815287,
+      "bytes_per_breeder": 4022307.6923076925,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:50:54.620934+00:00"
+    },
+    {
+      "generation": 19,
+      "bytes_used": 77448000,
+      "resident_bytes": 77448000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 77448000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 125,
+      "hit_rate": 0.48415021485956283,
+      "hits": 7774,
+      "misses": 8283,
+      "evictions": 8158,
+      "dup_bytes_saved": 1670886000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 662,
+      "overlay_shared": 140,
+      "overlay_resident": 125,
+      "resident_vertex_count": 125,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 154896,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 28,
+        "6912": 1,
+        "4800": 3,
+        "972": 5,
+        "768": 43,
+        "192": 18,
+        "3888": 1,
+        "12": 23,
+        "432": 2,
+        "1200": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 28,
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x9x9": 5,
+        "3x8x8": 43,
+        "3x4x4": 18,
+        "3x18x18": 1,
+        "3x1x1": 23,
+        "3x6x6": 2,
+        "3x10x10": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 125
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 619584.0,
+      "bytes_per_breeder": 2978769.230769231,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:51:01.896316+00:00"
+    },
+    {
+      "generation": 20,
+      "bytes_used": 81930000,
+      "resident_bytes": 81930000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 81930000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 125,
+      "hit_rate": 0.48631306293047627,
+      "hits": 8261,
+      "misses": 8726,
+      "evictions": 8601,
+      "dup_bytes_saved": 1728780000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 569,
+      "overlay_shared": 127,
+      "overlay_resident": 125,
+      "resident_vertex_count": 125,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 163860,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 26,
+        "6912": 1,
+        "4800": 6,
+        "972": 6,
+        "768": 40,
+        "192": 18,
+        "3888": 1,
+        "432": 4,
+        "12": 21,
+        "1200": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 26,
+        "3x24x24": 1,
+        "3x20x20": 6,
+        "3x9x9": 6,
+        "3x8x8": 40,
+        "3x4x4": 18,
+        "3x18x18": 1,
+        "3x6x6": 4,
+        "3x1x1": 21,
+        "3x10x10": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 125
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 655440.0,
+      "bytes_per_breeder": 3151153.846153846,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:51:09.044086+00:00"
+    },
+    {
+      "generation": 21,
+      "bytes_used": 85368000,
+      "resident_bytes": 85368000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 85368000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 124,
+      "hit_rate": 0.4887524420876361,
+      "hits": 8756,
+      "misses": 9159,
+      "evictions": 9035,
+      "dup_bytes_saved": 1666188000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 559,
+      "overlay_shared": 128,
+      "overlay_resident": 124,
+      "resident_vertex_count": 124,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 170736,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 27,
+        "6912": 1,
+        "4800": 7,
+        "972": 5,
+        "768": 39,
+        "192": 15,
+        "3888": 1,
+        "432": 3,
+        "12": 23,
+        "1200": 2,
+        "1728": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 27,
+        "3x24x24": 1,
+        "3x20x20": 7,
+        "3x9x9": 5,
+        "3x8x8": 39,
+        "3x4x4": 15,
+        "3x18x18": 1,
+        "3x6x6": 3,
+        "3x1x1": 23,
+        "3x10x10": 2,
+        "3x12x12": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 124
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 688451.6129032258,
+      "bytes_per_breeder": 3283384.6153846155,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:51:16.198663+00:00"
+    },
+    {
+      "generation": 22,
+      "bytes_used": 87120000,
+      "resident_bytes": 87120000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 87120000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 115,
+      "hit_rate": 0.4907520271344533,
+      "hits": 9260,
+      "misses": 9609,
+      "evictions": 9494,
+      "dup_bytes_saved": 1603284000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 575,
+      "overlay_shared": 158,
+      "overlay_resident": 115,
+      "resident_vertex_count": 115,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 174240,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 27,
+        "6912": 1,
+        "4800": 8,
+        "972": 5,
+        "192": 11,
+        "3888": 1,
+        "768": 34,
+        "432": 4,
+        "12": 19,
+        "1200": 3,
+        "1728": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 27,
+        "3x24x24": 1,
+        "3x20x20": 8,
+        "3x9x9": 5,
+        "3x4x4": 11,
+        "3x18x18": 1,
+        "3x8x8": 34,
+        "3x6x6": 4,
+        "3x1x1": 19,
+        "3x10x10": 3,
+        "3x12x12": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 115
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 757565.2173913043,
+      "bytes_per_breeder": 3350769.230769231,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:51:23.445887+00:00"
+    },
+    {
+      "generation": 23,
+      "bytes_used": 70290000,
+      "resident_bytes": 70290000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 70290000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 96,
+      "hit_rate": 0.49132364810330914,
+      "hits": 9740,
+      "misses": 10084,
+      "evictions": 9988,
+      "dup_bytes_saved": 1548738000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 591,
+      "overlay_shared": 121,
+      "overlay_resident": 96,
+      "resident_vertex_count": 96,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 140580,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 19,
+        "6912": 1,
+        "4800": 7,
+        "972": 4,
+        "192": 11,
+        "768": 28,
+        "12": 15,
+        "432": 4,
+        "1200": 2,
+        "1728": 3,
+        "2352": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 19,
+        "3x24x24": 1,
+        "3x20x20": 7,
+        "3x9x9": 4,
+        "3x4x4": 11,
+        "3x8x8": 28,
+        "3x1x1": 15,
+        "3x6x6": 4,
+        "3x10x10": 2,
+        "3x12x12": 3,
+        "3x14x14": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 96
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 732187.5,
+      "bytes_per_breeder": 2703461.5384615385,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:51:31.224464+00:00"
+    },
+    {
+      "generation": 24,
+      "bytes_used": 58926000,
+      "resident_bytes": 58926000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 58926000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 76,
+      "hit_rate": 0.49405854506810937,
+      "hits": 10228,
+      "misses": 10474,
+      "evictions": 10398,
+      "dup_bytes_saved": 1547958000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 487,
+      "overlay_shared": 122,
+      "overlay_resident": 76,
+      "resident_vertex_count": 76,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 117852,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "3072": 14,
+        "6912": 1,
+        "4800": 8,
+        "972": 4,
+        "192": 10,
+        "768": 21,
+        "12": 13,
+        "1728": 2,
+        "432": 1,
+        "2352": 1,
+        "1200": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x16x16": 14,
+        "3x24x24": 1,
+        "3x20x20": 8,
+        "3x9x9": 4,
+        "3x4x4": 10,
+        "3x8x8": 21,
+        "3x1x1": 13,
+        "3x12x12": 2,
+        "3x6x6": 1,
+        "3x14x14": 1,
+        "3x10x10": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 76
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 775342.1052631579,
+      "bytes_per_breeder": 2266384.6153846155,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:51:38.930604+00:00"
+    },
+    {
+      "generation": 25,
+      "bytes_used": 60840000,
+      "resident_bytes": 60840000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 60840000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 75,
+      "hit_rate": 0.4960151978500602,
+      "hits": 10705,
+      "misses": 10877,
+      "evictions": 10802,
+      "dup_bytes_saved": 1523526000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 480,
+      "overlay_shared": 102,
+      "overlay_resident": 75,
+      "resident_vertex_count": 75,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 121680,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 9,
+        "192": 10,
+        "3072": 13,
+        "972": 3,
+        "768": 21,
+        "12": 13,
+        "1728": 2,
+        "2352": 3
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 9,
+        "3x4x4": 10,
+        "3x16x16": 13,
+        "3x9x9": 3,
+        "3x8x8": 21,
+        "3x1x1": 13,
+        "3x12x12": 2,
+        "3x14x14": 3
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 75
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 811200.0,
+      "bytes_per_breeder": 2340000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:51:46.431230+00:00"
+    },
+    {
+      "generation": 26,
+      "bytes_used": 76524000,
+      "resident_bytes": 76524000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 76524000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 103,
+      "hit_rate": 0.4980498182785214,
+      "hits": 11237,
+      "misses": 11325,
+      "evictions": 11222,
+      "dup_bytes_saved": 1464354000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 524,
+      "overlay_shared": 114,
+      "overlay_resident": 103,
+      "resident_vertex_count": 103,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 153048,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 11,
+        "192": 16,
+        "3072": 16,
+        "972": 4,
+        "768": 30,
+        "12": 18,
+        "1728": 4,
+        "2352": 3
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 11,
+        "3x4x4": 16,
+        "3x16x16": 16,
+        "3x9x9": 4,
+        "3x8x8": 30,
+        "3x1x1": 18,
+        "3x12x12": 4,
+        "3x14x14": 3
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 103
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 742951.4563106796,
+      "bytes_per_breeder": 2943230.769230769,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:51:54.199154+00:00"
+    },
+    {
+      "generation": 27,
+      "bytes_used": 60846000,
+      "resident_bytes": 60846000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 60846000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 89,
+      "hit_rate": 0.4989164152466749,
+      "hits": 11741,
+      "misses": 11792,
+      "evictions": 11703,
+      "dup_bytes_saved": 1475088000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 571,
+      "overlay_shared": 109,
+      "overlay_resident": 89,
+      "resident_vertex_count": 89,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 121692,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 7,
+        "192": 15,
+        "3072": 15,
+        "972": 5,
+        "768": 27,
+        "12": 16,
+        "2352": 2,
+        "1728": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 7,
+        "3x4x4": 15,
+        "3x16x16": 15,
+        "3x9x9": 5,
+        "3x8x8": 27,
+        "3x1x1": 16,
+        "3x14x14": 2,
+        "3x12x12": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 89
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 683662.9213483146,
+      "bytes_per_breeder": 2340230.769230769,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:52:02.316249+00:00"
+    },
+    {
+      "generation": 28,
+      "bytes_used": 39312000,
+      "resident_bytes": 39312000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 39312000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 64,
+      "hit_rate": 0.5015559741216935,
+      "hits": 12249,
+      "misses": 12173,
+      "evictions": 12109,
+      "dup_bytes_saved": 1562322000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 471,
+      "overlay_shared": 114,
+      "overlay_resident": 64,
+      "resident_vertex_count": 64,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 78624,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 4,
+        "192": 13,
+        "3072": 9,
+        "972": 3,
+        "768": 19,
+        "12": 13,
+        "2352": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 4,
+        "3x4x4": 13,
+        "3x16x16": 9,
+        "3x9x9": 3,
+        "3x8x8": 19,
+        "3x1x1": 13,
+        "3x14x14": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 64
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 614250.0,
+      "bytes_per_breeder": 1512000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:52:10.285852+00:00"
+    },
+    {
+      "generation": 29,
+      "bytes_used": 25818000,
+      "resident_bytes": 25818000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 25818000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 52,
+      "hit_rate": 0.5044083343217491,
+      "hits": 12758,
+      "misses": 12535,
+      "evictions": 12483,
+      "dup_bytes_saved": 1605180000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 427,
+      "overlay_shared": 109,
+      "overlay_resident": 52,
+      "resident_vertex_count": 52,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 51636,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "192": 12,
+        "3072": 6,
+        "972": 2,
+        "768": 16,
+        "12": 13
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x4x4": 12,
+        "3x16x16": 6,
+        "3x9x9": 2,
+        "3x8x8": 16,
+        "3x1x1": 13
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 52
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 496500.0,
+      "bytes_per_breeder": 993000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:52:18.215058+00:00"
+    },
+    {
+      "generation": 30,
+      "bytes_used": 27828000,
+      "resident_bytes": 27828000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 27828000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 54,
+      "hit_rate": 0.5075876304422614,
+      "hits": 13279,
+      "misses": 12882,
+      "evictions": 12828,
+      "dup_bytes_saved": 1637766000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 400,
+      "overlay_shared": 98,
+      "overlay_resident": 54,
+      "resident_vertex_count": 54,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 55656,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "192": 13,
+        "3072": 7,
+        "972": 2,
+        "768": 17,
+        "12": 12
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x4x4": 13,
+        "3x16x16": 7,
+        "3x9x9": 2,
+        "3x8x8": 17,
+        "3x1x1": 12
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 54
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 515333.3333333333,
+      "bytes_per_breeder": 1070307.6923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:52:26.127691+00:00"
+    },
+    {
+      "generation": 31,
+      "bytes_used": 24348000,
+      "resident_bytes": 24348000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 24348000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 41,
+      "hit_rate": 0.510124754747714,
+      "hits": 13780,
+      "misses": 13233,
+      "evictions": 13192,
+      "dup_bytes_saved": 1583220000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 406,
+      "overlay_shared": 89,
+      "overlay_resident": 41,
+      "resident_vertex_count": 41,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 48696,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "192": 9,
+        "3072": 6,
+        "972": 2,
+        "768": 13,
+        "12": 8
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x4x4": 9,
+        "3x16x16": 6,
+        "3x9x9": 2,
+        "3x8x8": 13,
+        "3x1x1": 8
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 41
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 593853.6585365854,
+      "bytes_per_breeder": 936461.5384615385,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:52:34.177032+00:00"
+    },
+    {
+      "generation": 32,
+      "bytes_used": 23874000,
+      "resident_bytes": 23874000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 23874000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 42,
+      "hit_rate": 0.5116203886633859,
+      "hits": 14243,
+      "misses": 13596,
+      "evictions": 13554,
+      "dup_bytes_saved": 1650486000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 405,
+      "overlay_shared": 64,
+      "overlay_resident": 42,
+      "resident_vertex_count": 42,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 47748,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "192": 9,
+        "3072": 6,
+        "972": 1,
+        "768": 13,
+        "12": 10
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x4x4": 9,
+        "3x16x16": 6,
+        "3x9x9": 1,
+        "3x8x8": 13,
+        "3x1x1": 10
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 42
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 568428.5714285715,
+      "bytes_per_breeder": 918230.7692307692,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:52:42.471055+00:00"
+    },
+    {
+      "generation": 33,
+      "bytes_used": 25872000,
+      "resident_bytes": 25872000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 25872000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 39,
+      "hit_rate": 0.5133082497212932,
+      "hits": 14734,
+      "misses": 13970,
+      "evictions": 13931,
+      "dup_bytes_saved": 1590948000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 417,
+      "overlay_shared": 93,
+      "overlay_resident": 39,
+      "resident_vertex_count": 39,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 51744,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "192": 9,
+        "3072": 6,
+        "972": 1,
+        "768": 12,
+        "12": 7
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x4x4": 9,
+        "3x16x16": 6,
+        "3x9x9": 1,
+        "3x8x8": 12,
+        "3x1x1": 7
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 39
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 663384.6153846154,
+      "bytes_per_breeder": 995076.9230769231,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:52:50.692001+00:00"
+    },
+    {
+      "generation": 34,
+      "bytes_used": 26844000,
+      "resident_bytes": 26844000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 26844000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 45,
+      "hit_rate": 0.514843776446295,
+      "hits": 15209,
+      "misses": 14332,
+      "evictions": 14287,
+      "dup_bytes_saved": 1602108000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 402,
+      "overlay_shared": 82,
+      "overlay_resident": 45,
+      "resident_vertex_count": 45,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 53688,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "192": 11,
+        "3072": 6,
+        "972": 1,
+        "768": 14,
+        "12": 9
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x4x4": 11,
+        "3x16x16": 6,
+        "3x9x9": 1,
+        "3x8x8": 14,
+        "3x1x1": 9
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 45
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 596533.3333333334,
+      "bytes_per_breeder": 1032461.5384615385,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:52:58.981412+00:00"
+    },
+    {
+      "generation": 35,
+      "bytes_used": 27432000,
+      "resident_bytes": 27432000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 27432000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 50,
+      "hit_rate": 0.516158696794535,
+      "hits": 15716,
+      "misses": 14732,
+      "evictions": 14682,
+      "dup_bytes_saved": 1626624000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 446,
+      "overlay_shared": 84,
+      "overlay_resident": 50,
+      "resident_vertex_count": 50,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 54864,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "192": 13,
+        "3072": 6,
+        "972": 1,
+        "768": 15,
+        "12": 11
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x4x4": 13,
+        "3x16x16": 6,
+        "3x9x9": 1,
+        "3x8x8": 15,
+        "3x1x1": 11
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 50
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 548640.0,
+      "bytes_per_breeder": 1055076.923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:53:07.545706+00:00"
+    },
+    {
+      "generation": 36,
+      "bytes_used": 27918000,
+      "resident_bytes": 27918000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 27918000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 51,
+      "hit_rate": 0.5179459390539335,
+      "hits": 16249,
+      "misses": 15123,
+      "evictions": 15072,
+      "dup_bytes_saved": 1609020000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 442,
+      "overlay_shared": 99,
+      "overlay_resident": 51,
+      "resident_vertex_count": 51,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 55836,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "192": 13,
+        "3072": 6,
+        "972": 2,
+        "768": 15,
+        "12": 11
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x4x4": 13,
+        "3x16x16": 6,
+        "3x9x9": 2,
+        "3x8x8": 15,
+        "3x1x1": 11
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 51
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 547411.7647058824,
+      "bytes_per_breeder": 1073769.2307692308,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:53:16.062985+00:00"
+    },
+    {
+      "generation": 37,
+      "bytes_used": 29352000,
+      "resident_bytes": 29352000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 29352000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 50,
+      "hit_rate": 0.5191526317421916,
+      "hits": 16738,
+      "misses": 15503,
+      "evictions": 15453,
+      "dup_bytes_saved": 1579746000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 432,
+      "overlay_shared": 115,
+      "overlay_resident": 50,
+      "resident_vertex_count": 50,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 58704,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "192": 12,
+        "3072": 7,
+        "972": 2,
+        "768": 15,
+        "12": 10
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x4x4": 12,
+        "3x16x16": 7,
+        "3x9x9": 2,
+        "3x8x8": 15,
+        "3x1x1": 10
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 50
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 587040.0,
+      "bytes_per_breeder": 1128923.076923077,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:53:24.526388+00:00"
+    },
+    {
+      "generation": 38,
+      "bytes_used": 23568000,
+      "resident_bytes": 23568000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 23568000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 36,
+      "hit_rate": 0.5207466377178699,
+      "hits": 17269,
+      "misses": 15893,
+      "evictions": 15857,
+      "dup_bytes_saved": 1567554000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 441,
+      "overlay_shared": 96,
+      "overlay_resident": 36,
+      "resident_vertex_count": 36,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 47136,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "192": 9,
+        "3072": 5,
+        "972": 1,
+        "768": 10,
+        "12": 7
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x4x4": 9,
+        "3x16x16": 5,
+        "3x9x9": 1,
+        "3x8x8": 10,
+        "3x1x1": 7
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 36
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 654666.6666666666,
+      "bytes_per_breeder": 906461.5384615385,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:53:32.852361+00:00"
+    },
+    {
+      "generation": 39,
+      "bytes_used": 21162000,
+      "resident_bytes": 21162000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 21162000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 31,
+      "hit_rate": 0.5223345480192783,
+      "hits": 17774,
+      "misses": 16254,
+      "evictions": 16223,
+      "dup_bytes_saved": 1467924000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 398,
+      "overlay_shared": 112,
+      "overlay_resident": 31,
+      "resident_vertex_count": 31,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 42324,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "192": 8,
+        "3072": 4,
+        "972": 1,
+        "768": 8,
+        "12": 6
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x4x4": 8,
+        "3x16x16": 4,
+        "3x9x9": 1,
+        "3x8x8": 8,
+        "3x1x1": 6
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 31
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 682645.1612903225,
+      "bytes_per_breeder": 813923.0769230769,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:53:41.808755+00:00"
+    },
+    {
+      "generation": 40,
+      "bytes_used": 26064000,
+      "resident_bytes": 26064000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 26064000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 36,
+      "hit_rate": 0.5243602221331654,
+      "hits": 18318,
+      "misses": 16616,
+      "evictions": 16580,
+      "dup_bytes_saved": 1619394000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 394,
+      "overlay_shared": 96,
+      "overlay_resident": 36,
+      "resident_vertex_count": 36,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 52128,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 4,
+        "192": 9,
+        "3072": 5,
+        "972": 2,
+        "768": 9,
+        "12": 6
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 4,
+        "3x4x4": 9,
+        "3x16x16": 5,
+        "3x9x9": 2,
+        "3x8x8": 9,
+        "3x1x1": 6
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 36
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 724000.0,
+      "bytes_per_breeder": 1002461.5384615385,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:53:51.510880+00:00"
+    },
+    {
+      "generation": 41,
+      "bytes_used": 22134000,
+      "resident_bytes": 22134000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 22134000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 35,
+      "hit_rate": 0.5252666257189123,
+      "hits": 18814,
+      "misses": 17004,
+      "evictions": 16969,
+      "dup_bytes_saved": 1632624000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 425,
+      "overlay_shared": 89,
+      "overlay_resident": 35,
+      "resident_vertex_count": 35,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 44268,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "3072": 4,
+        "972": 2,
+        "192": 9,
+        "768": 9,
+        "12": 7
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x16x16": 4,
+        "3x9x9": 2,
+        "3x4x4": 9,
+        "3x8x8": 9,
+        "3x1x1": 7
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 35
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 632400.0,
+      "bytes_per_breeder": 851307.6923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:54:01.161605+00:00"
+    },
+    {
+      "generation": 42,
+      "bytes_used": 21648000,
+      "resident_bytes": 21648000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 21648000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 32,
+      "hit_rate": 0.5270667683258904,
+      "hits": 19356,
+      "misses": 17368,
+      "evictions": 17336,
+      "dup_bytes_saved": 1620522000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 400,
+      "overlay_shared": 104,
+      "overlay_resident": 32,
+      "resident_vertex_count": 32,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 43296,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 3,
+        "3072": 4,
+        "972": 2,
+        "192": 8,
+        "768": 8,
+        "12": 6
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 3,
+        "3x16x16": 4,
+        "3x9x9": 2,
+        "3x4x4": 8,
+        "3x8x8": 8,
+        "3x1x1": 6
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 32
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 676500.0,
+      "bytes_per_breeder": 832615.3846153846,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:54:10.792891+00:00"
+    },
+    {
+      "generation": 43,
+      "bytes_used": 15594000,
+      "resident_bytes": 15594000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 15594000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 27,
+      "hit_rate": 0.5293086039219854,
+      "hits": 19920,
+      "misses": 17714,
+      "evictions": 17687,
+      "dup_bytes_saved": 1593450000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 379,
+      "overlay_shared": 88,
+      "overlay_resident": 27,
+      "resident_vertex_count": 27,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 31188,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 7,
+        "768": 8,
+        "12": 6
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 7,
+        "3x8x8": 8,
+        "3x1x1": 6
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 27
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 33648,
+      "bytes_per_entry": 577555.5555555555,
+      "bytes_per_breeder": 599769.2307692308,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:54:20.261314+00:00"
+    },
+    {
+      "generation": 44,
+      "bytes_used": 14724000,
+      "resident_bytes": 14724000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 14724000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 23,
+      "hit_rate": 0.531340729987557,
+      "hits": 20497,
+      "misses": 18079,
+      "evictions": 18056,
+      "dup_bytes_saved": 1423212000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 393,
+      "overlay_shared": 85,
+      "overlay_resident": 23,
+      "resident_vertex_count": 23,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 29448,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 6,
+        "768": 6,
+        "12": 5
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 6,
+        "3x8x8": 6,
+        "3x1x1": 5
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 23
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 34956,
+      "bytes_per_entry": 640173.9130434783,
+      "bytes_per_breeder": 566307.6923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:54:29.329409+00:00"
+    },
+    {
+      "generation": 45,
+      "bytes_used": 15210000,
+      "resident_bytes": 15210000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 15210000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 26,
+      "hit_rate": 0.5326776729957272,
+      "hits": 21069,
+      "misses": 18484,
+      "evictions": 18458,
+      "dup_bytes_saved": 1455168000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 429,
+      "overlay_shared": 88,
+      "overlay_resident": 26,
+      "resident_vertex_count": 26,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 30420,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 7,
+        "768": 7,
+        "12": 6
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 7,
+        "3x8x8": 7,
+        "3x1x1": 6
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 26
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 585000.0,
+      "bytes_per_breeder": 585000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:54:39.328376+00:00"
+    },
+    {
+      "generation": 46,
+      "bytes_used": 14724000,
+      "resident_bytes": 14724000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 14724000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 23,
+      "hit_rate": 0.5338056330379403,
+      "hits": 21625,
+      "misses": 18886,
+      "evictions": 18863,
+      "dup_bytes_saved": 1627380000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 429,
+      "overlay_shared": 95,
+      "overlay_resident": 23,
+      "resident_vertex_count": 23,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 29448,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 6,
+        "768": 6,
+        "12": 5
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 6,
+        "3x8x8": 6,
+        "3x1x1": 5
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 23
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 640173.9130434783,
+      "bytes_per_breeder": 566307.6923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:54:49.632214+00:00"
+    },
+    {
+      "generation": 47,
+      "bytes_used": 15210000,
+      "resident_bytes": 15210000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 15210000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 26,
+      "hit_rate": 0.5350037379120747,
+      "hits": 22185,
+      "misses": 19282,
+      "evictions": 19256,
+      "dup_bytes_saved": 1457370000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 420,
+      "overlay_shared": 108,
+      "overlay_resident": 26,
+      "resident_vertex_count": 26,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 30420,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 7,
+        "768": 7,
+        "12": 6
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 7,
+        "3x8x8": 7,
+        "3x1x1": 6
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 26
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 585000.0,
+      "bytes_per_breeder": 585000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:55:00.160906+00:00"
+    },
+    {
+      "generation": 48,
+      "bytes_used": 15312000,
+      "resident_bytes": 15312000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 15312000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 28,
+      "hit_rate": 0.5363734814954327,
+      "hits": 22783,
+      "misses": 19693,
+      "evictions": 19665,
+      "dup_bytes_saved": 1496718000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 438,
+      "overlay_shared": 106,
+      "overlay_resident": 28,
+      "resident_vertex_count": 28,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 30624,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 8,
+        "768": 7,
+        "12": 7
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 8,
+        "3x8x8": 7,
+        "3x1x1": 7
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 28
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 546857.1428571428,
+      "bytes_per_breeder": 588923.0769230769,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:55:10.747479+00:00"
+    },
+    {
+      "generation": 49,
+      "bytes_used": 18690000,
+      "resident_bytes": 18690000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 18690000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 39,
+      "hit_rate": 0.5371919823464509,
+      "hits": 23370,
+      "misses": 20134,
+      "evictions": 20095,
+      "dup_bytes_saved": 1490136000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 470,
+      "overlay_shared": 108,
+      "overlay_resident": 39,
+      "resident_vertex_count": 39,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 37380,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 3,
+        "972": 1,
+        "192": 11,
+        "768": 11,
+        "12": 10
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 3,
+        "3x9x9": 1,
+        "3x4x4": 11,
+        "3x8x8": 11,
+        "3x1x1": 10
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 39
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 479230.76923076925,
+      "bytes_per_breeder": 718846.1538461539,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:55:21.827386+00:00"
+    },
+    {
+      "generation": 50,
+      "bytes_used": 15798000,
+      "resident_bytes": 15798000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 15798000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 31,
+      "hit_rate": 0.5387969789606186,
+      "hits": 23970,
+      "misses": 20518,
+      "evictions": 20487,
+      "dup_bytes_saved": 1563186000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 424,
+      "overlay_shared": 88,
+      "overlay_resident": 31,
+      "resident_vertex_count": 31,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 31596,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 9,
+        "768": 8,
+        "12": 8
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 9,
+        "3x8x8": 8,
+        "3x1x1": 8
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 31
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 509612.9032258064,
+      "bytes_per_breeder": 607615.3846153846,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:55:33.087955+00:00"
+    },
+    {
+      "generation": 51,
+      "bytes_used": 15312000,
+      "resident_bytes": 15312000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 15312000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 28,
+      "hit_rate": 0.540337999692328,
+      "hits": 24587,
+      "misses": 20916,
+      "evictions": 20888,
+      "dup_bytes_saved": 1508508000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 430,
+      "overlay_shared": 105,
+      "overlay_resident": 28,
+      "resident_vertex_count": 28,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 30624,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 8,
+        "768": 7,
+        "12": 7
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 8,
+        "3x8x8": 7,
+        "3x1x1": 7
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 28
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 546857.1428571428,
+      "bytes_per_breeder": 588923.0769230769,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:55:44.061067+00:00"
+    },
+    {
+      "generation": 52,
+      "bytes_used": 15798000,
+      "resident_bytes": 15798000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 15798000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 31,
+      "hit_rate": 0.5409371173222765,
+      "hits": 25179,
+      "misses": 21368,
+      "evictions": 21337,
+      "dup_bytes_saved": 1389660000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 481,
+      "overlay_shared": 110,
+      "overlay_resident": 31,
+      "resident_vertex_count": 31,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 31596,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 9,
+        "768": 8,
+        "12": 8
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 9,
+        "3x8x8": 8,
+        "3x1x1": 8
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 31
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 509612.9032258064,
+      "bytes_per_breeder": 607615.3846153846,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:55:55.369402+00:00"
+    },
+    {
+      "generation": 53,
+      "bytes_used": 18690000,
+      "resident_bytes": 18690000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 18690000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 39,
+      "hit_rate": 0.5416886154364821,
+      "hits": 25708,
+      "misses": 21751,
+      "evictions": 21712,
+      "dup_bytes_saved": 1622664000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 415,
+      "overlay_shared": 107,
+      "overlay_resident": 39,
+      "resident_vertex_count": 39,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 37380,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 3,
+        "972": 1,
+        "192": 11,
+        "768": 11,
+        "12": 10
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 3,
+        "3x9x9": 1,
+        "3x4x4": 11,
+        "3x8x8": 11,
+        "3x1x1": 10
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 39
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 479230.76923076925,
+      "bytes_per_breeder": 718846.1538461539,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:56:06.709534+00:00"
+    },
+    {
+      "generation": 54,
+      "bytes_used": 20046000,
+      "resident_bytes": 20046000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 20046000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 46,
+      "hit_rate": 0.5426449350113473,
+      "hits": 26302,
+      "misses": 22168,
+      "evictions": 22122,
+      "dup_bytes_saved": 1497852000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 457,
+      "overlay_shared": 104,
+      "overlay_resident": 46,
+      "resident_vertex_count": 46,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 40092,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 3,
+        "972": 1,
+        "192": 13,
+        "768": 14,
+        "12": 12
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 3,
+        "3x9x9": 1,
+        "3x4x4": 13,
+        "3x8x8": 14,
+        "3x1x1": 12
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 46
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 435782.60869565216,
+      "bytes_per_breeder": 771000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:56:18.132740+00:00"
+    },
+    {
+      "generation": 55,
+      "bytes_used": 18612000,
+      "resident_bytes": 18612000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 18612000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 47,
+      "hit_rate": 0.542785506308638,
+      "hits": 26844,
+      "misses": 22612,
+      "evictions": 22565,
+      "dup_bytes_saved": 1550562000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 491,
+      "overlay_shared": 84,
+      "overlay_resident": 47,
+      "resident_vertex_count": 47,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 37224,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 14,
+        "768": 14,
+        "12": 13
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 14,
+        "3x8x8": 14,
+        "3x1x1": 13
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 47
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 396000.0,
+      "bytes_per_breeder": 715846.1538461539,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:56:29.929689+00:00"
+    },
+    {
+      "generation": 56,
+      "bytes_used": 17742000,
+      "resident_bytes": 17742000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 17742000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 43,
+      "hit_rate": 0.5429142506580119,
+      "hits": 27434,
+      "misses": 23097,
+      "evictions": 23054,
+      "dup_bytes_saved": 1484466000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 533,
+      "overlay_shared": 91,
+      "overlay_resident": 43,
+      "resident_vertex_count": 43,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 35484,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 13,
+        "768": 12,
+        "12": 12
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 13,
+        "3x8x8": 12,
+        "3x1x1": 12
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 43
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 412604.6511627907,
+      "bytes_per_breeder": 682384.6153846154,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:56:41.837554+00:00"
+    },
+    {
+      "generation": 57,
+      "bytes_used": 16668000,
+      "resident_bytes": 16668000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 16668000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 35,
+      "hit_rate": 0.5437837208399643,
+      "hits": 28019,
+      "misses": 23507,
+      "evictions": 23472,
+      "dup_bytes_saved": 1577724000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 454,
+      "overlay_shared": 110,
+      "overlay_resident": 35,
+      "resident_vertex_count": 35,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 33336,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 10,
+        "768": 10,
+        "12": 9
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 10,
+        "3x8x8": 10,
+        "3x1x1": 9
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 35
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 476228.5714285714,
+      "bytes_per_breeder": 641076.9230769231,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:56:53.449166+00:00"
+    },
+    {
+      "generation": 58,
+      "bytes_used": 15210000,
+      "resident_bytes": 15210000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 15210000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 26,
+      "hit_rate": 0.5448060717886287,
+      "hits": 28641,
+      "misses": 23930,
+      "evictions": 23904,
+      "dup_bytes_saved": 1462380000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 459,
+      "overlay_shared": 106,
+      "overlay_resident": 26,
+      "resident_vertex_count": 26,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 30420,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 7,
+        "768": 7,
+        "12": 6
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 7,
+        "3x8x8": 7,
+        "3x1x1": 6
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 26
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 585000.0,
+      "bytes_per_breeder": 585000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:57:05.158369+00:00"
+    },
+    {
+      "generation": 59,
+      "bytes_used": 14724000,
+      "resident_bytes": 14724000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 14724000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 23,
+      "hit_rate": 0.5455258440394383,
+      "hits": 29214,
+      "misses": 24338,
+      "evictions": 24315,
+      "dup_bytes_saved": 1528668000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 435,
+      "overlay_shared": 89,
+      "overlay_resident": 23,
+      "resident_vertex_count": 23,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 29448,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 6,
+        "768": 6,
+        "12": 5
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 6,
+        "3x8x8": 6,
+        "3x1x1": 5
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 23
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 640173.9130434783,
+      "bytes_per_breeder": 566307.6923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:57:16.920477+00:00"
+    },
+    {
+      "generation": 60,
+      "bytes_used": 14238000,
+      "resident_bytes": 14238000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 14238000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 20,
+      "hit_rate": 0.5469174311926606,
+      "hits": 29807,
+      "misses": 24693,
+      "evictions": 24673,
+      "dup_bytes_saved": 1529286000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 379,
+      "overlay_shared": 101,
+      "overlay_resident": 20,
+      "resident_vertex_count": 20,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 28476,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 5,
+        "768": 5,
+        "12": 4
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 5,
+        "3x8x8": 5,
+        "3x1x1": 4
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 20
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 711900.0,
+      "bytes_per_breeder": 547615.3846153846,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:57:29.060073+00:00"
+    },
+    {
+      "generation": 61,
+      "bytes_used": 13266000,
+      "resident_bytes": 13266000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 13266000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 14,
+      "hit_rate": 0.5480287126212892,
+      "hits": 30386,
+      "misses": 25060,
+      "evictions": 25046,
+      "dup_bytes_saved": 1642068000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 388,
+      "overlay_shared": 82,
+      "overlay_resident": 14,
+      "resident_vertex_count": 14,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 26532,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 3,
+        "768": 3,
+        "12": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 3,
+        "3x8x8": 3,
+        "3x1x1": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 14
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 947571.4285714285,
+      "bytes_per_breeder": 510230.76923076925,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:57:41.194454+00:00"
+    },
+    {
+      "generation": 62,
+      "bytes_used": 13266000,
+      "resident_bytes": 13266000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 13266000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 14,
+      "hit_rate": 0.5490248226950355,
+      "hits": 30965,
+      "misses": 25435,
+      "evictions": 25421,
+      "dup_bytes_saved": 1492908000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 390,
+      "overlay_shared": 101,
+      "overlay_resident": 14,
+      "resident_vertex_count": 14,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 26532,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 3,
+        "768": 3,
+        "12": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 3,
+        "3x8x8": 3,
+        "3x1x1": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 14
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 947571.4285714285,
+      "bytes_per_breeder": 510230.76923076925,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:57:53.323685+00:00"
+    },
+    {
+      "generation": 63,
+      "bytes_used": 12780000,
+      "resident_bytes": 12780000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 12780000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 206046000,
+      "max_bytes": 12884901888,
+      "entries": 11,
+      "hit_rate": 0.5501498571129853,
+      "hits": 31572,
+      "misses": 25816,
+      "evictions": 25805,
+      "dup_bytes_saved": 1488294000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 396,
+      "overlay_shared": 96,
+      "overlay_resident": 11,
+      "resident_vertex_count": 11,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 25560,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 1,
+        "4800": 2,
+        "3072": 2,
+        "972": 1,
+        "192": 2,
+        "768": 2,
+        "12": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 1,
+        "3x20x20": 2,
+        "3x16x16": 2,
+        "3x9x9": 1,
+        "3x4x4": 2,
+        "3x8x8": 2,
+        "3x1x1": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 11
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 36684,
+      "bytes_per_entry": 1161818.1818181819,
+      "bytes_per_breeder": 491538.46153846156,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+      "updated_at": "2026-08-14T21:58:05.525235+00:00"
+    }
+  ],
+  "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_03_cat\\tanh_mean\\run_0001",
+  "updated_at": "2026-08-14T21:58:05.525235+00:00"
+}
