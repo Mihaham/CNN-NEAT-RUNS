@@ -1,0 +1,2418 @@
+{
+  "points": [
+    {
+      "generation": 0,
+      "bytes_used": 34878000,
+      "resident_bytes": 34878000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 34878000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 96168000,
+      "max_bytes": 12884901888,
+      "entries": 31,
+      "hit_rate": 0.5083333333333333,
+      "hits": 244,
+      "misses": 236,
+      "evictions": 205,
+      "dup_bytes_saved": 256158000,
+      "breeding_pool_size": 25,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 237,
+      "overlay_shared": 62,
+      "overlay_resident": 31,
+      "resident_vertex_count": 31,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 69756,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 12,
+        "3072": 6,
+        "768": 2,
+        "6912": 3,
+        "192": 1,
+        "1728": 1,
+        "9408": 1,
+        "5808": 1,
+        "4800": 2,
+        "1200": 1,
+        "972": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 12,
+        "3x16x16": 6,
+        "3x8x8": 2,
+        "3x24x24": 3,
+        "3x4x4": 1,
+        "3x12x12": 1,
+        "3x28x28": 1,
+        "3x22x22": 1,
+        "3x20x20": 2,
+        "3x10x10": 1,
+        "3x9x9": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 31
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 1125096.7741935484,
+      "bytes_per_breeder": 1395120.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:43:56.030606+00:00"
+    },
+    {
+      "generation": 1,
+      "bytes_used": 46434000,
+      "resident_bytes": 46434000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 46434000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 117270000,
+      "max_bytes": 12884901888,
+      "entries": 30,
+      "hit_rate": 0.3856837606837607,
+      "hits": 361,
+      "misses": 575,
+      "evictions": 545,
+      "dup_bytes_saved": 432864000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 371,
+      "overlay_shared": 36,
+      "overlay_resident": 30,
+      "resident_vertex_count": 30,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 92868,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 10,
+        "3072": 8,
+        "6912": 4,
+        "9408": 1,
+        "5808": 1,
+        "4800": 3,
+        "1728": 1,
+        "3888": 1,
+        "5292": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 10,
+        "3x16x16": 8,
+        "3x24x24": 4,
+        "3x28x28": 1,
+        "3x22x22": 1,
+        "3x20x20": 3,
+        "3x12x12": 1,
+        "3x18x18": 1,
+        "3x21x21": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 30
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1547800.0,
+      "bytes_per_breeder": 1785923.076923077,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:43:58.546661+00:00"
+    },
+    {
+      "generation": 2,
+      "bytes_used": 18396000,
+      "resident_bytes": 18396000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 18396000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 14,
+      "hit_rate": 0.36737692872887584,
+      "hits": 500,
+      "misses": 861,
+      "evictions": 847,
+      "dup_bytes_saved": 443958000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 317,
+      "overlay_shared": 43,
+      "overlay_resident": 14,
+      "resident_vertex_count": 14,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 36792,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 6,
+        "6912": 2,
+        "5808": 1,
+        "4800": 1,
+        "3072": 4
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 6,
+        "3x24x24": 2,
+        "3x22x22": 1,
+        "3x20x20": 1,
+        "3x16x16": 4
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 14
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1314000.0,
+      "bytes_per_breeder": 707538.4615384615,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:01.235494+00:00"
+    },
+    {
+      "generation": 3,
+      "bytes_used": 28104000,
+      "resident_bytes": 28104000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 28104000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 19,
+      "hit_rate": 0.35528596187175043,
+      "hits": 615,
+      "misses": 1116,
+      "evictions": 1097,
+      "dup_bytes_saved": 343932000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 270,
+      "overlay_shared": 42,
+      "overlay_resident": 19,
+      "resident_vertex_count": 19,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 56208,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 8,
+        "6912": 3,
+        "5808": 1,
+        "4800": 1,
+        "3072": 5,
+        "9408": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 8,
+        "3x24x24": 3,
+        "3x22x22": 1,
+        "3x20x20": 1,
+        "3x16x16": 5,
+        "3x28x28": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 19
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1479157.894736842,
+      "bytes_per_breeder": 1080923.076923077,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:04.169092+00:00"
+    },
+    {
+      "generation": 4,
+      "bytes_used": 33984000,
+      "resident_bytes": 33984000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 33984000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 26,
+      "hit_rate": 0.33963155408597073,
+      "hits": 719,
+      "misses": 1398,
+      "evictions": 1372,
+      "dup_bytes_saved": 413268000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 302,
+      "overlay_shared": 21,
+      "overlay_resident": 26,
+      "resident_vertex_count": 26,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 67968,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 12,
+        "6912": 4,
+        "5808": 1,
+        "4800": 1,
+        "3072": 6,
+        "9408": 1,
+        "1728": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 12,
+        "3x24x24": 4,
+        "3x22x22": 1,
+        "3x20x20": 1,
+        "3x16x16": 6,
+        "3x28x28": 1,
+        "3x12x12": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 26
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1307076.923076923,
+      "bytes_per_breeder": 1307076.923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:06.954191+00:00"
+    },
+    {
+      "generation": 5,
+      "bytes_used": 27012000,
+      "resident_bytes": 27012000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 27012000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 17,
+      "hit_rate": 0.3338613861386139,
+      "hits": 843,
+      "misses": 1682,
+      "evictions": 1665,
+      "dup_bytes_saved": 252450000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 311,
+      "overlay_shared": 40,
+      "overlay_resident": 17,
+      "resident_vertex_count": 17,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 54024,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 3,
+        "3072": 3,
+        "12": 6,
+        "9408": 2,
+        "1728": 3
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 3,
+        "3x16x16": 3,
+        "3x1x1": 6,
+        "3x28x28": 2,
+        "3x12x12": 3
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 17
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1588941.1764705882,
+      "bytes_per_breeder": 1038923.0769230769,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:09.961986+00:00"
+    },
+    {
+      "generation": 6,
+      "bytes_used": 45072000,
+      "resident_bytes": 45072000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 45072000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 25,
+      "hit_rate": 0.32732940768964325,
+      "hits": 945,
+      "misses": 1942,
+      "evictions": 1917,
+      "dup_bytes_saved": 327972000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 278,
+      "overlay_shared": 18,
+      "overlay_resident": 25,
+      "resident_vertex_count": 25,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 90144,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 5,
+        "3072": 3,
+        "12": 8,
+        "9408": 4,
+        "1728": 5
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 5,
+        "3x16x16": 3,
+        "3x1x1": 8,
+        "3x28x28": 4,
+        "3x12x12": 5
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 25
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1802880.0,
+      "bytes_per_breeder": 1733538.4615384615,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:12.522694+00:00"
+    },
+    {
+      "generation": 7,
+      "bytes_used": 41700000,
+      "resident_bytes": 41700000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 41700000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 22,
+      "hit_rate": 0.33619105939987753,
+      "hits": 1098,
+      "misses": 2168,
+      "evictions": 2146,
+      "dup_bytes_saved": 280500000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 252,
+      "overlay_shared": 58,
+      "overlay_resident": 22,
+      "resident_vertex_count": 22,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 83400,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 5,
+        "1728": 6,
+        "12": 6,
+        "9408": 4,
+        "768": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 5,
+        "3x12x12": 6,
+        "3x1x1": 6,
+        "3x28x28": 4,
+        "3x8x8": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 22
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1895454.5454545454,
+      "bytes_per_breeder": 1603846.1538461538,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:15.248202+00:00"
+    },
+    {
+      "generation": 8,
+      "bytes_used": 55170000,
+      "resident_bytes": 55170000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 55170000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 29,
+      "hit_rate": 0.3407325194228635,
+      "hits": 1228,
+      "misses": 2376,
+      "evictions": 2347,
+      "dup_bytes_saved": 404142000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 231,
+      "overlay_shared": 38,
+      "overlay_resident": 29,
+      "resident_vertex_count": 29,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 110340,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 7,
+        "1728": 7,
+        "12": 7,
+        "9408": 4,
+        "768": 2,
+        "5808": 1,
+        "4800": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 7,
+        "3x12x12": 7,
+        "3x1x1": 7,
+        "3x28x28": 4,
+        "3x8x8": 2,
+        "3x22x22": 1,
+        "3x20x20": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 29
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1902413.7931034483,
+      "bytes_per_breeder": 2121923.076923077,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:18.017898+00:00"
+    },
+    {
+      "generation": 9,
+      "bytes_used": 13602000,
+      "resident_bytes": 13602000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 13602000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 10,
+      "hit_rate": 0.34841289677580606,
+      "hits": 1394,
+      "misses": 2607,
+      "evictions": 2597,
+      "dup_bytes_saved": 336108000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 261,
+      "overlay_shared": 47,
+      "overlay_resident": 10,
+      "resident_vertex_count": 10,
+      "resident_vertex_bytes_per_sample_max": 6912,
+      "resident_vertex_bytes_per_sample_sum": 27204,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 2,
+        "1728": 3,
+        "12": 3,
+        "5808": 1,
+        "2352": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 2,
+        "3x12x12": 3,
+        "3x1x1": 3,
+        "3x22x22": 1,
+        "3x14x14": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 10
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        24,
+        24
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1360200.0,
+      "bytes_per_breeder": 523153.8461538461,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:20.901870+00:00"
+    },
+    {
+      "generation": 10,
+      "bytes_used": 35244000,
+      "resident_bytes": 35244000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 35244000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 21,
+      "hit_rate": 0.3562106210621062,
+      "hits": 1583,
+      "misses": 2861,
+      "evictions": 2840,
+      "dup_bytes_saved": 504192000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 265,
+      "overlay_shared": 51,
+      "overlay_resident": 21,
+      "resident_vertex_count": 21,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 70488,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 4,
+        "1728": 6,
+        "12": 6,
+        "5808": 1,
+        "9408": 2,
+        "3888": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 4,
+        "3x12x12": 6,
+        "3x1x1": 6,
+        "3x22x22": 1,
+        "3x28x28": 2,
+        "3x18x18": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 21
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1678285.7142857143,
+      "bytes_per_breeder": 1355538.4615384615,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:23.952160+00:00"
+    },
+    {
+      "generation": 11,
+      "bytes_used": 38724000,
+      "resident_bytes": 38724000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 38724000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 32,
+      "hit_rate": 0.3613205624617893,
+      "hits": 1773,
+      "misses": 3134,
+      "evictions": 3102,
+      "dup_bytes_saved": 492822000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 295,
+      "overlay_shared": 45,
+      "overlay_resident": 32,
+      "resident_vertex_count": 32,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 77448,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 4,
+        "1728": 10,
+        "12": 10,
+        "5808": 1,
+        "9408": 1,
+        "4800": 1,
+        "768": 2,
+        "3072": 1,
+        "3888": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 4,
+        "3x12x12": 10,
+        "3x1x1": 10,
+        "3x22x22": 1,
+        "3x28x28": 1,
+        "3x20x20": 1,
+        "3x8x8": 2,
+        "3x16x16": 1,
+        "3x18x18": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 32
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1210125.0,
+      "bytes_per_breeder": 1489384.6153846155,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:27.326620+00:00"
+    },
+    {
+      "generation": 12,
+      "bytes_used": 55302000,
+      "resident_bytes": 55302000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 55302000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 42,
+      "hit_rate": 0.3689899366380917,
+      "hits": 1980,
+      "misses": 3386,
+      "evictions": 3344,
+      "dup_bytes_saved": 492942000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 285,
+      "overlay_shared": 58,
+      "overlay_resident": 42,
+      "resident_vertex_count": 42,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 110604,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 6,
+        "1728": 13,
+        "12": 13,
+        "5808": 1,
+        "9408": 2,
+        "4800": 1,
+        "768": 2,
+        "3888": 4
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 6,
+        "3x12x12": 13,
+        "3x1x1": 13,
+        "3x22x22": 1,
+        "3x28x28": 2,
+        "3x20x20": 1,
+        "3x8x8": 2,
+        "3x18x18": 4
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 42
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1316714.2857142857,
+      "bytes_per_breeder": 2127000.0,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:30.636483+00:00"
+    },
+    {
+      "generation": 13,
+      "bytes_used": 105708000,
+      "resident_bytes": 105708000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 105708000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 68,
+      "hit_rate": 0.36912521440823326,
+      "hits": 2152,
+      "misses": 3678,
+      "evictions": 3610,
+      "dup_bytes_saved": 529992000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 335,
+      "overlay_shared": 55,
+      "overlay_resident": 68,
+      "resident_vertex_count": 68,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 211416,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 14,
+        "5808": 1,
+        "1728": 18,
+        "12": 18,
+        "9408": 4,
+        "4800": 2,
+        "768": 4,
+        "3888": 7
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 14,
+        "3x22x22": 1,
+        "3x12x12": 18,
+        "3x1x1": 18,
+        "3x28x28": 4,
+        "3x20x20": 2,
+        "3x8x8": 4,
+        "3x18x18": 7
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 68
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1554529.4117647058,
+      "bytes_per_breeder": 4065692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:34.229791+00:00"
+    },
+    {
+      "generation": 14,
+      "bytes_used": 78816000,
+      "resident_bytes": 78816000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 78816000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 178578000,
+      "max_bytes": 12884901888,
+      "entries": 45,
+      "hit_rate": 0.37309885931558934,
+      "hits": 2355,
+      "misses": 3957,
+      "evictions": 3912,
+      "dup_bytes_saved": 551538000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 348,
+      "overlay_shared": 54,
+      "overlay_resident": 45,
+      "resident_vertex_count": 45,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 157632,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 9,
+        "4800": 1,
+        "768": 2,
+        "1728": 12,
+        "12": 12,
+        "3888": 3,
+        "9408": 4,
+        "8112": 1,
+        "10800": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 9,
+        "3x20x20": 1,
+        "3x8x8": 2,
+        "3x12x12": 12,
+        "3x1x1": 12,
+        "3x18x18": 3,
+        "3x28x28": 4,
+        "3x26x26": 1,
+        "3x30x30": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 45
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 39408,
+      "bytes_per_entry": 1751466.6666666667,
+      "bytes_per_breeder": 3031384.6153846155,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:38.035181+00:00"
+    },
+    {
+      "generation": 15,
+      "bytes_used": 122610000,
+      "resident_bytes": 122610000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 122610000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 188070000,
+      "max_bytes": 12884901888,
+      "entries": 70,
+      "hit_rate": 0.37757807896287565,
+      "hits": 2563,
+      "misses": 4225,
+      "evictions": 4155,
+      "dup_bytes_saved": 633780000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 314,
+      "overlay_shared": 50,
+      "overlay_resident": 70,
+      "resident_vertex_count": 70,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 245220,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 13,
+        "4800": 1,
+        "768": 4,
+        "1728": 19,
+        "12": 19,
+        "3888": 3,
+        "9408": 6,
+        "8112": 1,
+        "10800": 3,
+        "5808": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 13,
+        "3x20x20": 1,
+        "3x8x8": 4,
+        "3x12x12": 19,
+        "3x1x1": 19,
+        "3x18x18": 3,
+        "3x28x28": 6,
+        "3x26x26": 1,
+        "3x30x30": 3,
+        "3x22x22": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 70
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 40176,
+      "bytes_per_entry": 1751571.4285714286,
+      "bytes_per_breeder": 4715769.230769231,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:41.729909+00:00"
+    },
+    {
+      "generation": 16,
+      "bytes_used": 137184000,
+      "resident_bytes": 137184000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 137184000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 205416000,
+      "max_bytes": 12884901888,
+      "entries": 77,
+      "hit_rate": 0.3800793542208236,
+      "hits": 2778,
+      "misses": 4531,
+      "evictions": 4454,
+      "dup_bytes_saved": 791412000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 377,
+      "overlay_shared": 76,
+      "overlay_resident": 77,
+      "resident_vertex_count": 77,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 274368,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 17,
+        "4800": 1,
+        "768": 5,
+        "1728": 20,
+        "12": 20,
+        "9408": 7,
+        "3888": 1,
+        "8112": 1,
+        "10800": 2,
+        "5808": 2,
+        "2352": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 17,
+        "3x20x20": 1,
+        "3x8x8": 5,
+        "3x12x12": 20,
+        "3x1x1": 20,
+        "3x28x28": 7,
+        "3x18x18": 1,
+        "3x26x26": 1,
+        "3x30x30": 2,
+        "3x22x22": 2,
+        "3x14x14": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 77
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 49584,
+      "bytes_per_entry": 1781610.3896103897,
+      "bytes_per_breeder": 5276307.692307692,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:45.613448+00:00"
+    },
+    {
+      "generation": 17,
+      "bytes_used": 90786000,
+      "resident_bytes": 90786000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 90786000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 240072000,
+      "max_bytes": 12884901888,
+      "entries": 56,
+      "hit_rate": 0.3837417049515059,
+      "hits": 3007,
+      "misses": 4829,
+      "evictions": 4773,
+      "dup_bytes_saved": 742212000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 376,
+      "overlay_shared": 83,
+      "overlay_resident": 56,
+      "resident_vertex_count": 56,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 181572,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "6912": 10,
+        "4800": 1,
+        "768": 6,
+        "1728": 15,
+        "12": 15,
+        "9408": 6,
+        "5808": 1,
+        "10800": 1,
+        "3888": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x24x24": 10,
+        "3x20x20": 1,
+        "3x8x8": 6,
+        "3x12x12": 15,
+        "3x1x1": 15,
+        "3x28x28": 6,
+        "3x22x22": 1,
+        "3x30x30": 1,
+        "3x18x18": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 56
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 49584,
+      "bytes_per_entry": 1621178.5714285714,
+      "bytes_per_breeder": 3491769.230769231,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:49.759177+00:00"
+    },
+    {
+      "generation": 18,
+      "bytes_used": 78564000,
+      "resident_bytes": 78564000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 78564000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 240072000,
+      "max_bytes": 12884901888,
+      "entries": 53,
+      "hit_rate": 0.38651040420951926,
+      "hits": 3232,
+      "misses": 5130,
+      "evictions": 5077,
+      "dup_bytes_saved": 790812000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 358,
+      "overlay_shared": 85,
+      "overlay_resident": 53,
+      "resident_vertex_count": 53,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 157128,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 2,
+        "768": 8,
+        "9408": 5,
+        "6912": 8,
+        "1728": 14,
+        "12": 14,
+        "10800": 1,
+        "3888": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 2,
+        "3x8x8": 8,
+        "3x28x28": 5,
+        "3x24x24": 8,
+        "3x12x12": 14,
+        "3x1x1": 14,
+        "3x30x30": 1,
+        "3x18x18": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 53
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 49584,
+      "bytes_per_entry": 1482339.6226415094,
+      "bytes_per_breeder": 3021692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:53.971780+00:00"
+    },
+    {
+      "generation": 19,
+      "bytes_used": 92376000,
+      "resident_bytes": 92376000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 92376000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 240072000,
+      "max_bytes": 12884901888,
+      "entries": 64,
+      "hit_rate": 0.3895957662425403,
+      "hits": 3460,
+      "misses": 5421,
+      "evictions": 5357,
+      "dup_bytes_saved": 969834000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 345,
+      "overlay_shared": 79,
+      "overlay_resident": 64,
+      "resident_vertex_count": 64,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 184752,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 2,
+        "768": 12,
+        "9408": 5,
+        "6912": 12,
+        "1728": 16,
+        "12": 16,
+        "8112": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 2,
+        "3x8x8": 12,
+        "3x28x28": 5,
+        "3x24x24": 12,
+        "3x12x12": 16,
+        "3x1x1": 16,
+        "3x26x26": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 64
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 49584,
+      "bytes_per_entry": 1443375.0,
+      "bytes_per_breeder": 3552923.076923077,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:44:58.384178+00:00"
+    },
+    {
+      "generation": 20,
+      "bytes_used": 109422000,
+      "resident_bytes": 109422000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 109422000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 240072000,
+      "max_bytes": 12884901888,
+      "entries": 74,
+      "hit_rate": 0.39350485027414595,
+      "hits": 3732,
+      "misses": 5752,
+      "evictions": 5678,
+      "dup_bytes_saved": 1319286000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 396,
+      "overlay_shared": 72,
+      "overlay_resident": 74,
+      "resident_vertex_count": 74,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 218844,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 2,
+        "768": 14,
+        "9408": 7,
+        "6912": 13,
+        "1728": 17,
+        "12": 17,
+        "3888": 2,
+        "2352": 1,
+        "3072": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 2,
+        "3x8x8": 14,
+        "3x28x28": 7,
+        "3x24x24": 13,
+        "3x12x12": 17,
+        "3x1x1": 17,
+        "3x18x18": 2,
+        "3x14x14": 1,
+        "3x16x16": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 74
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 49584,
+      "bytes_per_entry": 1478675.6756756757,
+      "bytes_per_breeder": 4208538.461538462,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:03.271743+00:00"
+    },
+    {
+      "generation": 21,
+      "bytes_used": 86454000,
+      "resident_bytes": 86454000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 86454000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 240072000,
+      "max_bytes": 12884901888,
+      "entries": 56,
+      "hit_rate": 0.3990322899180409,
+      "hits": 4041,
+      "misses": 6086,
+      "evictions": 6030,
+      "dup_bytes_saved": 1616118000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 409,
+      "overlay_shared": 88,
+      "overlay_resident": 56,
+      "resident_vertex_count": 56,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 172908,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "9408": 5,
+        "6912": 10,
+        "768": 10,
+        "1728": 13,
+        "12": 13,
+        "3888": 2,
+        "3072": 1,
+        "10800": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x28x28": 5,
+        "3x24x24": 10,
+        "3x8x8": 10,
+        "3x12x12": 13,
+        "3x1x1": 13,
+        "3x18x18": 2,
+        "3x16x16": 1,
+        "3x30x30": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 56
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 49584,
+      "bytes_per_entry": 1543821.4285714286,
+      "bytes_per_breeder": 3325153.846153846,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:08.294862+00:00"
+    },
+    {
+      "generation": 22,
+      "bytes_used": 126948000,
+      "resident_bytes": 126948000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 126948000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 240072000,
+      "max_bytes": 12884901888,
+      "entries": 78,
+      "hit_rate": 0.40474651399021144,
+      "hits": 4383,
+      "misses": 6446,
+      "evictions": 6368,
+      "dup_bytes_saved": 1693392000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 417,
+      "overlay_shared": 88,
+      "overlay_resident": 78,
+      "resident_vertex_count": 78,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 253896,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 15,
+        "9408": 7,
+        "768": 14,
+        "1728": 18,
+        "12": 18,
+        "3888": 2,
+        "10800": 2,
+        "8112": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 15,
+        "3x28x28": 7,
+        "3x8x8": 14,
+        "3x12x12": 18,
+        "3x1x1": 18,
+        "3x18x18": 2,
+        "3x30x30": 2,
+        "3x26x26": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 78
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 49728,
+      "bytes_per_entry": 1627538.4615384615,
+      "bytes_per_breeder": 4882615.384615385,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:13.489989+00:00"
+    },
+    {
+      "generation": 23,
+      "bytes_used": 104346000,
+      "resident_bytes": 104346000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 104346000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 240072000,
+      "max_bytes": 12884901888,
+      "entries": 66,
+      "hit_rate": 0.40914245834423796,
+      "hits": 4690,
+      "misses": 6773,
+      "evictions": 6707,
+      "dup_bytes_saved": 1696146000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 406,
+      "overlay_shared": 88,
+      "overlay_resident": 66,
+      "resident_vertex_count": 66,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 208692,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 13,
+        "9408": 5,
+        "768": 13,
+        "1728": 15,
+        "12": 15,
+        "10800": 1,
+        "3888": 1,
+        "8112": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 13,
+        "3x28x28": 5,
+        "3x8x8": 13,
+        "3x12x12": 15,
+        "3x1x1": 15,
+        "3x30x30": 1,
+        "3x18x18": 1,
+        "3x26x26": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 66
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 49728,
+      "bytes_per_entry": 1581000.0,
+      "bytes_per_breeder": 4013307.6923076925,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:18.801692+00:00"
+    },
+    {
+      "generation": 24,
+      "bytes_used": 96180000,
+      "resident_bytes": 96180000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 96180000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 251316000,
+      "max_bytes": 12884901888,
+      "entries": 63,
+      "hit_rate": 0.4121042216358839,
+      "hits": 4998,
+      "misses": 7130,
+      "evictions": 7067,
+      "dup_bytes_saved": 1749846000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 424,
+      "overlay_shared": 90,
+      "overlay_resident": 63,
+      "resident_vertex_count": 63,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 192360,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 14,
+        "9408": 3,
+        "768": 13,
+        "1728": 14,
+        "12": 14,
+        "3888": 1,
+        "8112": 3
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 14,
+        "3x28x28": 3,
+        "3x8x8": 13,
+        "3x12x12": 14,
+        "3x1x1": 14,
+        "3x18x18": 1,
+        "3x26x26": 3
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 63
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 49728,
+      "bytes_per_entry": 1526666.6666666667,
+      "bytes_per_breeder": 3699230.769230769,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:24.390741+00:00"
+    },
+    {
+      "generation": 25,
+      "bytes_used": 85608000,
+      "resident_bytes": 85608000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 85608000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 251316000,
+      "max_bytes": 12884901888,
+      "entries": 55,
+      "hit_rate": 0.41608364122317426,
+      "hits": 5293,
+      "misses": 7428,
+      "evictions": 7373,
+      "dup_bytes_saved": 1759524000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 362,
+      "overlay_shared": 81,
+      "overlay_resident": 55,
+      "resident_vertex_count": 55,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 171216,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 12,
+        "9408": 3,
+        "768": 11,
+        "1728": 12,
+        "12": 12,
+        "3888": 1,
+        "8112": 2,
+        "5808": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 12,
+        "3x28x28": 3,
+        "3x8x8": 11,
+        "3x12x12": 12,
+        "3x1x1": 12,
+        "3x18x18": 1,
+        "3x26x26": 2,
+        "3x22x22": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 55
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 49728,
+      "bytes_per_entry": 1556509.0909090908,
+      "bytes_per_breeder": 3292615.3846153845,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:29.905715+00:00"
+    },
+    {
+      "generation": 26,
+      "bytes_used": 97440000,
+      "resident_bytes": 97440000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 97440000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 251316000,
+      "max_bytes": 12884901888,
+      "entries": 59,
+      "hit_rate": 0.4208355208880222,
+      "hits": 5611,
+      "misses": 7722,
+      "evictions": 7663,
+      "dup_bytes_saved": 1661994000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 350,
+      "overlay_shared": 93,
+      "overlay_resident": 59,
+      "resident_vertex_count": 59,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 194880,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 12,
+        "9408": 4,
+        "768": 12,
+        "1728": 12,
+        "12": 12,
+        "3888": 1,
+        "8112": 4,
+        "3072": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 12,
+        "3x28x28": 4,
+        "3x8x8": 12,
+        "3x12x12": 12,
+        "3x1x1": 12,
+        "3x18x18": 1,
+        "3x26x26": 4,
+        "3x16x16": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 59
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 49728,
+      "bytes_per_entry": 1651525.4237288137,
+      "bytes_per_breeder": 3747692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:35.387994+00:00"
+    },
+    {
+      "generation": 27,
+      "bytes_used": 86436000,
+      "resident_bytes": 86436000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 86436000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 51,
+      "hit_rate": 0.42468499427262313,
+      "hits": 5932,
+      "misses": 8036,
+      "evictions": 7985,
+      "dup_bytes_saved": 1568400000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 374,
+      "overlay_shared": 65,
+      "overlay_resident": 51,
+      "resident_vertex_count": 51,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 172872,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 10,
+        "9408": 6,
+        "768": 10,
+        "1728": 10,
+        "12": 10,
+        "3888": 1,
+        "3072": 1,
+        "2352": 1,
+        "8112": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 10,
+        "3x28x28": 6,
+        "3x8x8": 10,
+        "3x12x12": 10,
+        "3x1x1": 10,
+        "3x18x18": 1,
+        "3x16x16": 1,
+        "3x14x14": 1,
+        "3x26x26": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 51
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 49728,
+      "bytes_per_entry": 1694823.5294117648,
+      "bytes_per_breeder": 3324461.5384615385,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:41.146358+00:00"
+    },
+    {
+      "generation": 28,
+      "bytes_used": 70530000,
+      "resident_bytes": 70530000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 70530000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 38,
+      "hit_rate": 0.4286594972258374,
+      "hits": 6258,
+      "misses": 8341,
+      "evictions": 8303,
+      "dup_bytes_saved": 1768920000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 357,
+      "overlay_shared": 78,
+      "overlay_resident": 38,
+      "resident_vertex_count": 38,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 141060,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 8,
+        "9408": 6,
+        "768": 7,
+        "1728": 7,
+        "12": 7,
+        "3888": 1,
+        "3072": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 8,
+        "3x28x28": 6,
+        "3x8x8": 7,
+        "3x12x12": 7,
+        "3x1x1": 7,
+        "3x18x18": 1,
+        "3x16x16": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 38
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 50928,
+      "bytes_per_entry": 1856052.6315789474,
+      "bytes_per_breeder": 2712692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:46.990154+00:00"
+    },
+    {
+      "generation": 29,
+      "bytes_used": 65826000,
+      "resident_bytes": 65826000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 65826000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 37,
+      "hit_rate": 0.4336288998357964,
+      "hits": 6602,
+      "misses": 8623,
+      "evictions": 8586,
+      "dup_bytes_saved": 1832652000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 321,
+      "overlay_shared": 77,
+      "overlay_resident": 37,
+      "resident_vertex_count": 37,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 131652,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 8,
+        "9408": 5,
+        "768": 7,
+        "1728": 7,
+        "12": 7,
+        "3888": 1,
+        "3072": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 8,
+        "3x28x28": 5,
+        "3x8x8": 7,
+        "3x12x12": 7,
+        "3x1x1": 7,
+        "3x18x18": 1,
+        "3x16x16": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 37
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 50928,
+      "bytes_per_entry": 1779081.0810810812,
+      "bytes_per_breeder": 2531769.230769231,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:52.993329+00:00"
+    },
+    {
+      "generation": 30,
+      "bytes_used": 65826000,
+      "resident_bytes": 65826000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 65826000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 37,
+      "hit_rate": 0.43621788802625766,
+      "hits": 6911,
+      "misses": 8932,
+      "evictions": 8895,
+      "dup_bytes_saved": 1778658000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 347,
+      "overlay_shared": 76,
+      "overlay_resident": 37,
+      "resident_vertex_count": 37,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 131652,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 8,
+        "9408": 5,
+        "768": 7,
+        "1728": 7,
+        "12": 7,
+        "3888": 1,
+        "3072": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 8,
+        "3x28x28": 5,
+        "3x8x8": 7,
+        "3x12x12": 7,
+        "3x1x1": 7,
+        "3x18x18": 1,
+        "3x16x16": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 37
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 50928,
+      "bytes_per_entry": 1779081.0810810812,
+      "bytes_per_breeder": 2531769.230769231,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:45:59.124061+00:00"
+    },
+    {
+      "generation": 31,
+      "bytes_used": 70530000,
+      "resident_bytes": 70530000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 70530000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 38,
+      "hit_rate": 0.43767869091793904,
+      "hits": 7195,
+      "misses": 9244,
+      "evictions": 9206,
+      "dup_bytes_saved": 1729470000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 350,
+      "overlay_shared": 65,
+      "overlay_resident": 38,
+      "resident_vertex_count": 38,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 141060,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 8,
+        "9408": 6,
+        "768": 7,
+        "1728": 7,
+        "12": 7,
+        "3888": 1,
+        "3072": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 8,
+        "3x28x28": 6,
+        "3x8x8": 7,
+        "3x12x12": 7,
+        "3x1x1": 7,
+        "3x18x18": 1,
+        "3x16x16": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 38
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 50928,
+      "bytes_per_entry": 1856052.6315789474,
+      "bytes_per_breeder": 2712692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:46:05.283343+00:00"
+    },
+    {
+      "generation": 32,
+      "bytes_used": 51702000,
+      "resident_bytes": 51702000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 51702000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 28,
+      "hit_rate": 0.43964101360863445,
+      "hits": 7495,
+      "misses": 9553,
+      "evictions": 9525,
+      "dup_bytes_saved": 1811196000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 348,
+      "overlay_shared": 64,
+      "overlay_resident": 28,
+      "resident_vertex_count": 28,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 103404,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 6,
+        "9408": 4,
+        "768": 5,
+        "1728": 5,
+        "12": 5,
+        "3888": 1,
+        "3072": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 6,
+        "3x28x28": 4,
+        "3x8x8": 5,
+        "3x12x12": 5,
+        "3x1x1": 5,
+        "3x18x18": 1,
+        "3x16x16": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 28
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 50928,
+      "bytes_per_entry": 1846500.0,
+      "bytes_per_breeder": 1988538.4615384615,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:46:11.510902+00:00"
+    },
+    {
+      "generation": 33,
+      "bytes_used": 70530000,
+      "resident_bytes": 70530000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 70530000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 38,
+      "hit_rate": 0.44067604996891074,
+      "hits": 7796,
+      "misses": 9895,
+      "evictions": 9857,
+      "dup_bytes_saved": 1662786000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 371,
+      "overlay_shared": 65,
+      "overlay_resident": 38,
+      "resident_vertex_count": 38,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 141060,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 8,
+        "9408": 6,
+        "768": 7,
+        "1728": 7,
+        "12": 7,
+        "3888": 1,
+        "3072": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 8,
+        "3x28x28": 6,
+        "3x8x8": 7,
+        "3x12x12": 7,
+        "3x1x1": 7,
+        "3x18x18": 1,
+        "3x16x16": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 38
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 50928,
+      "bytes_per_entry": 1856052.6315789474,
+      "bytes_per_breeder": 2712692.3076923075,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:46:17.732491+00:00"
+    },
+    {
+      "generation": 34,
+      "bytes_used": 99012000,
+      "resident_bytes": 99012000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 99012000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 54,
+      "hit_rate": 0.4425443851432306,
+      "hits": 8126,
+      "misses": 10236,
+      "evictions": 10182,
+      "dup_bytes_saved": 1839582000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 380,
+      "overlay_shared": 71,
+      "overlay_resident": 54,
+      "resident_vertex_count": 54,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 198024,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 11,
+        "9408": 7,
+        "768": 10,
+        "1728": 10,
+        "12": 10,
+        "3888": 1,
+        "3072": 2,
+        "8112": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 11,
+        "3x28x28": 7,
+        "3x8x8": 10,
+        "3x12x12": 10,
+        "3x1x1": 10,
+        "3x18x18": 1,
+        "3x16x16": 2,
+        "3x26x26": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 54
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 50928,
+      "bytes_per_entry": 1833555.5555555555,
+      "bytes_per_breeder": 3808153.846153846,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:46:24.147899+00:00"
+    },
+    {
+      "generation": 35,
+      "bytes_used": 111594000,
+      "resident_bytes": 111594000,
+      "cpu_bytes": 0,
+      "gpu_bytes": 111594000,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 252996000,
+      "max_bytes": 12884901888,
+      "entries": 59,
+      "hit_rate": 0.44435699669447504,
+      "hits": 8469,
+      "misses": 10590,
+      "evictions": 10531,
+      "dup_bytes_saved": 1607076000,
+      "breeding_pool_size": 26,
+      "population_size": 128,
+      "eval_batch_size": 500,
+      "eval_sample_count": 500,
+      "overlay_nodes": 409,
+      "overlay_shared": 86,
+      "overlay_resident": 59,
+      "resident_vertex_count": 59,
+      "resident_vertex_bytes_per_sample_max": 9408,
+      "resident_vertex_bytes_per_sample_sum": 223188,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "4800": 1,
+        "6912": 12,
+        "9408": 9,
+        "768": 11,
+        "1728": 11,
+        "12": 11,
+        "3888": 1,
+        "3072": 1,
+        "8112": 2
+      },
+      "resident_vertex_shape_histogram": {
+        "3x20x20": 1,
+        "3x24x24": 12,
+        "3x28x28": 9,
+        "3x8x8": 11,
+        "3x12x12": 11,
+        "3x1x1": 11,
+        "3x18x18": 1,
+        "3x16x16": 1,
+        "3x26x26": 2
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 59
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        500
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        28,
+        28
+      ],
+      "forward_per_sample_bytes_estimated_max": 50928,
+      "bytes_per_entry": 1891423.7288135593,
+      "bytes_per_breeder": 4292076.923076923,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+      "updated_at": "2026-08-14T20:46:30.441356+00:00"
+    }
+  ],
+  "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_05_dog\\leaky_relu_mean\\run_0001",
+  "updated_at": "2026-08-14T20:46:30.441356+00:00"
+}
