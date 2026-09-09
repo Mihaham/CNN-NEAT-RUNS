@@ -1,0 +1,83 @@
+{
+  "points": [
+    {
+      "generation": 0,
+      "bytes_used": 1084104,
+      "resident_bytes": 1084104,
+      "cpu_bytes": 0,
+      "gpu_bytes": 1084104,
+      "pending_bytes": 0,
+      "gpu_spills": 0,
+      "gpu_spill_bytes": 0,
+      "peak_bytes": 1491168,
+      "max_bytes": 12884901888,
+      "entries": 70,
+      "hit_rate": 0.5083333333333333,
+      "hits": 244,
+      "misses": 236,
+      "evictions": 166,
+      "dup_bytes_saved": 5548116,
+      "breeding_pool_size": 25,
+      "population_size": 128,
+      "eval_batch_size": 7,
+      "eval_sample_count": 7,
+      "overlay_nodes": 237,
+      "overlay_shared": 62,
+      "overlay_resident": 70,
+      "resident_vertex_count": 70,
+      "resident_vertex_bytes_per_sample_max": 10800,
+      "resident_vertex_bytes_per_sample_sum": 154872,
+      "resident_vertex_bytes_per_sample_histogram": {
+        "12": 22,
+        "3072": 13,
+        "6912": 6,
+        "768": 10,
+        "192": 5,
+        "1728": 2,
+        "4800": 5,
+        "9408": 2,
+        "1200": 1,
+        "10800": 1,
+        "5808": 1,
+        "48": 1,
+        "432": 1
+      },
+      "resident_vertex_shape_histogram": {
+        "3x1x1": 22,
+        "3x16x16": 13,
+        "3x24x24": 6,
+        "3x8x8": 10,
+        "3x4x4": 5,
+        "3x12x12": 2,
+        "3x20x20": 5,
+        "3x28x28": 2,
+        "3x10x10": 1,
+        "3x30x30": 1,
+        "3x22x22": 1,
+        "3x2x2": 1,
+        "3x6x6": 1
+      },
+      "resident_vertex_dtype_histogram": {
+        "torch.float32": 70
+      },
+      "resident_vertex_element_sizes": [
+        4
+      ],
+      "resident_vertex_batch_sizes": [
+        7
+      ],
+      "resident_vertex_max_shape": [
+        3,
+        30,
+        30
+      ],
+      "forward_per_sample_bytes_estimated_max": 33408,
+      "bytes_per_entry": 15487.2,
+      "bytes_per_breeder": 43364.16,
+      "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_00_airplane\\linear_mmd\\run_0008",
+      "updated_at": "2026-08-14T19:23:46.223643+00:00"
+    }
+  ],
+  "run_key": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_only\\phase_a\\class_00_airplane\\linear_mmd\\run_0008",
+  "updated_at": "2026-08-14T19:23:46.223643+00:00"
+}
