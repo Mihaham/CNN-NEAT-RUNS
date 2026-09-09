@@ -1,0 +1,111 @@
+{
+  "updated_at": "2026-08-18T03:25:01",
+  "generation": 19,
+  "num_generations_planned": 0,
+  "best_fitness": 0.6029118931381785,
+  "best_bal_acc": 0.6029118931381785,
+  "best_mcc": 0.12427146936113882,
+  "best_f1": 0.2317364739218985,
+  "best_nodes": 6,
+  "best_edges": 10,
+  "best_edges_executed": 8,
+  "run_path": "D:\\cifar-10-CNN_NEAT\\runs\\ablation\\ova_gpu_ab\\phase_a\\class_03_cat\\gelu_mean\\run_0001",
+  "run_id": "run_0001",
+  "memory_snapshot": {
+    "structures": [
+      {
+        "name": "cuda_reserved",
+        "bytes": 3382706176,
+        "length": null
+      },
+      {
+        "name": "cuda_peak_allocated",
+        "bytes": 2346934272,
+        "length": null
+      },
+      {
+        "name": "host_ram_rss",
+        "bytes": 2154586112,
+        "length": null
+      },
+      {
+        "name": "cuda_allocated",
+        "bytes": 502793216,
+        "length": null
+      },
+      {
+        "name": "eval_source",
+        "bytes": 491520000,
+        "length": null
+      },
+      {
+        "name": "offspring_queue_params",
+        "bytes": 16307403,
+        "length": 128
+      },
+      {
+        "name": "population_params",
+        "bytes": 11088488,
+        "length": 128
+      },
+      {
+        "name": "last_breeding_pool_params",
+        "bytes": 3541776,
+        "length": 26
+      },
+      {
+        "name": "topology_hashes",
+        "bytes": 357288,
+        "length": 2560
+      },
+      {
+        "name": "history",
+        "bytes": 30344,
+        "length": 19
+      },
+      {
+        "name": "population_lineage",
+        "bytes": 13368,
+        "length": 128
+      },
+      {
+        "name": "evaluated_hashes",
+        "bytes": 216,
+        "length": 0
+      }
+    ],
+    "total_bytes": 8909878659,
+    "process_rss_bytes": 2154586112,
+    "process_peak_rss_bytes": null
+  },
+  "live": {
+    "phase": "save",
+    "phase_done": 0,
+    "phase_total": 1,
+    "phase_frac": 0.0,
+    "oom_retries": 0,
+    "eval_batch_size": 40000,
+    "message": "saving archive",
+    "best_nodes": 6,
+    "best_edges": 10,
+    "best_edges_executed": 8,
+    "best_mcc": 0.12427146936113882,
+    "best_f1": 0.2317364739218985,
+    "best_fitness": 0.6029118931381785,
+    "best_bal_acc": 0.6029118931381785,
+    "all_time_best_fitness": 0.6057994961645938,
+    "gens_without_improve": 10
+  },
+  "eval_batch_size": 40000,
+  "oom_retries": 0,
+  "best_acc": 0.5662,
+  "best_roc_auc": 0.6364487376783817,
+  "best_pr_auc": 0.15509493918854853,
+  "best_precision": 0.14105535492912197,
+  "best_recall": 0.6488966030250434,
+  "best_sweep_bal_acc": 0.6029118931381785,
+  "all_time_best_fitness": 0.6057994961645938,
+  "gens_without_improve": 10,
+  "stagnation_patience": 10,
+  "population_size": 128
+}
