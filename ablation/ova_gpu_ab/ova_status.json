@@ -1,0 +1,132 @@
+{
+  "updated_at": "2026-08-17T21:48:09",
+  "pipeline": "ova_gpu_ab",
+  "pilot_class": 0,
+  "pilot_class_name": "airplane",
+  "phase_gens": {
+    "a": 0,
+    "b": 0,
+    "c": 0,
+    "d": 0
+  },
+  "context": {
+    "script_id": "12",
+    "label": "12 OVA A-B CUDA sequential no activation cache",
+    "pipeline": "ova_gpu_ab",
+    "phases": [
+      "a",
+      "b"
+    ],
+    "population_size": 128,
+    "population_size_ab": 128,
+    "effective_population_size_ab": 128,
+    "eval_batch_size": 40000,
+    "eval_batch_size_ab": 40000,
+    "fitness_val_size": 40000,
+    "gpu_vram_cap_bytes": 17175150592,
+    "forward_hash_cache": false,
+    "fitness_tiered": false,
+    "preserve_protected_parents": false,
+    "evict_covered_parents": true,
+    "strict_full_batch": false,
+    "compute_mode": "full_gpu",
+    "train_device": "cuda",
+    "eval_parallel": 1,
+    "generalize_fraction": 0.5,
+    "config_limit": 0
+  },
+  "phases": {
+    "a": {
+      "title": "Phase A — Activation × Readout (без GD)",
+      "pilot": {
+        "class_id": 0,
+        "class_name": "airplane",
+        "done": 0,
+        "total": 10
+      },
+      "generalize": {
+        "done": 0,
+        "total": 45,
+        "by_class": {
+          "1": {
+            "class_name": "automobile",
+            "done": 0,
+            "total": 5
+          },
+          "2": {
+            "class_name": "bird",
+            "done": 0,
+            "total": 5
+          },
+          "3": {
+            "class_name": "cat",
+            "done": 0,
+            "total": 5
+          },
+          "4": {
+            "class_name": "deer",
+            "done": 0,
+            "total": 5
+          },
+          "5": {
+            "class_name": "dog",
+            "done": 0,
+            "total": 5
+          },
+          "6": {
+            "class_name": "frog",
+            "done": 0,
+            "total": 5
+          },
+          "7": {
+            "class_name": "horse",
+            "done": 0,
+            "total": 5
+          },
+          "8": {
+            "class_name": "ship",
+            "done": 0,
+            "total": 5
+          },
+          "9": {
+            "class_name": "truck",
+            "done": 0,
+            "total": 5
+          }
+        }
+      },
+      "top5": [],
+      "finished": false
+    }
+  },
+  "live": {
+    "phase": "a",
+    "stage": "pilot",
+    "class_id": 0,
+    "class_name": "airplane",
+    "config": "linear_mmd",
+    "generation": 2,
+    "best_bal_acc": 0.630662316053874,
+    "best_fitness": 0.630662316053874,
+    "best_mcc": 0.15839240999563184,
+    "wall_elapsed_sec": 122.54,
+    "wall_gen_sec": 54.16,
+    "started_at": 1786992367.2596395,
+    "stagnation_patience": 10,
+    "all_time_best_fitness": 0.630662316053874,
+    "gens_without_improve": 0,
+    "best_sweep_bal_acc": 0.6317608795399905,
+    "best_nodes": 6,
+    "best_edges": 6
+  },
+  "top_by_class": {},
+  "top_overall": [],
+  "errors": [],
+  "capacity_alerts": [],
+  "completed_count": 0,
+  "finished": false,
+  "script_id": "12",
+  "label": "12 OVA A-B CUDA sequential no activation cache",
+  "forward_hash_cache": false,
+  "fitness_tiered": false
+}

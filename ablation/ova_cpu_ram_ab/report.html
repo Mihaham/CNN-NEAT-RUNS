@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CNN-NEAT OVA Class Study</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+:root {
+  --bg:#0b1020; --panel:#151c2f; --panel2:#1b243c; --border:#2c3755;
+  --text:#e9edf8; --muted:#a8b3cf; --accent:#7aa2ff; --good:#7ce2b2;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:Inter,Segoe UI,system-ui,sans-serif;
+  background:radial-gradient(1200px 600px at 20% -10%,#1a2550 0%,var(--bg) 45%);
+  color:var(--text); line-height:1.45; }
+a { color:var(--accent); text-decoration:none; }
+.container { max-width:1500px; margin:0 auto; padding:18px 18px 40px; }
+.topbar { position:sticky; top:0; z-index:50; backdrop-filter:blur(10px);
+  background:rgba(11,16,32,.82); border-bottom:1px solid var(--border); }
+.topbar-in { max-width:1500px; margin:0 auto; padding:12px 18px 6px;
+  display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+h1 { margin:0; font-size:23px; font-weight:800; letter-spacing:.2px;
+  background:linear-gradient(90deg,#c7d2fe,#7aa2ff 60%,#7ce2b2);
+  -webkit-background-clip:text; background-clip:text; color:transparent; }
+h2 { font-size:19px; margin:28px 0 12px; }
+h3 { font-size:14px; margin:18px 0 8px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; }
+.ctx { color:var(--muted); font-size:12.5px; margin-top:3px; }
+.header-actions { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+.ar-btn { font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
+  padding:6px 12px; border-radius:999px; border:1px solid var(--border);
+  background:rgba(124,226,178,.12); color:var(--good); white-space:nowrap; transition:.15s; }
+.ar-btn[aria-pressed="false"] { background:rgba(255,255,255,.03); color:var(--muted); }
+.ar-btn:hover { border-color:var(--accent); }
+.ar-btn:disabled { opacity:.55; cursor:default; }
+.status { display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--muted);
+  padding:6px 12px; border:1px solid var(--border); border-radius:999px;
+  background:rgba(255,255,255,.03); white-space:nowrap; }
+.dot { width:8px; height:8px; border-radius:999px; }
+.nav { max-width:1500px; margin:0 auto; padding:2px 18px 10px; display:flex; gap:6px; flex-wrap:wrap; }
+.nav a { font-size:12.5px; padding:5px 12px; border:1px solid var(--border); border-radius:999px;
+  color:var(--muted); background:rgba(255,255,255,.02); transition:.15s; }
+.nav a:hover { color:var(--text); border-color:var(--accent); background:rgba(122,162,255,.12); }
+.cards { display:grid; grid-template-columns:repeat(4,minmax(180px,1fr)); gap:12px; margin:6px 0 12px; }
+.card { display:block; background:linear-gradient(180deg,var(--panel),var(--panel2));
+  border:1px solid var(--border); border-radius:14px; padding:12px 14px; color:var(--text);
+  transition:.15s; }
+.card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.card .label { font-size:12px; text-transform:uppercase; letter-spacing:.4px; color:var(--muted); margin-bottom:6px; }
+.bar { height:8px; border-radius:999px; background:rgba(255,255,255,.08); overflow:hidden; margin:6px 0; }
+.bar > span { display:block; height:100%; border-radius:999px; }
+.kv { font-size:13px; color:var(--muted); }
+.kv b { color:var(--text); }
+.panel { background:linear-gradient(180deg,var(--panel),var(--panel2)); border:1px solid var(--border);
+  border-radius:16px; padding:16px; margin-bottom:16px; box-shadow:0 8px 30px rgba(0,0,0,.25); }
+.panel.live { border-color:rgba(124,226,178,.4); }
+.panel.progress { border-color:rgba(122,162,255,.35); }
+.progress-grid { display:grid; grid-template-columns:repeat(6,minmax(110px,1fr)); gap:10px; margin-bottom:8px; }
+.pstat { background:rgba(255,255,255,.02); border:1px solid var(--border); border-radius:10px;
+  padding:8px 10px; text-align:center; }
+.pstat.warn { border-color:#dc2626; }
+.pstat.warn .pstat-v { color:#f87171; }
+.pstat-v { font-size:17px; font-weight:800; }
+.pstat-k { font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.3px; margin-top:2px; }
+@media (max-width:1100px) { .progress-grid { grid-template-columns:repeat(3,1fr); } }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th,td { border:1px solid var(--border); padding:6px 9px; text-align:right; white-space:nowrap; }
+th { background:#1f2a46; color:#dbe5ff; text-transform:uppercase; font-size:11px; letter-spacing:.3px;
+  position:sticky; top:0; }
+td.l,th.l { text-align:left; }
+tr.top5 td { background:rgba(122,162,255,.16); }
+tr.agg td { background:rgba(255,255,255,.035); font-style:italic; color:var(--muted); }
+tbody tr:hover td { background:rgba(255,255,255,.04); }
+.badge { display:inline-block; padding:2px 9px; border-radius:999px; font-size:11px; font-weight:800; color:#0b1020; }
+.badge.sm { font-size:10px; padding:1px 7px; }
+.muted { color:var(--muted); }
+.scroll { overflow:auto; max-height:560px; }
+.foot { text-align:center; color:var(--muted); font-size:12px; margin:28px 0 0; }
+.totop { position:fixed; right:18px; bottom:18px; width:40px; height:40px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center; font-size:20px; z-index:60;
+  background:var(--panel2); border:1px solid var(--border); color:var(--text); }
+.totop:hover { border-color:var(--accent); }
+
+/* per-run sub-tabs */
+.runs { padding:8px 14px 14px; }
+.run-tab { border:1px solid var(--border); border-radius:12px; margin:8px 0; overflow:hidden;
+  background:rgba(255,255,255,.015); }
+.run-tab[open] { border-color:var(--accent); }
+.run-tab > summary { list-style:none; cursor:pointer; padding:10px 14px; display:flex; gap:12px;
+  align-items:center; flex-wrap:wrap; user-select:none; }
+.run-tab > summary::-webkit-details-marker { display:none; }
+.run-tab > summary::before { content:"▸"; color:var(--muted); transition:.15s; }
+.run-tab[open] > summary::before { transform:rotate(90deg); color:var(--accent); }
+.run-tab > summary:hover { background:rgba(122,162,255,.08); }
+.run-cfg { font-weight:700; font-size:13px; }
+.run-cls { font-size:12.5px; color:var(--muted); }
+.run-m { font-size:12.5px; color:var(--muted); margin-left:auto; }
+.run-m + .run-m { margin-left:14px; }
+.run-body { padding:6px 16px 16px; border-top:1px dashed var(--border); }
+
+/* interpretation fragment */
+.interp-section { margin:18px 0; padding-top:6px; border-top:1px solid rgba(255,255,255,.06); }
+.interp-section:first-child { border-top:none; }
+.interp-h { margin:6px 0; font-size:15px; color:var(--text); }
+.interp-sub { color:var(--muted); font-size:12px; margin-bottom:8px; }
+.interp-note { color:var(--muted); font-size:12.5px; margin:6px 0; }
+.interp-img { max-width:100%; height:auto; border-radius:10px; background:#fff;
+  margin:6px 0; border:1px solid var(--border); }
+.interp-pre { background:#0d1526; border:1px solid var(--border); border-radius:10px;
+  padding:10px 12px; font-size:11.5px; overflow:auto; max-height:340px; color:#cbd6f5; }
+.interp-table { width:auto; margin:8px 0; }
+.metric-grid { display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 10px; }
+.metric { background:#0d1526; border:1px solid var(--border); border-radius:12px;
+  padding:8px 14px; min-width:96px; text-align:center; }
+.metric-v { font-size:18px; font-weight:800; color:var(--text); }
+.metric-k { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.4px; }
+@media (max-width:1100px) { .cards { grid-template-columns:repeat(2,1fr); } .run-m { margin-left:0; } }
+</style>
+</head>
+<body data-finished="false" data-refresh-sec="15">
+  <header class="topbar">
+    <div class="topbar-in">
+      <div>
+        <h1>CNN-NEAT — OVA Class Study</h1>
+        <div class="ctx">pop=128 · gens[A=0, B=0, C=0, D=0] · pilot=airplane · fitness=bal_acc@logit&gt;0 · обновлено 2026-08-17 11:18:48</div>
+      </div>
+      <div class="header-actions">
+        <button type="button" id="autorefresh-btn" class="ar-btn" aria-pressed="true"
+                title="Вкл/выкл автообновление страницы (сохраняется в браузере)">
+          Автообновление: вкл
+        </button>
+        <div class="status"><span class="dot" style="background:#7ce2b2;box-shadow:0 0 12px #7ce2b2"></span>Статус: идёт обучение…</div>
+      </div>
+    </div>
+    <nav class="nav"><a href="#overview">Обзор</a><a href="#phase-a">Phase A</a></nav>
+  </header>
+  <div class="container">
+    <section id="overview">
+    <div class="panel progress">
+      <div class="progress-grid">
+        <div class="pstat"><div class="pstat-v">0/55</div><div class="pstat-k">запусков (известный план)</div></div>
+        <div class="pstat"><div class="pstat-v">0%</div><div class="pstat-k">прогресс по известным фазам</div></div>
+        <div class="pstat"><div class="pstat-v">2 ч 22 мин</div><div class="pstat-k">процесс запущен</div></div>
+        <div class="pstat"><div class="pstat-v">—</div><div class="pstat-k">в среднем на run</div></div>
+        <div class="pstat"><div class="pstat-v">—</div><div class="pstat-k">ETA до конца известного плана</div></div>
+        <div class="pstat"><div class="pstat-v">0</div><div class="pstat-k">ошибок</div></div>
+      </div>
+      <div class="bar"><span style="width:0%; background:#7aa2ff"></span></div>
+      <div class="interp-note">План известен только для уже начатых фаз — ETA растёт по мере старта новых фаз.</div>
+    </div><div class="cards">
+      <a class="card" href="#phase-a">
+        <div class="label"><span class="badge" style="background:#a78bfa">Phase A</span></div>
+        <div class="kv">Pilot (airplane): <b>0/10</b></div>
+        <div class="bar"><span style="width:0%; background:#a78bfa"></span></div>
+        <div class="kv">Generalize: <b>0/45</b></div>
+        <div class="bar"><span style="width:0%; background:#a78bfa"></span></div>
+        <div class="kv" style="margin-top:4px">ETA —</div>
+      </a></div></section>
+    
+    
+    <h2>Текущий run</h2>
+    <div class="panel live">
+      <div class="kv">
+        <span class="badge" style="background:#a78bfa">Phase A</span>
+        <b>pilot</b> · класс <b>airplane</b>
+        (#0) · конфиг <b>linear_mmd</b>
+      </div>
+      <div class="kv" style="margin-top:6px">
+        Поколение <b>15/0</b> ·
+        bal_acc@0 <b>0.6761</b> ·
+        sweep_bal <b>0.6884</b> ·
+        MCC <b>0.2126</b> ·
+        fitness <b>0.6761</b> ·
+        nodes/edges <b>10/17</b> ·
+        elapsed <b>2 ч 22 мин</b>
+      </div>
+      <div class="kv" style="margin-top:4px">ETA до конца run <b>0 с</b> · ~582.6 с/поколение</div>
+      <div style="margin-top:10px"><div style="height:320px; width:100%;">                            <div id="877bed59-a6ac-49d6-ae87-518e1105e7b2" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("877bed59-a6ac-49d6-ae87-518e1105e7b2")) {                    Plotly.newPlot(                        "877bed59-a6ac-49d6-ae87-518e1105e7b2",                        [{"line":{"color":"#7aa2ff","width":2},"mode":"lines+markers","name":"bal_acc @logit\u003e0","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[0.5893295064419746,0.5931961525292356,0.6164633442523881,0.6336416461285069,0.6256966922968349,0.6302735908814319,0.6405152034707265,0.6440212405531006,0.6440212405531006,0.6542895610855011,0.6521263833673892,0.6604766987485737,0.659704463666294,0.6671662135808047,0.6758595696765677,0.6761238154010757],"type":"scatter"},{"line":{"color":"#a5b4fc","dash":"dot","width":1.5},"mode":"lines","name":"sweep_bal (opt P-thr)","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[0.5893295064419746,0.5936350249884942,0.6194082763739333,0.6404996405196456,0.6298797919591363,0.6382360163605584,0.6481037350040232,0.6581089212047406,0.6581089212047406,0.6682217123207166,0.6769232968652212,0.6713492752762706,0.6617059302768333,0.6793749293428559,0.6846286316425921,0.6884378753258995],"type":"scatter"},{"line":{"color":"#7ce2b2","dash":"dot","width":1.5},"mode":"lines","name":"best_mcc","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[0.1077191514789733,0.11238527173737853,0.14025683107901626,0.1611993070774087,0.15228375533015648,0.15722202910125185,0.16966127145359067,0.17370333295995247,0.17370333295995247,0.185984671467471,0.18310095783282648,0.19386413676336522,0.1924529687783117,0.20140706416063606,0.212016938817698,0.21255763247383402],"type":"scatter"},{"line":{"color":"#fbbf24","dash":"dash","width":1.5},"mode":"lines","name":"best_fitness","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[0.5893295064419746,0.5931961525292356,0.6164633442523881,0.6336416461285069,0.6256966922968349,0.6302735908814319,0.6405152034707265,0.6440212405531006,0.6440212405531006,0.6542895610855011,0.6521263833673892,0.6604766987485737,0.659704463666294,0.6671662135808047,0.6758595696765677,0.6761238154010757],"type":"scatter"},{"line":{"color":"#c084fc","width":1},"mode":"lines","name":"nodes","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[5,5,6,5,7,7,7,7,7,9,9,8,10,10,10,10],"yaxis":"y2","type":"scatter"},{"line":{"color":"#f472b6","width":1},"mode":"lines","name":"edges","x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"y":[4,5,5,5,7,10,13,14,15,18,17,13,25,20,21,17],"yaxis":"y2","type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#f2f5fa"},"error_y":{"color":"#f2f5fa"},"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"baxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"line":{"color":"#283442"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"marker":{"line":{"color":"#283442"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#506784"},"line":{"color":"rgb(17,17,17)"}},"header":{"fill":{"color":"#2a3f5f"},"line":{"color":"rgb(17,17,17)"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#f2f5fa","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#f2f5fa"},"geo":{"bgcolor":"rgb(17,17,17)","lakecolor":"rgb(17,17,17)","landcolor":"rgb(17,17,17)","showlakes":true,"showland":true,"subunitcolor":"#506784"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"dark"},"paper_bgcolor":"rgb(17,17,17)","plot_bgcolor":"rgb(17,17,17)","polar":{"angularaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","radialaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"yaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"zaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"}},"shapedefaults":{"line":{"color":"#f2f5fa"}},"sliderdefaults":{"bgcolor":"#C8D4E3","bordercolor":"rgb(17,17,17)","borderwidth":1,"tickwidth":0},"ternary":{"aaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"baxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","caxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"title":{"x":0.05},"updatemenudefaults":{"bgcolor":"#506784","borderwidth":0},"xaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2}}},"margin":{"l":10,"r":10,"t":10,"b":10},"legend":{"orientation":"h","y":1.15},"yaxis":{"title":{"text":"bal_acc \u002f MCC \u002f fitness"},"range":[0,1]},"yaxis2":{"title":{"text":"nodes \u002f edges"},"overlaying":"y","side":"right"},"height":320,"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","xaxis":{"title":{"text":"generation"}}},                        {"responsive": true}                    )                };            </script>        </div></div>
+    </div>
+    
+    <section id="phase-a">
+    <h2><span class="badge" style="background:#a78bfa">Phase A</span> Phase A — Activation × Readout (без GD)</h2>
+    <div class="panel">
+      <p class='muted'>Данных пока нет.</p>
+      <h3>Pilot (airplane) — рейтинг, top-5 подсвечены</h3>
+      <div class="scroll"><p class='muted'>Pilot ещё не запускался.</p></div>
+      <h3>Generalize — bal_acc по классам</h3>
+      <div class="scroll"><p class='muted'>Generalize ещё не запускался.</p></div>
+    </div>
+    
+    </section>
+    
+    <div class="foot">CNN-NEAT · один HTML-файл · раскрывайте «Разбор запуска» под каждым конфигом ▾
+      · порог fitness: logit&gt;0 (≡ P≥0.5) · sweep_bal — диагностика с оптимальным P-порогом на val</div>
+  </div>
+  <a href="#overview" class="totop" title="Наверх">↑</a>
+  <script>
+(function () {
+  var KEY = "ova_report_autorefresh";
+  var OPEN_KEY = "ova_report_open_tabs";
+  var body = document.body;
+  var finished = body.getAttribute("data-finished") === "true";
+  var refreshSec = parseInt(body.getAttribute("data-refresh-sec") || "0", 10);
+  var btn = document.getElementById("autorefresh-btn");
+  var timer = null;
+
+  function readPref() {
+    try {
+      var v = localStorage.getItem(KEY);
+      if (v === null) return true;
+      return v === "1";
+    } catch (e) { return true; }
+  }
+  function writePref(on) {
+    try { localStorage.setItem(KEY, on ? "1" : "0"); } catch (e) {}
+  }
+  function paint() {
+    if (!btn) return;
+    if (finished || refreshSec <= 0) {
+      btn.textContent = finished ? "Автообновление: стоп (готово)" : "Автообновление: выкл";
+      btn.setAttribute("aria-pressed", "false");
+      btn.disabled = true;
+      return;
+    }
+    var on = readPref();
+    btn.disabled = false;
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.textContent = on ? ("Автообновление: вкл (" + refreshSec + " с)") : "Автообновление: выкл";
+  }
+  function clearTimer() {
+    if (timer !== null) { clearTimeout(timer); timer = null; }
+  }
+  function schedule() {
+    clearTimer();
+    if (finished || refreshSec <= 0 || !readPref()) return;
+    timer = setTimeout(function () { location.reload(); }, refreshSec * 1000);
+  }
+
+  // Restore open run-tabs across reload
+  try {
+    var openIds = JSON.parse(localStorage.getItem(OPEN_KEY) || "[]");
+    if (Array.isArray(openIds)) {
+      openIds.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el && el.tagName === "DETAILS") el.open = true;
+      });
+    }
+  } catch (e) {}
+  document.querySelectorAll("details.run-tab").forEach(function (el, i) {
+    if (!el.id) el.id = "run-tab-" + i;
+    el.addEventListener("toggle", function () {
+      try {
+        var ids = [];
+        document.querySelectorAll("details.run-tab[open]").forEach(function (d) {
+          if (d.id) ids.push(d.id);
+        });
+        localStorage.setItem(OPEN_KEY, JSON.stringify(ids));
+      } catch (e) {}
+    });
+  });
+
+  if (btn) {
+    btn.addEventListener("click", function () {
+      if (finished || refreshSec <= 0) return;
+      var next = !readPref();
+      writePref(next);
+      paint();
+      schedule();
+    });
+  }
+  paint();
+  schedule();
+})();
+</script>
+</body>
+</html>
